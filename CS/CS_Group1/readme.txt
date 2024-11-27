@@ -21,3 +21,35 @@ Steps / Usage :
 - Tasks can be viewed in a list format, and users can choose to update or delete tasks as needed.
 - All tasks will be saved in a designated file, ensuring that no data is lost between sessions.
 
+
+
+
+Requirements : 
+You are to have cooperated in your solution the following compulsory concepts and any other ten (10) of your choosing from the list below the compulsory list.
+
+Decision Making concepts (ifs and switches)
+Loops (for, do while, while)
+Files (Create read update delete)
+Functions (arguments and parameters)
+Classes – inheritance
+Variable declaration, 
+assignment and initialization,
+\t \n escape sequences, 
+overflow, 
+fixed and setprecision, 
+the setw function, 
+the pow function, 
+the random function, 
+Boolean functions, 
+Local and global variables, 
+Break and Continue concepts, 
+Menu driven concepts, 
+Constructors, 
+Overloaded functions, 
+Enumerated data types, 
+Arrays or Vectors, 
+Getters, 
+setters, 
+Polymorphism, 
+Encapsulation, 
+Exceptions
