@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "Loops.cpp"
-#include "Functions.cpp"
+#include "loops.cpp"
+#include "fuctions.cpp"
 
 using namespace std;
 
@@ -16,7 +16,7 @@ struct Item {
 // Class representing the ShoppingCart
 class ShoppingCart {
 public:
-    vector<Item> items;
+    vector <Item> items;
 
     void addItem() {
         Item newItem;

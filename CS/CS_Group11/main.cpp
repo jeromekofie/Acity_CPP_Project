@@ -2,14 +2,15 @@
 #include "descisionmaking.cpp"
 #include "loops.cpp"
 #include "filehandler.cpp"
-#include "Fuctions.cpp"
-#include "Classes.cpp"
+#include "fuctions.cpp"
+#include "classes.cpp"
 
 using namespace std;
 
 int main() {
     ShoppingCart cart;
     int choice;
+    int cart;
 
     do {
         cout << "\n===== Online Shopping Cart =====\n";
