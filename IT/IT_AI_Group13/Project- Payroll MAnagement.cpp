@@ -1,2 +1,0 @@
-// at least seven inputs
-// 
