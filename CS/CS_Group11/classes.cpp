@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
 #include <string>
-#include "loops.cpp"
-#include "fuctions.cpp"
 
 using namespace std;
 
@@ -13,11 +11,17 @@ struct Item {
     double price;
 };
 
+// Function prototypes for external dependencies
+void displayCartLoop(const vector<Item>& cart);
+void calculateTotal(const vector<Item>& items);
+
 // Class representing the ShoppingCart
 class ShoppingCart {
-public:
-    vector <Item> items;
+private:
+    vector<Item> items; // Encapsulation: private member
 
+public:
+    // Add an item to the cart
     void addItem() {
         Item newItem;
         cout << "Enter item name: ";
@@ -32,12 +36,23 @@ public:
         cout << "Item added successfully!\n";
     }
 
-    void viewCart() {
+    // View all items in the cart
+    void viewCart() const {
         if (items.empty()) {
             cout << "Your cart is empty!\n";
             return;
         }
         displayCartLoop(items); // Display items using loop
         calculateTotal(items);  // Calculate the total price
+    }
+
+    // Getter for accessing `items`
+    const vector<Item>& getItems() const {
+        return items;
+    }
+
+    // Setter for modifying `items`
+    void setItems(const vector<Item>& newItems) {
+        items = newItems;
     }
 };
