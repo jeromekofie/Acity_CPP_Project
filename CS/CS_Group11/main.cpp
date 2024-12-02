@@ -10,10 +10,8 @@
 using namespace std;
 
 int main() {
-
-    const ShoppingCart cart;
+    ShoppingCart cart; // Make cart non-const to allow modifications
     int choice;
-   
 
     do {
         cout << "\n===== Online Shopping Cart =====\n";
@@ -27,16 +25,16 @@ int main() {
 
         switch (choice) {
             case 1:
-                cart.addItem();
+                cart.addItem(); // Modify cart
                 break;
             case 2:
-                cart.viewCart();
+                cart.viewCart(); // View cart
                 break;
             case 3:
-                saveCart(cart);
+                saveCart(cart); // Save cart
                 break;
             case 4:
-                loadCart(cart);
+                loadCart(cart); // Load cart
                 break;
             case 5:
                 cout << "Exiting program. Goodbye!\n";
