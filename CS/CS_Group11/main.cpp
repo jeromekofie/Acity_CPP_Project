@@ -1,16 +1,19 @@
 #include <iostream>
-#include "descisionmaking.cpp"
-#include "loops.cpp"
-#include "filehandler.cpp"
-#include "fuctions.cpp"
-#include "classes.cpp"
+
+// Include all other .cpp files directly
+#include "DecisionMaking.cpp"
+#include "Loops.cpp"
+#include "FileHandler.cpp"
+#include "Functions.cpp"
+#include "Classes.cpp"
 
 using namespace std;
 
 int main() {
-    ShoppingCart cart;
+
+    const ShoppingCart cart;
     int choice;
-    int cart;
+   
 
     do {
         cout << "\n===== Online Shopping Cart =====\n";

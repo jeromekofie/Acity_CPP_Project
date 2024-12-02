@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
-#include "classes.cpp"
+#include <vector>
+#include "Classes.cpp"
 
 using namespace std;
 
@@ -11,9 +12,11 @@ void saveCart(const ShoppingCart& cart) {
         cout << "Error saving cart to file!\n";
         return;
     }
-    for (const auto& item : cart.items) {
+
+    for (const auto& item : cart.getItems()) { // Use getter to access items
         file << item.name << "," << item.quantity << "," << item.price << "\n";
     }
+
     file.close();
     cout << "Cart saved successfully!\n";
 }
@@ -25,13 +28,17 @@ void loadCart(ShoppingCart& cart) {
         cout << "Error loading cart from file!\n";
         return;
     }
-    cart.items.clear();
+
+    vector<Item> loadedItems;
     string name;
     int quantity;
     double price;
+
     while (file >> name >> quantity >> price) {
-        cart.items.push_back({name, quantity, price});
+        loadedItems.push_back({name, quantity, price});
     }
+
+    cart.setItems(loadedItems); // Use setter to update items
     file.close();
     cout << "Cart loaded successfully!\n";
 }
