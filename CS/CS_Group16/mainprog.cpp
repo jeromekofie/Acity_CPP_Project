@@ -26,4 +26,28 @@ int main() {
         cin >> choice;
         cin.ignore(); 
 
-       
+        if (choice == 1) {
+            fileHandler.createFile();
+        } else if (choice == 2) {
+            cout << "Enter text to write into the file: ";
+            string text;
+            getline(cin, text);
+            fileHandler.writeFile(text);
+        } else if (choice == 3) {
+            cout << "Enter keyword to search: ";
+            string keyword;
+            getline(cin, keyword);
+            textSearcher.searchKeyword(keyword);
+        } else if (choice == 4) {
+            fileHandler.deleteFile();
+        } else if (choice == 5) {
+            cout << "Goodbye!\n";
+        } else {
+            cout << "Invalid choice. Try again.\n";
+        }
+
+    } while (choice != 5);
+
+    return 0;
+}
+
