@@ -24,17 +24,6 @@ class Loan{
     	:principal(p), annualInterestRate(r) , duration(d), monthlyPayment(0.0){}// Explicitly initializing monthly payment to avoid errors during calculations.
     	// Sets up basic info about the loan
     	//Takes the values for the loan and fills in the details.
-    	
-    	
-    	 /*
-     	 calculateMonthlyPayment
-      	Calculates the fixed monthly payment using the formula for an annuity.
-      	Formula: M = P * (r(1+r)^n) / ((1+r)^n - 1), where:
-      	- M = Monthly Payment
-     	 - P = Principal
-     	 - r = Monthly interest rate
-    	  - n = Total number of payments (months)
-    	 */
     	 
     void calculateMonthlyPayment() {
         double monthlyRate = annualInterestRate / 12 / 100; //From years to months
