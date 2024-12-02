@@ -1,9 +1,11 @@
 #include <iostream>
-#include "Employee.cpp"
+#include "Employee.h"
+#include "Payroll.cpp"
 using namespace std;
 
 int main() {
     EmployeeManager empManager;
+    Payroll payroll;
     int choice;
 
     do {
@@ -32,6 +34,7 @@ int main() {
                 else cout << "Invalid choice." << endl;
                 break;
             }
+            case 5: payroll.generatePayslip(empManager); break;
             case 6: cout << "Exiting program." << endl; break;
             default: cout << "Invalid choice." << endl; break;
         }
