@@ -1,54 +1,69 @@
 ID: 001
-Name: Name: Sam Smith
-Position: Position: Position: Software Engineer
-Department: Department: Department: IT
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $85000.00
+Name: John Doe
+Position: Software Engineer
+Department: IT
+Salary Type: Salaried
+Salary: $85,000.00
+
 ID: 002
-Name: Name: Name: Jane Smith
-Position: Position: Position: Marketing Manager
-Department: Department: Department: Marketing
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $92000.00
+Name: Jane Smith
+Position: Marketing Manager
+Department: Marketing
+Salary Type: Salaried
+Salary: $92,000.00
+
 ID: 003
-Name: Name: Name: Michael Brown
-Position: Position: Position: Data Analyst
-Department: Department: Department: Analytics
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $78000.00
+Name: Michael Brown
+Position: Data Analyst
+Department: Analytics
+Salary Type: Salaried
+Salary: $78,000.00
+
 ID: 004
-Name: Name: Name: Emily Davis
-Position: Position: Position: HR Specialist
-Department: Department: Department: Human Resources
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $60.00
+Name: Emily Davis
+Position: HR Specialist
+Department: Human Resources
+Salary Type: Salaried
+Salary: $60,000.00
+
 ID: 005
-Name: Name: Name: Sarah Wilson
-Position: Position: Position: Product Manager
-Department: Department: Department: Product Development
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $105.00
+Name: Sarah Wilson
+Position: Product Manager
+Department: Product Development
+Salary Type: Salaried
+Salary: $105,000.00
+
+ID: 006
+Name: David Johnson
+Position: Sales Associate
+Department: Sales
+Salary Type: Hourly
+Salary: $25.00
+
 ID: 007
-Name: Name: Name: Olivia Martinez
-Position: Position: Position: Graphic Designer
-Department: Department: Department: Design
-Salary Type: Salary Type: Salary Type: Hourly
+Name: Olivia Martinez
+Position: Graphic Designer
+Department: Design
+Salary Type: Hourly
 Salary: $28.00
+
 ID: 008
-Name: Name: Name: James Lee
-Position: Position: Position: IT Support Technician
-Department: Department: Department: IT
-Salary Type: Salary Type: Salary Type: Hourly
+Name: James Lee
+Position: IT Support Technician
+Department: IT
+Salary Type: Hourly
 Salary: $22.00
+
 ID: 009
-Name: Name: Name: Sophia Garcia
-Position: Position: Position: Customer Service Representative
-Department: Department: Department: Customer Support
-Salary Type: Salary Type: Salary Type: Hourly
+Name: Sophia Garcia
+Position: Customer Service Representative
+Department: Customer Support
+Salary Type: Hourly
 Salary: $20.00
+
 ID: 010
-Name: Name: Name: Daniel Hernandez
-Position: Position: Position: Warehouse Associate
-Department: Department: Department: Operations
-Salary Type: Salary Type: Salary Type: Hourly
+Name: Daniel Hernandez
+Position: Warehouse Associate
+Department: Operations
+Salary Type: Hourly
 Salary: $18.00
