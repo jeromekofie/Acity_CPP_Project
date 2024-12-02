@@ -1,8 +1,8 @@
 #include <iostream>
-#include <cmath> // For pow
-#include <iomanip> // For set precision. The decimal place.
-#include <fstream> // Save to File
-#include <string>// String class
+#include <cmath>
+#include <iomanip>
+#include <fstream>
+#include <string>
 #include <vector>// Something like a memory space(Can resize it self automatically)
 
 
@@ -12,29 +12,19 @@ int i;
 
 
 class Loan{
-	private: // Only accessible to the loan class.
-		double principal;   // What you borrowed        
-    	double annualInterestRate; //Annual charge on what you borrowed in percentage
-    	int duration;         // Time in years             
-    	double monthlyPayment;  //What to pay monthly to cover the loan
+	private:
+		double principal;  
+    	double annualInterestRate; 
+    	int duration;         
+    	double monthlyPayment; 
     
     
     public: // Accessible anywhere in the code //Constructor
     	Loan(double p, double r, int d)
-    	:principal(p), annualInterestRate(r) , duration(d), monthlyPayment(0.0){}// Explicitly initializing monthly payment to avoid errors during calculations.
-    	// Sets up basic info about the loan
-    	//Takes the values for the loan and fills in the details.
+    	:principal(p), annualInterestRate(r) , duration(d), monthlyPayment(0.0){}
     	
     	
-    	 /*
-     	 calculateMonthlyPayment
-      	Calculates the fixed monthly payment using the formula for an annuity.
-      	Formula: M = P * (r(1+r)^n) / ((1+r)^n - 1), where:
-      	- M = Monthly Payment
-     	 - P = Principal
-     	 - r = Monthly interest rate
-    	  - n = Total number of payments (months)
-    	 */
+
     	 
     void calculateMonthlyPayment() {
         double monthlyRate = annualInterestRate / 12 / 100; //From years to months
@@ -54,7 +44,7 @@ class Loan{
      // displayLoanDetails
     
     void displayLoanDetails() const { // Does not change your loan details
-        cout << fixed << setprecision(2); // 2 decimal places
+        cout << fixed << setprecision(2); 
         cout << "\nYour Loan Details" << endl;
         cout << "*****************" << endl;
         cout << "\nPrincipal: GHS" << principal << endl;
@@ -82,21 +72,20 @@ private:
     string accountName;
     string accountNumber;   
     double balance;          
-    vector<Loan> loans;       // A list of loans associated with the account. At this point it is dynamic and empty all loans can be added.
+    vector<Loan> loans; // A list of loans associated with the account. At this point it is dynamic and empty all loans can be added.
 
 public:
     // Constructor
     BankAccount(const string &name, const string &number, double bal) 
         : accountName(name), accountNumber(number), balance(bal) {}
 
-    //Deposit
+
     void deposit(double amount) {
         balance += amount; // Increase balance
         cout << "Deposit successful! New balance: GHS " << fixed << setprecision(2) << balance << endl;
     }
 
     
-     //Withdraw
     void withdraw(double amount) {
         if (amount <= balance) {
             balance -= amount; // Deduct amount
@@ -107,7 +96,7 @@ public:
     }
 
 
-       // Requesting for a loan
+    
     void requestLoan(double principal, double interestRate, int duration) {
         if (principal > balance * 2) {
             // What you borrowed should not be more than what is in your account
@@ -115,7 +104,7 @@ public:
             return;
         }
 
-        // Creating a new loan
+
         Loan newLoan(principal, interestRate, duration);
         newLoan.calculateMonthlyPayment(); // Calculate monthly payment for the loan
         loans.push_back(newLoan);          // Adds loans
@@ -126,8 +115,7 @@ public:
         saveToFile(); // Save loan details to a file for record-keeping
     }
 
-    
-     // displayAccountDetails
+
     
     void displayAccountDetails() const {
         cout << "Account Name: " << accountName << endl;
@@ -145,10 +133,10 @@ public:
             outFile << "Account Name: " << accountName << "\n";
             outFile << "Account Number: " << accountNumber << "\n";
             outFile << "Balance: GHS" << fixed << setprecision(2) << balance << "\n";
-            outFile << "Loans:\n";
+            outFile << "*******" << endl;
 			 
             for (size_t i = 0; i < loans.size(); ++i) { //size_t = unsigned int type to represent sizes
-    			cout << "\nLoan #" << (i + 1) << ":" << endl; // Number of Your loans
+    			cout << "\nLoan " << (i + 1) << ":" << endl; // Number of Your loans
     			
             	loans[i].displayLoanDetails();
 				
@@ -176,10 +164,8 @@ int main() {
 
     account.displayAccountDetails(); // From the account details 
     
-    int choice; // User choice menu
-    do { // Menu is displayed at least once for the do while before the condition is checked
-    // the user can atleast see the menu and choose what they want from it.
-        //  Menu options
+    int choice;
+    do { 
         cout << "\nMenu:\n";
         cout << "1. Deposit Money\n";
         cout << "2. Withdraw Money\n";
