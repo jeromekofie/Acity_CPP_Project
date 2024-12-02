@@ -50,9 +50,10 @@ use if else statement in the function
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "hotel_menu_class_1.cpp"
 using namespace std;
 
-void display_menu()
+/*void display_menu()
 {
     cout << "*****Hotel Menu*****" << endl;
     cout << "-------------------------" << endl;
@@ -62,7 +63,7 @@ void display_menu()
     cout << "4. Water - $2.99" << endl;
     cout << "5. Exit menu" << endl;
 
-};
+};*/
 
 void display_bill()
 {
@@ -103,17 +104,22 @@ void display_bill()
 
 
 int main(){
-
+    
     int choice ;
     int quantity;
     float total = 0;
     float grandTtoal=0;
     string order;
     float order_price;
+    HotelBill bill;
+
     
     cout<<"WELCOME!"<<endl;
     cout<<""<<endl;
-    display_menu();
+    bill.display_menu();
+    //display_menu();
+    
+
     cout<<""<<endl;
 
     //cout<<"Place you order by selecting an item from 1 to 4. Select option 5 to exit the menu."<<endl;
@@ -182,5 +188,3 @@ int main(){
     return 0;
 
 }
-
-hi
