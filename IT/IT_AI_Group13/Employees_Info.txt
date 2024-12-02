@@ -1,54 +1,18 @@
 ID: 001
-Name: Name: John Doe
-Position: Position: Software Engineer
-Department: Department: IT
-Salary Type: Salary Type: Salaried
-Salary: $85.00
+Name: John Doe
+Position: Software Engineer
+Department: IT
+Salary Type: Salaried
+Salary: $85000.00
 ID: 002
-Name: Name: Jane Smith
-Position: Position: Marketing Manager
-Department: Department: Marketing
-Salary Type: Salary Type: Salaried
-Salary: $92.00
+Name: Jane Smith
+Position: Marketing Manager
+Department: Marketing
+Salary Type: Salaried
+Salary: $92000.00
 ID: 003
-Name: Name: Michael Brown
-Position: Position: Data Analyst
-Department: Department: Analytics
-Salary Type: Salary Type: Salaried
-Salary: $78.00
-ID: 004
-Name: Name: Emily Davis
-Position: Position: HR Specialist
-Department: Department: Human Resources
-Salary Type: Salary Type: Salaried
-Salary: $60.00
-ID: 005
-Name: Name: Sarah Wilson
-Position: Position: Product Manager
-Department: Department: Product Development
-Salary Type: Salary Type: Salaried
-Salary: $105.00
-ID: 007
-Name: Name: Olivia Martinez
-Position: Position: Graphic Designer
-Department: Department: Design
-Salary Type: Salary Type: Hourly
-Salary: $28.00
-ID: 008
-Name: Name: James Lee
-Position: Position: IT Support Technician
-Department: Department: IT
-Salary Type: Salary Type: Hourly
-Salary: $22.00
-ID: 009
-Name: Name: Sophia Garcia
-Position: Position: Customer Service Representative
-Department: Department: Customer Support
-Salary Type: Salary Type: Hourly
-Salary: $20.00
-ID: 010
-Name: Name: Daniel Hernandez
-Position: Position: Warehouse Associate
-Department: Department: Operations
-Salary Type: Salary Type: Hourly
-Salary: $18.00
+Name: David Johnson
+Position: Sales Associate
+Department: Sales
+Salary Type: Hourly
+Salary: $25.00
