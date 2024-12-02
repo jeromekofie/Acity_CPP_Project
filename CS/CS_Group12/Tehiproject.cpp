@@ -12,6 +12,7 @@
 using namespace std;
 
 enum Category{ FOOD,RENT, TRANSPORT, CLOTHES, SHOES, FEES, AIRTIME, MISCELLANEOUS};
+enum Category{ FOOD, RENT, TRANSPORT, CLOTHES, SHOES, FEES, AIRTIME, MISCELLANEOUS};
 
 string category_to_string(Category category){
     switch(category){
@@ -27,9 +28,33 @@ string category_to_string(Category category){
     return "Unknown";
 }
 
+// Classes
 
-int main(){
-
+class Expense{
+    private:
+        string date;
+        Category category;
+        double amount;
     
-    return 0;
-}
+    public:
+    Expense (string d, Category c, double a) : date(d), category(c), amount(a) {}
+
+    string gateDate()  const {return date;}
+    Category getCategory() const{return category;}
+    double getAmount()  const{return amount;}
+
+    void setDate(string d)  {date= d;}
+    void setCategory(Category c)  {category= c;}
+    void setAmount(double a)  {amount = a;}
+
+    void display() const{
+        cout<< setw(10) << " | "<< setw(10) << category_to_string(category)
+            << " | "<< fixed << setprecision(2) << amount << endl;
+    }
+
+};
+
+
+
+
+
