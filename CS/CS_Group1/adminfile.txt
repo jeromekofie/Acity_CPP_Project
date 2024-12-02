@@ -43,6 +43,12 @@ errors or bugs faced : {
 
 
 
+RESTART V3 : 
+
+Task Management project. 
+
+i have figured out the main file problem but i am now going to separate the classes for the priority and the date
+
 
 
 
