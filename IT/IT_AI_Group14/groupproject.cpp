@@ -132,7 +132,7 @@ void saveToFile() {
     
     file << studentCount << " " << attendanceCount << "\n";
 
-    // Save student details
+    
     for (int stu= 0; stu < studentCount; stu++) {
         file << rollNumbers[stu] << " " << studentNames[stu] << "\n";
     }
