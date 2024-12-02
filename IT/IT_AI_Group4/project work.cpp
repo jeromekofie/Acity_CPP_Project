@@ -24,7 +24,7 @@ int main(){
     cout<<"Enter the course : "<<endl;
     cout<<"COURSES"<<endl;
     cout<<"----------------------"<<endl;
-    cout<<"1. CS"<<endl;
+    cout<<"1. CS"<<endl;    
     cout<<"2. IT"<<endl;
 
     cin>>course;
@@ -39,6 +39,7 @@ int main(){
             cout<<"Logical Reasoning : "<<endl;
             cin>>marks;
 
+        
 
         }
 

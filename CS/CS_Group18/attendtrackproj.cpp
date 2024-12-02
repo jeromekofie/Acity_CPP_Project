@@ -127,3 +127,65 @@ public:
             s.displayAttendance();
         }
     }
+    
+    /* Save attendance records to file */
+    void saveToFile() const {
+        ofstream file("attendance_records.txt");
+        if (file.is_open()) {
+            for (const Student& s : students) {
+                file << s.getName() << "," << s.getAge() << "," << s.getCourse() << ","
+                     << s.getGender() << ",";
+                for (int a : s.getAttendance()) file << a << " ";
+                file << endl;
+            }
+            file.close();
+            cout << "Records saved to 'attendance_records.txt'.\n";
+        } else {
+            cout << "Error opening file.\n";
+        }
+    }
+
+    /* Load attendance records from file */
+    void loadFromFile() {
+        ifstream file("attendance_records.txt");
+        if (file.is_open()) {
+            
+            students.clear();
+            string line, name, course;
+            int age, gender;
+            
+            while (getline(file, line)) {
+                size_t pos = 0;
+                pos = line.find(",");
+                name = line.substr(0, pos);
+                line.erase(0, pos + 1);
+
+                pos = line.find(",");
+                age = stoi(line.substr(0, pos));
+                line.erase(0, pos + 1);
+                                pos = line.find(",");
+                course = line.substr(0, pos);
+                line.erase(0, pos + 1);
+
+                pos = line.find(",");
+                gender = stoi(line.substr(0, pos));
+                line.erase(0, pos + 1);
+
+                vector<int> attendance(30, 0);
+                int i = 0;
+                for (char ch : line) {
+                    if (ch == '1' || ch == '0') {
+                        attendance[i++] = ch - '0';
+                    }
+                }
+                Student s(name, age, course, static_cast<Gender>(gender));
+                for (int j = 0; j < 30; ++j) s.markAttendance(j + 1, attendance[j]);
+                students.push_back(s);
+            }
+            file.close();
+            cout << "Records loaded from 'attendance_records.txt'.\n";
+        } else {
+            cout << "Error opening file.\n";
+        }
+    }
+};

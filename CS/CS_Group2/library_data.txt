@@ -2,7 +2,7 @@
 Books in Library:
    ID               Title              Author              Status
     1               Alpha              Warren           Available
-    2               Omega                Brew           Available
+    2               Omega                Yoofi          Available
 
 Library Members:
    ID                Name
@@ -19,7 +19,7 @@ Library Members:
 Books in Library:
    ID               Title              Author              Status
     1               Omega              Warren            Borrowed
-    2               Alpha                brew            Borrowed
+    2               Alpha                Yoofi            Borrowed
 
 Library Members:
    ID                Name
