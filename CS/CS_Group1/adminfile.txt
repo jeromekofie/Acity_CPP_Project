@@ -49,6 +49,8 @@ Task Management project.
 
 i have figured out the main file problem but i am now going to separate the classes for the priority and the date
 
+- Kwame please make the files for the priority and the date 
+
 
 
 
@@ -60,5 +62,11 @@ i have figured out the main file problem but i am now going to separate the clas
 
 
 Kwame : 
+i am going to  make the classes for the priority and the date 
+
+
+
+
+
 
 
