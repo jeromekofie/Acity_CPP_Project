@@ -7,7 +7,7 @@
 void saveCart(const ShoppingCart& cart) {
     std::ofstream outFile("cart.txt");  // Open a file for writing
     if (!outFile) {
-        std::cout << "Failed to open file for saving.\n";
+        std::cout << "Open file for saving: Failed.\n";
         return;
     }
 
@@ -18,10 +18,9 @@ void saveCart(const ShoppingCart& cart) {
     std::cout << "Cart saved successfully.\n";
 }
 
-// Load the cart from a file
 void loadCart(ShoppingCart& cart) {
-    std::ifstream inFile("cart.txt");  // Open a file for reading
-    if (!inFile) {
+    std::ifstream inputFile("cart.txt"); // Open the file for reading
+    if (!inputFile.is_open()) {
         std::cout << "No saved cart found.\n";
         return;
     }
