@@ -4,5 +4,5 @@ using namespace std;
 
 // Function for invalid input
 void invalidInput() {
-    cout << "Invalid choice! Please enter a valid option.\n";
+    cout << "Choice is invalid! Please enter a valid option.\n";
 }

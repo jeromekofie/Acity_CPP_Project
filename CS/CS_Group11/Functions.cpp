@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
+#include <string>  // Needed for the `string` type
 
 using namespace std;
 
@@ -18,4 +19,17 @@ void calculateTotal(const vector<Item>& items) {
         total += item.quantity * item.price;
     }
     cout << "Total: $" << fixed << setprecision(2) << total << "\n";
+}
+
+int main() {
+    // Example usage
+    vector<Item> cart = {
+        {"Apple", 2, 0.99},
+        {"Bread", 1, 2.50},
+        {"Milk", 1, 1.99}
+    };
+
+    calculateTotal(cart);
+
+    return 0;
 }
