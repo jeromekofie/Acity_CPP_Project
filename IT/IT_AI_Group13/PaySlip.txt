@@ -1,0 +1,14 @@
+Salary Slip For The Month of December
+Employee ID:       3
+Name:              David Johnson
+Designation:       Sales Associate
+Department:        Sales
+
+Basic Salary:      $ 250.00
+Allowances:        $ 100.00
+Deduction:         $ 50.00
+Net Salary Amount: $ 300.00
+
+Amount in Words: Dollars 300 Only
+Prepared By:       HR Department
+Approved By:       Manager

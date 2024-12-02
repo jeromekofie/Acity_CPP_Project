@@ -1,0 +1,1 @@
+static unsigned int task_id; // static var so we can use it in all the functions 

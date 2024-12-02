@@ -1,54 +1,18 @@
 ID: 001
-Name: Name: Sam Smith
-Position: Position: Position: Software Engineer
-Department: Department: Department: IT
-Salary Type: Salary Type: Salary Type: Salaried
+Name: John Doe
+Position: Software Engineer
+Department: IT
+Salary Type: Salaried
 Salary: $85000.00
 ID: 002
-Name: Name: Name: Jane Smith
-Position: Position: Position: Marketing Manager
-Department: Department: Department: Marketing
-Salary Type: Salary Type: Salary Type: Salaried
+Name: Jane Smith
+Position: Marketing Manager
+Department: Marketing
+Salary Type: Salaried
 Salary: $92000.00
 ID: 003
-Name: Name: Name: Michael Brown
-Position: Position: Position: Data Analyst
-Department: Department: Department: Analytics
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $78000.00
-ID: 004
-Name: Name: Name: Emily Davis
-Position: Position: Position: HR Specialist
-Department: Department: Department: Human Resources
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $60.00
-ID: 005
-Name: Name: Name: Sarah Wilson
-Position: Position: Position: Product Manager
-Department: Department: Department: Product Development
-Salary Type: Salary Type: Salary Type: Salaried
-Salary: $105.00
-ID: 007
-Name: Name: Name: Olivia Martinez
-Position: Position: Position: Graphic Designer
-Department: Department: Department: Design
-Salary Type: Salary Type: Salary Type: Hourly
-Salary: $28.00
-ID: 008
-Name: Name: Name: James Lee
-Position: Position: Position: IT Support Technician
-Department: Department: Department: IT
-Salary Type: Salary Type: Salary Type: Hourly
-Salary: $22.00
-ID: 009
-Name: Name: Name: Sophia Garcia
-Position: Position: Position: Customer Service Representative
-Department: Department: Department: Customer Support
-Salary Type: Salary Type: Salary Type: Hourly
-Salary: $20.00
-ID: 010
-Name: Name: Name: Daniel Hernandez
-Position: Position: Position: Warehouse Associate
-Department: Department: Department: Operations
-Salary Type: Salary Type: Salary Type: Hourly
-Salary: $18.00
+Name: David Johnson
+Position: Sales Associate
+Department: Sales
+Salary Type: Hourly
+Salary: $25.00
