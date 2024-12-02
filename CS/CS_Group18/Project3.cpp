@@ -182,7 +182,20 @@ int main() {
                 break;
             }
 
-           
+            case 4: { // View attendance
+                cout << "Select a student to view attendance:\n";
+                for (size_t i = 0; i < students.size(); ++i) {
+                    cout << (i + 1) << ". " << students[i].getName() << endl;
+                }
+                int choice;
+                cin >> choice;
+                if (choice >= 1 && choice <= students.size()) {
+                    students[choice - 1].viewMonthlyAttendance(daysInMonth);
+                } else {
+                    cout << "Invalid student number.\n";
+                }
+                break;
+            }
 
             case 5: // Save and exit
                 saveAttendance(students, daysInMonth);
