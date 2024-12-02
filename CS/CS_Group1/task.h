@@ -1,64 +1,46 @@
-#ifndef TASK_H
-#define TASK_H
-
-#include <string> 
-#include <ctime> 
-
+#include <iostream>
+#include "utility.h"
 using namespace std; 
 
-enum class Priority {
-    LOW, 
-    MEDIUM, 
-    HIGH 
-}; 
 
-class Task { 
-    private : 
-        string title; 
-        string description;
-        Priority priority; 
-        time_t deadline ; // From the ctime function 
-        bool completed; // true or false for if its completed or not 
 
-    public: 
+class task {
+private : 
+    string name; 
+    bool status; 
+    unsigned int id; 
 
-    Task(const string& title,const string& description, Priority priority, time_t deadline);
-//GETTERS
-    string getTitle() const {
-        return title;
-    }
-    string getDescription() const  {
-        return description;
-    }
-    Priority getPriority() const  {
-        return priority; 
-    }
-    time_t getDeadline() const  {
-        return deadline; 
-    }
-    bool isCompleted() const  {
-        return completed; 
+public : 
+    task (const string &name_var) {
+        this->name = name_var;
+        this->status = false; 
+        id = task_id++; 
     }
 
-//SETTERS 
-    void setTitle ( const string title) {
-        this->title = title; // this is used to assign the parameter to that member variable (title)
-    }
-    void setDescription( const string description) {
-        this->description = description; 
-    }
-    void setPriority(Priority priority) {
-        this->priority = priority;
-    }
-    void setDeadline (time_t deadline) {
-        this->deadline = deadline; 
-    }
-    void setCompleted (bool completed) {
-        this ->completed = completed; 
+    void setName(const string &name_var) {
+        this->name = name_var; 
     }
 
-    string getPriorityString() const ; 
-    
-}; 
+    void setStatus (const bool &status_var){
+        this->status = status_var;
+    }
 
-#endif
+    string getName() {
+        return name; 
+    }
+
+    bool getStatus(){
+        return status; 
+    }
+
+    unsigned int getTaskId() {
+        return id;
+    }
+
+    ~task() {
+        cout << "\n In task constructor"; 
+    }
+
+
+
+};
