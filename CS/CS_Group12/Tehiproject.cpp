@@ -11,7 +11,6 @@
 
 using namespace std;
 
-enum Category{ FOOD,RENT, TRANSPORT, CLOTHES, SHOES, FEES, AIRTIME, MISCELLANEOUS};
 enum Category{ FOOD, RENT, TRANSPORT, CLOTHES, SHOES, FEES, AIRTIME, MISCELLANEOUS};
 
 string category_to_string(Category category){
