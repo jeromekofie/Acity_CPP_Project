@@ -13,7 +13,7 @@ bool isOverdue(int dueDate, int returnDate);
 void displayMenu();
 
 //the fine amount for each extra day a book is late
-const double FINE_RATE = 0.50;
+const double FINE_RATE = 1.0;
 
 int main() {
     int choice;
@@ -112,7 +112,7 @@ void calculateFine(const string& loanFile) {
              << setw(10) << fine << endl;
     }
 
-    cout << "\nTotal Fine Collected: $" << totalFine << endl;
+    cout << "\nTotal Fine Collected: GHC" << totalFine << endl;
     inFile.close();
 }
 
