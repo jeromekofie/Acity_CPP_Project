@@ -24,7 +24,7 @@ int main() {
     do {
         showMenu();
         cin >> choice;
-        cin.ignore(); // To clear input buffer
+        cin.ignore(); 
 
         if (choice == 1) {
             fileHandler.createFile();
@@ -50,3 +50,4 @@ int main() {
 
     return 0;
 }
+
