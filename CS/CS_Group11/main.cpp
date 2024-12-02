@@ -1,16 +1,15 @@
 #include <iostream>
-#include "descisionmaking.cpp"
-#include "loops.cpp"
-#include "filehandler.cpp"
-#include "fuctions.cpp"
-#include "classes.cpp"
+#include "ShoppingCart.cpp"  // Include the ShoppingCart class definition
+#include "FileHandler.cpp"  // Include the file handling functions
+#include "DecisionMaking.cpp"  // Other modules you may have
+#include "Loops.cpp"  // Other modules you may have
+#include "Functions.cpp"  // Other modules you may have
 
 using namespace std;
 
 int main() {
-    ShoppingCart cart;
+    ShoppingCart cart;  // Shopping cart object
     int choice;
-    int cart;
 
     do {
         cout << "\n===== Online Shopping Cart =====\n";
@@ -24,22 +23,22 @@ int main() {
 
         switch (choice) {
             case 1:
-                cart.addItem();
+                cart.addItem();  // Add an item to the cart
                 break;
             case 2:
-                cart.viewCart();
+                cart.viewCart();  // View the items in the cart
                 break;
             case 3:
-                saveCart(cart);
+                saveCart(cart);  // Save the cart to a file
                 break;
             case 4:
-                loadCart(cart);
+                loadCart(cart);  // Load the cart from a file
                 break;
             case 5:
                 cout << "Exiting program. Goodbye!\n";
                 break;
             default:
-                invalidInput();
+                invalidInput();  // Handle invalid input
         }
     } while (choice != 5);
 

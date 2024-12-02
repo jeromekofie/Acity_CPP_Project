@@ -1,8 +1,15 @@
 #include <iostream>
 #include <iomanip>
-#include "classes.cpp"
+#include <vector>
 
 using namespace std;
+
+// Structure to represent an item in the cart
+struct Item {
+    string name;
+    int quantity;
+    double price;
+};
 
 // Function to display the cart using loops
 void displayCartLoop(const vector<Item>& cart) {
