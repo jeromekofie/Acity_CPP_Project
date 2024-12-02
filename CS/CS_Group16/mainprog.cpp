@@ -14,3 +14,16 @@ void showMenu() {
     cout << "Choose an option: ";
 }
 
+int main() {
+    string filename = "example.txt";
+    FileHandler fileHandler(filename);
+    TextSearcher textSearcher(filename);
+
+    int choice;
+
+    do {
+        showMenu();
+        cin >> choice;
+        cin.ignore(); 
+
+       
