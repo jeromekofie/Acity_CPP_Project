@@ -2,6 +2,7 @@
 #include <time.h>
 #include <string>
 #include <ctime>
+#include <fstream>
 using namespace std;
 
 const int MAXSTUDENTS = 100;  
@@ -23,7 +24,11 @@ int attendanceCount = 0;
 
  
 int main() {
+    cout<<"WELCOME TO ATTENDIFY ATTENDANCE TRACKER\n";
+     cout<<"Please a number from the menu\n";
+
     loadFromFile(); 
+  
 
 //creation of menu
     int choice;
@@ -44,7 +49,7 @@ int main() {
                 if (timeLimit()) {
                     markAttendance();
                 } else {
-                    cout << "Attendance can only be marked between 7AM and 12 PM.\n";
+                     cout << "Attendance can only be marked between 7AM and 12 PM.\n";
                 }
                 break;
             case 3:
@@ -56,8 +61,11 @@ int main() {
                 break;
             default:
                 cout << "Invalid choice!.\n";
+                break;
         }
-    } while (choice != 4);
+    } 
+    while (choice!=4);
+
 
     return 0;
 }
@@ -73,7 +81,7 @@ void addStudent() {
     cout << "Enter roll number: ";
     cin >> rollNumbers[studentCount];
 
-    studentCount++;
+     studentCount++;
     cout << "Student added successfully!\n";
 }
 void markAttendance() {
@@ -88,11 +96,11 @@ void markAttendance() {
             localTime->tm_year + 1900, localTime->tm_mon + 1, localTime->tm_mday);
 
     cout << "Mark attendance for " << attendanceDates[attendanceCount] << ":\n";
-    for (int i = 0; i < studentCount; i++) {
+    for (int stu = 0; stu< studentCount; stu++) {
         int status;
-        cout << "Roll " << rollNumbers[i] << " (" << studentNames[i] << "): ";
+        cout << "Roll " << rollNumbers[stu] << " (" << studentNames[stu] << "): ";
         cin >> status;
-        attendance[i][attendanceCount] = status;
+        attendance[stu][attendanceCount] = status;
     }
 
     attendanceCount++;
@@ -104,7 +112,7 @@ void viewAttendance() {
         return;
     }
 
-    cout << "\nAttendance Report:\n";
+    cout << "Attendance Report:\n";
     for (int i = 0; i < studentCount; i++) {
         cout << "Roll: " << rollNumbers[i] << ", Name: " << studentNames[i] << "\n";
         for (int j = 0; j < attendanceCount; j++) {
@@ -112,7 +120,7 @@ void viewAttendance() {
                  << (attendance[i][j] ? "Present" : "Absent") << "\n";
         }
     }
-
+}
 
 void saveToFile() {
     ofstream file("attendance_data.txt");
@@ -121,19 +129,19 @@ void saveToFile() {
         return;
     }
 
-    // Save the number of students and attendance days
+    
     file << studentCount << " " << attendanceCount << "\n";
 
-    // Save student details
-    for (int i = 0; i < studentCount; i++) {
-        file << rollNumbers[i] << " " << studentNames[i] << "\n";
+    
+    for (int stu= 0; stu < studentCount; stu++) {
+        file << rollNumbers[stu] << " " << studentNames[stu] << "\n";
     }
 
     // Save attendance records
-    for (int i = 0; i < attendanceCount; i++) {
-        file << attendanceDates[i] << "\n";
-        for (int j = 0; j < studentCount; j++) {
-            file << attendance[j][i] << " ";
+    for (int stu= 0; stu < attendanceCount; stu++) {
+        file << attendanceDates[stu] << "\n";
+        for (int attend= 0; attend < studentCount; attend++) {
+            file << attendance[attend][stu] << " ";
         }
         file << "\n";
     }
@@ -144,37 +152,36 @@ void saveToFile() {
 void loadFromFile() {
     ifstream file("attendance_data.txt");
     if (!file) {
-        return; // No file to load
+        return; 
     }
 
-    // Load the number of students and attendance days
+    
     file >> studentCount >> attendanceCount;
-    file.ignore(); // Clear the newline character
+    file.ignore(); 
 
-    // Load student details
-    for (int i = 0; i < studentCount; i++) {
-        file >> rollNumbers[i];
-        file.ignore(); // Skip space
-        file.getline(studentNames[i], 100);
+    for (int stu= 0; stu< studentCount; stu++) {
+        file >> rollNumbers[stu];
+        file.ignore(); 
+        file.getline(studentNames[stu], 100);
     }
 
-    // Load attendance records
-    for (int i = 0; i < attendanceCount; i++) {
-        file.getline(attendanceDates[i], 31);
-        for (int j = 0; j < studentCount; j++) {
-            file >> attendance[j][i];
+    
+    for (int stu= 0; stu < attendanceCount; stu++) {
+        file.getline(attendanceDates[stu], 31);
+        for (int attend= 0; attend < studentCount; attend++) {
+            file >> attendance[attend][stu];
         }
-        file.ignore(); // Clear the newline character
+        file.ignore(); 
     }
 
-    file.close();
+ file.close();
 }
 
 bool timeLimit() {
     time_t now = time(0);
-    tm* localTime = localtime(&now);
+    tm* localTime =  localtime(&now);
     int hour = localTime->tm_hour;
-    return hour >= 7 && hour < 12; // Attendance is allowed between 7:00 AM and 11:59 AM
+     return hour >= 7 && hour < 12; 
 }
 
 void file() {
