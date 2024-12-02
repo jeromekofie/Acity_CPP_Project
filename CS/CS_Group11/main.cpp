@@ -35,7 +35,7 @@ int main() {
                 loadCart(cart);  // Load the cart from a file
                 break;
             case 5:
-                cout << "Exiting program. Goodbye!\n";
+                cout << "Closing program. Goodbye!\n";
                 break;
             default:
                 invalidInput();  // Handle invalid input
