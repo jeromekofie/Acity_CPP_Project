@@ -38,7 +38,7 @@ class Expense{
     public:
     Expense (string d, Category c, double a) : date(d), category(c), amount(a) {}
 
-    string gateDate()  const {return date;}
+    string getDate()  const {return date;}
     Category getCategory() const{return category;}
     double getAmount()  const{return amount;}
 
@@ -62,10 +62,81 @@ class Expense_tracker{
     public:
         Expense_tracker() : annualTotal(0) {}
 
+        void update_totals(string date, double amount){
+            string month = date.substr(0, 7);  // (yyyy-mm)
+            monthlyTotals[month] += amount;
+            annualTotal += amount;
+        }
+
+
+
         void addExpenses(string date, Category category, double amount){
-            if (amount < 0) throw invalid_argument("Amount cannot be negative");   }
-}
+            if (amount < 0) throw invalid_argument("Amount cannot be negative");
+            expenses.emplace_back(date, category, amount);   
+            update_totals(date, amount);
+        }
+
+        void displayExpenses() const{
+            if (expenses.empty()) {
+                cout<< "NO EXPENSE RECORDED.\n";
+                return;
+            }
+            cout<<"\nDate        | Category          | Amount\n";
+            cout<<"------------------------------------------\n";
+            for (const auto& expense : expenses){
+                expense.display();
+            }
+        }
+
+        void displayTotals() const{
+            cout<< "\nMonthly Total\n";
+            for(const auto& pair : monthlyTotals){
+                cout<< pair.first << ": $"<< fixed << setprecision(2)<< pair.second << endl;
+            }
+            cout<< "Annual Total: $"<< fixed << setprecision(2)<< annualTotal<< endl;
+        }
+
+        void saveToFile(const string& filename)  const{
+            ofstream file(filename,ios::trunc );
+            if(!file){
+                cerr<< "Error, unavle to open file\n";
+                return;
+            }
+            for(const auto& expense : expenses){        // Expenses
+                file<< expense.getDate()<< "," <<category_to_string(expense.getCategory())
+                    << ","<< expense.getAmount()<< endl; 
+            }
+
+            file<< "\nMonthly Totals:\n";
+            for(const auto& pair : monthlyTotals){
+                file<< pair.first<< ":$"<< annualTotal<< endl;
+                file.close();
+                cout<<"Saved to'"<< filename<< "'\n";
+            }
+        }
+    };
+
+    Expense generateRandomExpenses(){
+        string dates[]= {"2023-04-05", "2024-01-13", "2024-04-25", "2024-12-03"};
+        Category categories[]= {FOOD, RENT, FEES, AIRTIME, TRANSPORT, CLOTHES, SHOES, MISCELLANEOUS};
+        double amount = (rand()% 100+1)* 10.0;       //(amount b/n 10 and 1000)
+        return Expense(dates[rand()%4], categories[rand()%4], amount);
+    }
 
 
+    void displayMenu(){
+        cout<<"\nMenu: \n";
+        cout<<"1. Add Expense\n";
+        cout<<"2. View All Expenses\n";
+        cout<<"3. View Totals\n";
+        cout<<"4.Random expense\n";
+        cout<<"5. Save to file\n";
+        cout<<"6. Exit\n";
+        cout<<"Enter your choice: ";
+    }
 
 
+    int main(){
+
+        return 0;
+    }
