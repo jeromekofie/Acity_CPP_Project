@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip> 
 #include <vector>
 #include <fstream>
 #include "Account_class.h"
@@ -57,7 +58,8 @@ void transferMoney(vector<Account*>& accounts) {
 
         // Log the transaction
         Account::logTransaction(senderAccNum, receiverAccNum, amount);
-        cout << "Transfer successful!\n";
+        cout << fixed << setprecision(2);
+        cout << "Transfer of $" << amount << " successful!\n";
     } else {
         cout << "Insufficient funds for transfer!\n";
     }
@@ -70,6 +72,7 @@ void CheckAccountBalance(const vector<Account*>& accounts) {
 
     Account* account = findAccount(accounts, accNum);
     if (account) {
+        cout << fixed << setprecision(2);
         account->checkBalance();
     } else {
         cout << "Account not found!\n";
@@ -105,7 +108,7 @@ int main() {
 
         switch (choice) {
         case 1: {
-            cout << "Create Savings Account:\n";
+            cout << "\nCreate Savings Account:\n";
             cout << "Enter Account Number: ";
             cin >> accNum;
             cout << "Enter Account Holder Name: ";
@@ -120,13 +123,13 @@ int main() {
             break;
         }
         case 2: {
-            cout << "Create Checking Account:\n";
+            cout << "\nCreate Checking Account:\n";
             cout << "Enter Account Number: ";
             cin >> accNum;
             cout << "Enter Account Holder Name: ";
             cin.ignore();
             getline(cin, holder);
-            cout << "Enter Initial Balance: ";
+            cout << "Enter Initial Balance: $";
             cin >> initialBalance;
             account = new CheckingAccount(accNum, holder, initialBalance);
             accounts.push_back(account);
