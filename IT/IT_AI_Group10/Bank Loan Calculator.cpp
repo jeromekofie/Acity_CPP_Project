@@ -145,10 +145,10 @@ public:
             outFile << "Account Name: " << accountName << "\n";
             outFile << "Account Number: " << accountNumber << "\n";
             outFile << "Balance: GHS" << fixed << setprecision(2) << balance << "\n";
-            outFile << "Loans:\n";
+            outFile << "*******" << endl;
 			 
             for (size_t i = 0; i < loans.size(); ++i) { //size_t = unsigned int type to represent sizes
-    			cout << "\nLoan #" << (i + 1) << ":" << endl; // Number of Your loans
+    			cout << "\nLoan " << (i + 1) << ":" << endl; // Number of Your loans
     			
             	loans[i].displayLoanDetails();
 				
