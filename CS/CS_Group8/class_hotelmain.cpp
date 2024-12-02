@@ -1,6 +1,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <iomanip>
 #include "class_hotelfile.cpp"
 #include "class_hotelroom.cpp"
 #include "class_hotelpayment.cpp"
@@ -84,7 +85,7 @@ int main(){
                 roomnumber = standardRooms[i].getroomnumber();
                 standardRooms[i].setavailability(false);
                 price = standardRooms[i].getprice();
-                cout << "Room assigned: " << roomnumber << " at GHC " << price << " per night." << endl;
+                cout << "Room assigned: "<< setw(5) << roomnumber << " at GHC " << price << " per night." << endl;
                 break;
             }
         }
@@ -98,7 +99,7 @@ int main(){
                 roomnumber = deluxeRooms[i].getroomnumber();
                 deluxeRooms[i].setavailability(false);
                 price = deluxeRooms[i].getprice();
-                cout << "Room assigned: " << roomnumber << " at GHC " << price << " per night." << endl;
+                cout << "Room assigned: "<<setw(5) << roomnumber << " at GHC " << price << " per night." << endl;
                 break;
             }
         }
@@ -112,7 +113,7 @@ int main(){
                 roomnumber = executiveRooms[i].getroomnumber();
                 executiveRooms[i].setavailability(false);
                 price = executiveRooms[i].getprice();
-                cout << "Room assigned: " << roomnumber << " at GHC " << price << " per night." << endl;
+                cout << "Room assigned: "<<setw(5) << roomnumber << " at GHC " << price << " per night." << endl;
                 break;
             }
         }

@@ -21,7 +21,7 @@ public:
     }
 
     void writeFile(string text) {
-        ofstream file(filename); // Overwrites the file
+        ofstream file(filename); 
         if (file) {
             file << text << endl;
             cout << "Text written to file.\n";
