@@ -7,7 +7,7 @@
 #include<vector>   // stores collections of data  [vector<string> _ _ _ = {" "};]
 #include<map> 
 #include<string>
-#include<stdexcept> // exceptions
+#include<stdexcept> // exceptions (throw)
 
 using namespace std;
 
@@ -53,6 +53,18 @@ class Expense{
 
 };
 
+class Expense_tracker{
+    private:
+        vector<Expense> expenses;  // store expenses
+        double annualTotal;
+        map<string, double> monthlyTotals;  // maps monthly totals
+
+    public:
+        Expense_tracker() : annualTotal(0) {}
+
+        void addExpenses(string date, Category category, double amount){
+            if (amount < 0) throw invalid_argument("Amount cannot be negative");   }
+}
 
 
 
