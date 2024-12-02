@@ -21,7 +21,25 @@ int main() {
         cout << "Enter your choice: ";
         cin >> choice;
 
-       
+        switch (choice) {
+            case 1:
+                cart.addItem();  // Add an item to the cart
+                break;
+            case 2:
+                cart.viewCart();  // View the items in the cart
+                break;
+            case 3:
+                saveCart(cart);  // Save the cart to a file
+                break;
+            case 4:
+                loadCart(cart);  // Load the cart from a file
+                break;
+            case 5:
+                cout << "Exiting program. Goodbye!\n";
+                break;
+            default:
+                invalidInput();  // Handle invalid input
+        }
     } while (choice != 5);
 
     return 0;
