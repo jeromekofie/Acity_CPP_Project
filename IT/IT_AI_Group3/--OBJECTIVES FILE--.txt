@@ -25,5 +25,8 @@ project
 8.overflow 
 9.the pow function
 10.boolean function
+11.ctime
 
-
+//so far what has been done:
+1. the display menu in main
+2. the various classes needed
