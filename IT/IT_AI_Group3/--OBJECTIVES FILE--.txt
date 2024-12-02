@@ -1,0 +1,32 @@
+--OBJECTIVES FILE--
+this file allows us to understand the various obectives we need to accomplish in this
+project 
+
+//list of things to do{major}
+    1.allow the code to take in or create an account and store the data in a file at least 7 things
+    2.allow the user to create send and and receive money deducting and adding to the various accounts
+    3.show statements of transactions in a file
+
+//list of things to do{minor}
+    1. decision making(if/else)
+    2.loops
+    3.files
+    4.fuctions
+    5.classes
+
+//optional 10 but needed
+1.arrays
+2.fixed set precision
+3.break and continue
+4.menu driven concept
+5.variable declaration
+6.assignment and initialization
+7.\t and \n
+8.overflow 
+9.the pow function
+10.boolean function
+11.ctime
+
+//so far what has been done:
+1. the display menu in main
+2. the various classes needed

@@ -1,5 +1,6 @@
-#include <string> 
+#include <string>
 using namespace std;
+
 class Hotelroom{
     private:
     int roomnumber;
