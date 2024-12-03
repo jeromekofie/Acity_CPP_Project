@@ -1,11 +1,11 @@
 #include <iostream>
 #include <fstream>
-#include <vector> //for precised arrays
+#include <vector> //for precised arrays.
 #include <iomanip>
 #include <string>
 #include <cstdlib>
 #include <limits>
-#include <algorithm> // to find value in range
+#include <algorithm> // to find the value in range
 using namespace std;
 
 // Book Class
@@ -179,7 +179,7 @@ void returnBook(int bookId, int memberId) {
     }
 
 void saveToFile() {
-    // Open file in append mode to keep adding data without overwriting
+    // Open the file in append mode to keep adding data without overwriting
     ofstream file("Library_data.txt", ios::app);  // Open file in append mode
     if (!file) {
         cerr << "Error: Unable to open file for writing.\n";
@@ -190,13 +190,13 @@ void saveToFile() {
     streambuf* originalBuffer = cout.rdbuf();  // Save the original buffer
     cout.rdbuf(file.rdbuf());  // Redirect cout to the file
 
-    // Display Books in Library
+    // Display all Books in Library
     cout << "\nBooks in Library:\n";
     cout << setw(5) << "ID" << setw(20) << "Title" << setw(20) << "Author" << setw(20) << "Status" << endl;
     for (auto &book : books)
         book.displayBook();
 
-    // Display Library Members
+    // Display all Library Members
     cout << "\nLibrary Members:\n";
     cout << setw(5) << "ID" << setw(20) << "Name" << endl;
     for (auto &member : members)
@@ -402,3 +402,4 @@ int main() {
     }
 }
 
+//end of main

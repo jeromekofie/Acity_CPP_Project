@@ -1,37 +1,34 @@
+#include "ShoppingCart.cpp"  // Include the ShoppingCart class definition directly
 #include <iostream>
 #include <fstream>
-#include "Classes.cpp"
+#include <string>
 
-using namespace std;
-
-// Function to save the cart to a file
+// Save the cart to a file
 void saveCart(const ShoppingCart& cart) {
-    ofstream file("CartDetails.txt");
-    if (!file) {
-        cout << "Error saving cart to file!\n";
+    std::ofstream outFile("cart.txt");  // Open a file for writing
+    if (!outFile) {
+        std::cout << "Failed to open file for saving.\n";
         return;
     }
-    for (const auto& item : cart.items) {
-        file << item.name << "," << item.quantity << "," << item.price << "\n";
+
+    // Assuming ShoppingCart has a method to retrieve items
+    for (const auto& item : cart.getItems()) {  // Ensure getItems() returns a collection of strings or objects with a valid stream operator
+        outFile << item << std::endl;
     }
-    file.close();
-    cout << "Cart saved successfully!\n";
+    std::cout << "Cart saved successfully.\n";
 }
 
-// Function to load the cart from a file
+// Load the cart from a file
 void loadCart(ShoppingCart& cart) {
-    ifstream file("CartDetails.txt");
-    if (!file) {
-        cout << "Error loading cart from file!\n";
+    std::ifstream inputFile("cart.txt"); // Open the file for reading
+    if (!inputFile.is_open()) {
+        std::cout << "No saved cart found.\n";
         return;
     }
-    cart.items.clear();
-    string name;
-    int quantity;
-    double price;
-    while (file >> name >> quantity >> price) {
-        cart.items.push_back({name, quantity, price});
+
+    std::string item;
+    while (std::getline(inputFile, item)) {  // Corrected variable name from 'inFile' to 'inputFile'
+        cart.addItem(item);  // Assuming ShoppingCart has an addItem method that accepts a string
     }
-    file.close();
-    cout << "Cart loaded successfully!\n";
+    std::cout << "Cart loaded successfully.\n";
 }
