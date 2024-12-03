@@ -41,12 +41,12 @@ class Loan{
     }
     
 
-     // displayLoanDetails
+     
     
     void displayLoanDetails() const { // Does not change your loan details
         cout << fixed << setprecision(2); 
         cout << "\nYour Loan Details" << endl;
-        cout << "*****************" << endl;
+        cout << "*******************" << endl;
         cout << "\nPrincipal: GHS" << principal << endl;
         cout << "\nAnnual Interest Rate: " << annualInterestRate << "%" << endl;
         cout << "\nDuration: " << duration << " years" << endl;
@@ -83,14 +83,14 @@ public:
 
 
     void deposit(double amount) {
-        balance += amount; // Increase balance
+        balance += amount; 
         cout << "Deposit successful! New balance: GHS " << fixed << setprecision(2) << balance << endl;
     }
 
     
     void withdraw(double amount) {
         if (amount <= balance) {
-            balance -= amount; // Deduct amount
+            balance -= amount;
             cout << "Withdrawal successful! New balance: GHS" << fixed << setprecision(2) << balance << endl;
         } else {
             cout << "Insufficient funds!" << endl; // Error message if balance is insufficient
@@ -135,7 +135,7 @@ public:
             outFile << "Account Name: " << accountName << "\n";
             outFile << "Account Number: " << accountNumber << "\n";
             outFile << "Balance: GHS" << fixed << setprecision(2) << balance << "\n";
-            outFile << "\n***************************************" << endl;
+            outFile << "\n******************************************" << endl;
 			 
             for (size_t i = 0; i < loans.size(); ++i) { //size_t = unsigned int type to represent sizes
     			cout << "\nLoan " << (i + 1) << ":" << endl; // Number of Your loans
