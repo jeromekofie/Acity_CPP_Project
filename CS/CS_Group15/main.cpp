@@ -44,6 +44,7 @@ int main() {
 
         if (choice == 1) {
             // Add a new course
+            cout << "\n...................................................................."<<endl;
             string courseName;
             int courseLimit;
             cout << "Enter course name: ";
