@@ -57,6 +57,7 @@ int main() {
 
         } else if (choice == 2) {
             // Enroll a student in a course
+            cout << "\n...................................................................."<<endl;
             if (courses.empty()) {
                 cout << "No courses available. Add a course first.\n";
                 continue;
@@ -92,6 +93,7 @@ int main() {
 
         } else if (choice == 3) {
             // List students in a course
+            cout << "\n...................................................................."<<endl;
             if (courses.empty()) {
                 cout << "No courses available. Add a course first.\n";
                 continue;
@@ -114,6 +116,7 @@ int main() {
 
         } else if (choice == 4) {
             // Save and exit
+            cout << "\n...................................................................."<<endl;
             saveToFile(courses);
             cout << "Exiting program. Goodbye!\n";
         } else {
