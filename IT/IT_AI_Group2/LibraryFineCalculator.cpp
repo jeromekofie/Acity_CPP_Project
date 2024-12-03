@@ -5,10 +5,14 @@
 #include <vector>
 #include <cmath>  // For pow()
 #include <ctime>  // For date calculations
+#include <bits/stdc++.h>
+
 using namespace std;
 
+
 // Global Constants
-const int DAILY_FINE = 2; // Fine per day for overdue books
+const int DAILY_FINE = 5; // Fine per day for overdue books
+
 
 // Base class for common attributes
 class LibraryEntity {
@@ -16,19 +20,28 @@ protected:
     int id;
     string name;
 public:
-    LibraryEntity(int id, string name) : id(id), name(name) {}
+    LibraryEntity(int id, string name) : id(id), name(name) {
+    }
+
     virtual void displayInfo() const = 0; // Polymorphism: Abstract function
 };
 
-// Derived class for Members
-// Derived class for Members
+
+
+// class for Members
 class Member : public LibraryEntity {
 public:
-    Member(int id, string name) : LibraryEntity(id, name) {}
+    Member(int id, string name) : LibraryEntity(id, name) {
+    }
 
     // Getter methods
-    int getID() const { return id; }
-    string getName() const { return name; }
+    int getID() const {
+        return id;
+    }
+
+    string getName() const {
+        return name;
+    }
 
     void displayInfo() const override {
         cout << "Member ID: " << id << ", Name: " << name << endl;
@@ -36,25 +49,39 @@ public:
 };
 
 
-// Derived class for Books
+
+//  class for Books
 class Book : public LibraryEntity {
     string issueDate;  // Format: YYYY-MM-DD
     string dueDate;    // Format: YYYY-MM-DD
-public:
-    Book(int id, string name, string issueDate, string dueDate)
-        : LibraryEntity(id, name), issueDate(issueDate), dueDate(dueDate) {}
 
-    void displayInfo() const override {
-        cout << "Book ID: " << id << ", Title: " << name
-             << ", Issue Date: " << issueDate
-             << ", Due Date: " << dueDate << endl;
+public:
+    Book(int id, string name, string issueDate, string dueDate) : LibraryEntity(id, name), issueDate(issueDate), dueDate(dueDate) {
+
     }
 
-    string getDueDate() const { return dueDate; }
-    string getIssueDate() const { return issueDate; }
-    int getID() const { return id; }
-    string getName() const { return name; }
+    void displayInfo() const override {
+        cout << "Book ID: " << id << ", Title: " << name << ", Issue Date: " << issueDate << ", Due Date: " << dueDate << endl;
+    }
+
+    string getDueDate() const {
+        return dueDate;
+    }
+
+    string getIssueDate() const {
+        return issueDate;
+    }
+
+    int getID() const {
+        return id;
+    }
+
+    string getName() const {
+         return name;
+    }
 };
+
+
 
 // Fine Calculator Function
 int calculateFine(const string& returnDate, const string& dueDate) {
@@ -72,6 +99,7 @@ int calculateFine(const string& returnDate, const string& dueDate) {
     return (daysOverdue > 0) ? daysOverdue * DAILY_FINE : 0;
 }
 
+
 // CRUD Operations: Add, View, Delete
 void addLoan(const Member& member, const Book& book, const string& returnDate) {
     ofstream file("loans.txt", ios::app); // Append mode
@@ -84,7 +112,7 @@ void addLoan(const Member& member, const Book& book, const string& returnDate) {
              << setw(15) << left << "Issue Date"
              << setw(15) << left << "Due Date"
              << setw(15) << left << "Return Date"
-             << setw(10) << right << "Fine"
+             << setw(10) << right << "Fine(in cedis)"
              << endl;
 
         file << "---------------------------------------------------------------------------------------------------------------------------------\n";
@@ -117,7 +145,7 @@ void viewLoans() {
              << setw(15) << left << "Issue Date"
              << setw(15) << left << "Due Date"
              << setw(15) << left << "Return Date"
-             << setw(10) << right << "Fine" << endl;
+             << setw(10) << right << "Fine(in cedis)" << endl;
         cout << "---------------------------------------------------------------------------------------------------------------------------------\n";
         while (getline(file, line)) {
             cout << line << endl;
@@ -128,29 +156,55 @@ void viewLoans() {
     }
 }
 
+
 void deleteLoan(int bookID) {
     ifstream file("loans.txt");
     ofstream tempFile("temp.txt");
 
     if (file.is_open() && tempFile.is_open()) {
         string line;
+        bool found = false;
+
+        // Skip the header and divider lines
+        getline(file, line); // Header line
+        tempFile << line << endl;
+        getline(file, line); // Divider line
+        tempFile << line << endl;
+
         while (getline(file, line)) {
-            int id = stoi(line.substr(0, line.find(',')));
-            if (id != bookID) { // Copy all except the one to delete
-                tempFile << line << endl;
+            // Extract the Book ID from the current line
+            stringstream ss(line);
+            int currentBookID;
+            ss >> currentBookID;
+
+            // If the Book ID matches, skip this line
+            if (currentBookID == bookID) {
+                found = true;
+                continue;
             }
+
+            // Otherwise, write the line to the temp file
+            tempFile << line << endl;
         }
+
         file.close();
         tempFile.close();
 
-        // Replace original file
+        // Replace the original file with the updated file
         remove("loans.txt");
         rename("temp.txt", "loans.txt");
-        cout << "Loan deleted successfully!" << endl;
+
+        if (found) {
+            cout << "Loan deleted successfully!" << endl;
+        } else {
+            cout << "Loan with Book ID " << bookID << " not found." << endl;
+        }
     } else {
         cerr << "Error opening file!" << endl;
     }
 }
+
+
 
 // Menu-driven Program
 void displayMenu() {
@@ -160,7 +214,7 @@ void displayMenu() {
     cout << "1. Add Book Loan\n";
     cout << "2. View All Loans\n";
     cout << "3. Delete a Loan\n";
-    cout << "4. Calculate Fine\n";
+    cout << "4. Calculate Fine(5 cedis charge)\n";
     cout << "5. Exit\n";
     cout << "Enter your choice: ";
 }
@@ -210,7 +264,7 @@ int main() {
             break;
         case 3: {
             int id;
-            cout << "Enter Book ID to delete: ";
+            cout << "Enter Member ID to delete: ";
             cin >> id;
             deleteLoan(id);
             break;
@@ -221,8 +275,8 @@ int main() {
             cin >> returnDate;
             cout << "Enter Due Date (YYYY-MM-DD): ";
             cin >> dueDate;
-            int fine = calculateFine(returnDate, dueDate);
-            cout << "Fine calculated: " << fine << " units.\n";
+            float fine = calculateFine(returnDate, dueDate);
+            cout << "Fine calculated: " << fine << " cedis.\n";
             break;
         }
         case 5:

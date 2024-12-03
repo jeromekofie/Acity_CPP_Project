@@ -22,4 +22,3 @@ void displayCartLoop(const vector<Item>& cart) {
              << setw(10) << item.quantity
              << fixed << setprecision(2) << item.price << "\n";
     }
-}

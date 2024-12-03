@@ -3,7 +3,6 @@
 #include <fstream>
 using namespace std;
 
-// Remarks class to handle remarks based on average score
 class Remarks {
 private:
     string remark;
@@ -26,7 +25,6 @@ public:
     }
 };
 
-// Function to calculate grades
 char calculateGrade(float subjectTotal) {
     if (subjectTotal >= 90) {
         return 'A';
@@ -57,7 +55,7 @@ int main() {
     cout << "Enter roll number: ";
     cin >> rollNumber;
 
-    // Course selection
+   
     cout << "Choose a course:" << endl;
     cout << "1. Computer Science" << endl;
     cout << "2. Information Technology" << endl;
@@ -131,7 +129,7 @@ int main() {
         subjectTotal = classScore + examScore;
         total += subjectTotal;
 
-        // Use the calculateGrade function
+        
         char grade = calculateGrade(subjectTotal);
 
         outToFile << subjects[i] << "\t: " << subjectTotal << " | Grade: \t\t " << grade << endl;
@@ -139,7 +137,7 @@ int main() {
 
     average = total / MAX_SUBJECTS;
 
-    // Use the Remarks class
+   
     Remarks remarkHandler;
     remarkHandler.setRemark(average);
     string remarks = remarkHandler.getRemark();
