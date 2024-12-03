@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <string>
 #include"shop.cpp"
 
 using namespace std;

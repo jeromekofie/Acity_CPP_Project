@@ -2,11 +2,11 @@
 #include <iomanip>
 #include <fstream>
 #include <vector>
-#include <string>
+
 
 using namespace std;
 
-// Struct to store item details
+// Struct to store item details. 
 struct Item {
     string name;
     double price;

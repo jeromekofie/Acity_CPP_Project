@@ -1,4 +1,4 @@
 Item Name	Quantity	Price	Total
-Denzel	3		cedis12.00	cedis36.00
-ss	3		cedis23.00	cedis69.00
-Total: cedis 105.00
+apple	5		cedis2.00	cedis10.00
+banana	8		cedis3.00	cedis24.00
+Total: cedis 34.00
