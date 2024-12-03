@@ -15,6 +15,8 @@ for hourly-
 rate * hours = salary
 salary + bonus - deductions = new salary
 
+Bonus and Deductions are user input
+
 
 Main.cpp
 Use menu to navigate
@@ -27,3 +29,4 @@ salary - enter id to generate payslip
 
 
 
+vectors
