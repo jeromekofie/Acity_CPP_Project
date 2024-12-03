@@ -41,12 +41,12 @@ class Loan{
     }
     
 
-     // displayLoanDetails
+     
     
     void displayLoanDetails() const { // Does not change your loan details
         cout << fixed << setprecision(2); 
         cout << "\nYour Loan Details" << endl;
-        cout << "*****************" << endl;
+        cout << "*******************" << endl;
         cout << "\nPrincipal: GHS" << principal << endl;
         cout << "\nAnnual Interest Rate: " << annualInterestRate << "%" << endl;
         cout << "\nDuration: " << duration << " years" << endl;
@@ -56,6 +56,8 @@ class Loan{
     // Saving Details To the File.
      void saveToFile(ofstream &outFile) const { //& used for referencing. Do not waste time to create a new file. 
         outFile << fixed << setprecision(2);
+        outFile <<" Bank Loan Calculator (Know Your Finances!!)"<< endl;
+        outFile << "*****************************************" << endl; 
         outFile << "Principal: GHS" << principal << "\n";
         outFile << "Annual Interest Rate: " << annualInterestRate << "%\n";
         outFile << "Duration: " << duration << " years\n";
@@ -81,14 +83,14 @@ public:
 
 
     void deposit(double amount) {
-        balance += amount; // Increase balance
+        balance += amount; 
         cout << "Deposit successful! New balance: GHS " << fixed << setprecision(2) << balance << endl;
     }
 
     
     void withdraw(double amount) {
         if (amount <= balance) {
-            balance -= amount; // Deduct amount
+            balance -= amount;
             cout << "Withdrawal successful! New balance: GHS" << fixed << setprecision(2) << balance << endl;
         } else {
             cout << "Insufficient funds!" << endl; // Error message if balance is insufficient
@@ -112,7 +114,7 @@ public:
         cout << "\nLoan approved!" << endl;
        // newLoan.displayLoanDetails(); // Display loan details
 
-        saveToFile(); // Save loan details to a file for record-keeping
+        saveToFile(); 
     }
 
 
@@ -125,15 +127,15 @@ public:
     }
 
     
-      //saveLoanDetails
+      
      
     void saveToFile() const {
-        ofstream outFile("LoanDetails.txt", ios::app); // Appends
+        ofstream outFile("LoanDetails.txt", ios::app); 
         if (outFile.is_open()) {
             outFile << "Account Name: " << accountName << "\n";
             outFile << "Account Number: " << accountNumber << "\n";
             outFile << "Balance: GHS" << fixed << setprecision(2) << balance << "\n";
-            outFile << "*******" << endl;
+            outFile << "\n******************************************" << endl;
 			 
             for (size_t i = 0; i < loans.size(); ++i) { //size_t = unsigned int type to represent sizes
     			cout << "\nLoan " << (i + 1) << ":" << endl; // Number of Your loans
@@ -154,15 +156,15 @@ public:
 };
 
 
- // The main
+ 
 int main() {
 
-     cout <<" Bank Loan Calculator (Know Your Debts!!)"<< endl;
-     cout << "*****************************************" << endl; 
+     cout <<" Bank Loan Calculator (Know Your Finances!!)"<< endl;
+     cout << "********************************************" << endl; 
 	// Example
     BankAccount account("Vina", "758594", 10000.00);
 
-    account.displayAccountDetails(); // From the account details 
+    account.displayAccountDetails();
     
     int choice;
     do { 
@@ -175,7 +177,7 @@ int main() {
         cout << "\nEnter your choice: ";
         cin >> choice;
 
-        // Process user choice
+        
         switch (choice) {
         case 1: {
             double amount;
