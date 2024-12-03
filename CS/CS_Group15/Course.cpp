@@ -9,7 +9,7 @@
 using namespace std;
 
 // Declaration
-class Course
+class Course 
 {
 private:
     string name;
