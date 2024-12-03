@@ -1,5 +1,6 @@
 #include<iostream>
 #include<fstream>
+#include<iomanip>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ public:
 
 class GradingPolicy {
 public:
-     char calculateGrade(float marks) ; // 
+    virtual char calculateGrade(float marks) = 0; // Pure virtual function; // 
 };
 
 class LetterGrading : public GradingPolicy {
@@ -84,7 +85,7 @@ public:
         return Total_marks;
     }
 
-    void displayMarks(ofstream file, GradingPolicy *gp) {
+    void displayMarks(ofstream &file, GradingPolicy *gp) {
         file << "Critical Thinking      : " << setw(3) << critical_thinking << " | Grade: " << gp->calculateGrade(critical_thinking) << endl;
         file << "Programming in C       : " << setw(3) << programming_in_C  << " | Grade: " << gp->calculateGrade(programming_in_C) << endl;
         file << "Data Structures        : " << setw(3) << data_structures   << " | Grade: " << gp->calculateGrade(data_structures) << endl;
@@ -121,7 +122,7 @@ public:
     }
     
 
-    void displayMarks(ofstream file, GradingPolicy *gp) {
+    void displayMarks(ofstream &file, GradingPolicy *gp) {
         file << "Networking             : " << setw(3) << networking          << " | Grade: " << gp->calculateGrade(networking) << endl;
         file << "Cybersecurity          : " << setw(3) << cybersecurity       << " | Grade: " << gp->calculateGrade(cybersecurity) << endl;
         file << "Web Development        : " << setw(3) << web_development     << " | Grade: " << gp->calculateGrade(web_development) << endl;
