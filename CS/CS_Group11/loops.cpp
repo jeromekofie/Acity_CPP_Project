@@ -21,4 +21,4 @@ void displayCartLoop(const vector<Item>& cart) {
         cout << left << setw(20) << item.name
              << setw(10) << item.quantity
              << fixed << setprecision(2) << item.price << "\n";
-    }
+}
