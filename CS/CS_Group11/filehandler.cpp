@@ -1,4 +1,4 @@
-include "ShoppingCart.cpp"  // Include the ShoppingCart class definition directly
+#include "ShoppingCart.cpp"  // Include the ShoppingCart class definition directly
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -25,3 +25,4 @@ void loadCart(ShoppingCart& cart) {
         std::cout << "No saved cart found.\n";
         return;
     }
+}
