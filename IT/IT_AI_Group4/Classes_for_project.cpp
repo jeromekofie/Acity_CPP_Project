@@ -31,13 +31,13 @@ class Student {
 private:
     string name;
     int roll_number;
-    string course;
+    int course;
 
 public:
-    void setName(string n) {
+    void setname(string n) {
         name = n;
     }
-    string getName() {
+    string getname() {
         return name;
     }
 
@@ -48,10 +48,10 @@ public:
         return roll_number;
     }
 
-    void setCourse(string c) {
+    void setCourse(int c) {
         course = c;
     }
-    string getCourse() {
+    int getCourse() {
         return course;
     }
 };
@@ -72,7 +72,7 @@ public:
     void setprogramming_in_C(float pc){
         programming_in_C = pc;
     }
-    void setdata_stuctures(float ds){
+    void setdata_structures(float ds){
         data_structures = ds;
     }
      void setlogical_reasoning(float lr){
@@ -84,7 +84,7 @@ public:
         return Total_marks;
     }
 
-    void displayMarks(ofstream &file, GradingPolicy *gp) {
+    void displayMarks(ofstream file, GradingPolicy *gp) {
         file << "Critical Thinking      : " << setw(3) << critical_thinking << " | Grade: " << gp->calculateGrade(critical_thinking) << endl;
         file << "Programming in C       : " << setw(3) << programming_in_C  << " | Grade: " << gp->calculateGrade(programming_in_C) << endl;
         file << "Data Structures        : " << setw(3) << data_structures   << " | Grade: " << gp->calculateGrade(data_structures) << endl;
@@ -116,11 +116,12 @@ public:
     }
     
     float getTotalMarks() {
-        return networking + cybersecurity + web_development + database_management;
+        float totalmarks= networking + cybersecurity + web_development + database_management;
+        return totalmarks;
     }
     
 
-    void displayMarks(ofstream &file, GradingPolicy *gp) {
+    void displayMarks(ofstream file, GradingPolicy *gp) {
         file << "Networking             : " << setw(3) << networking          << " | Grade: " << gp->calculateGrade(networking) << endl;
         file << "Cybersecurity          : " << setw(3) << cybersecurity       << " | Grade: " << gp->calculateGrade(cybersecurity) << endl;
         file << "Web Development        : " << setw(3) << web_development     << " | Grade: " << gp->calculateGrade(web_development) << endl;
