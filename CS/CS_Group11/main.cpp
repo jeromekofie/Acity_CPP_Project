@@ -1,5 +1,4 @@
 #include <iostream>
-#include <string>
 #include "shop.cpp" // This includes the `ShoppingCart` and `Item` classes
 
 using namespace std;
