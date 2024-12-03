@@ -1,156 +1,229 @@
-// TASK MANAGEMENT SYSTEM
-/*
-18. Task Management System
-Manage to-do lists with task priority and deadlines.
-Use enums for task priorities (e.g., Low, Medium, High).
-Store tasks in files, use for and do-while loops for task management.
-
-*/
-
 #include <iostream>
-#include <limits>
-#include <ctime>
-#include "taskmanager.h"
+#include <fstream>
+#include <vector>
+#include <string>
+#include <sstream>
+
+#include "priority.h"
+#include "date.h"
 
 using namespace std;
 
-void clearInput()
+class Task
 {
-    cin.clear();
-    cin.ignore();
-}
+public:
+    string title;
+    string description;
+    bool isDone;
+    Priority priority;
+    Date dueDate;
 
-Priority getPriorityFromUser()
+    Task(const std::string &_title, const std::string &_description, Priority _priority, const Date &_dueDate)
+        : title(_title), description(_description), isDone(false), priority(_priority), dueDate(_dueDate) {}
+};
+
+class TaskManager
 {
-    int choice;
-    do
-    {
-        cout << "Select Priority: \n"
-             << "1. Low\n"
-             << "2. Medium\n"
-             << "3. High\n"
-             << "Choice: ";
-        cin >> choice;
-        clearInput();
-    } while (choice < 1 || choice > 3);
+private:
+    vector<Task> tasks;
+    const string filename = "tasks.txt";
 
-    switch (choice)
+public:
+    void addTask(const string &title, const string &description, Priority priority, const Date &dueDate)
     {
-    case 1:
-        return Priority::LOW;
-    case 2:
-        return Priority::MEDIUM;
-    default:
-        return Priority::HIGH;
+        tasks.emplace_back(title, description, priority, dueDate);
     }
-}
 
-time_t getDeadlineFromUser()
+    void deleteTask(int index)
+    {
+        if (index >= 0 && index < tasks.size())
+        {
+            tasks.erase(tasks.begin() + index);
+        }
+        else
+        {
+            cerr << "Invalid task index.\n";
+        }
+    }
+
+    void markTaskAsDone(int index)
+    {
+        if (index >= 0 && index < tasks.size())
+        {
+            tasks[index].isDone = true;
+        }
+        else
+        {
+            cerr << "Invalid task index.\n";
+        }
+    }
+
+    void exportTasks()
+    {
+        ofstream file(filename);
+        if (file.is_open())
+        {
+            for (const auto &task : tasks)
+            {
+                // file << task.title << ','
+                //      << task.description << ','
+                //      << task.isDone << ','
+                //      << static_cast<int>(task.priority) << ','
+                //      << task.dueDate.day << '/' << task.dueDate.month << '/' << task.dueDate.year << '\n';
+
+
+
+                file << "TITLE : " << task.title << endl;
+                file << "DESCRIPTION : " << task.description << endl;
+                file << "PRIORITY : " << static_cast<int>(task.priority) << endl;
+                file << "DUE DATE : " << task.dueDate.day << "/" << task.dueDate.month << "/" << task.dueDate.year << endl;
+                file << "\n"; 
+                file << "_____________________________" << endl;
+
+            }
+
+            file.close();
+            cout << "Tasks exported successfully.\n";
+        }
+        else
+        {
+            cerr << "Failed to export tasks.\n";
+        }
+    }
+
+    void importTasks()
+    {
+        tasks.clear();
+        ifstream file(filename);
+        if (file.is_open())
+        {
+            string line;
+            while (getline(file, line))
+            {
+                stringstream ss(line);
+                string title, description, isDoneStr, priorityStr, dueDateStr;
+                getline(ss, title, ',');
+                getline(ss, description, ',');
+                getline(ss, isDoneStr, ',');
+                getline(ss, priorityStr, ',');
+                getline(ss, dueDateStr, ',');
+
+                bool isDone = (isDoneStr == "1");
+                try
+                {
+                    Priority priority = static_cast<Priority>(stoi(priorityStr));
+                    int day, month, year;
+                    if (sscanf(dueDateStr.c_str(), "%d/%d/%d", &day, &month, &year) != 3)
+                    {
+                        throw std::invalid_argument("Invalid date format");
+                    }
+                    Date dueDate(day, month, year);
+                    tasks.emplace_back(title, description, priority, dueDate);
+                    tasks.back().isDone = isDone;
+                }
+                catch (const std::invalid_argument &e)
+                {
+                    cerr << "Error converting priority or due date: " << e.what() << endl;
+                }
+            }
+            file.close();
+            cout << "Tasks imported successfully.\n";
+        }
+        else
+        {
+            cerr << "Failed to import tasks.\n";
+        }
+    }
+
+    void listTasks()
+    {
+        int index = 0;
+        for (const auto &task : tasks)
+        {
+            cout << index << ". ";
+            cout << "Title: " << task.title << ", ";
+            cout << "Description: " << task.description << ", ";
+            cout << "Status: " << (task.isDone ? "Done" : "Not Done") << '\n';
+            index++;
+        }
+    }
+};
+
+enum MenuOptions
 {
-    struct tm deadline = {0};
-    cout << "Enter Deadline: \n";
-
-    do
-    {
-        cout << "Year (e.g., 2024): ";
-        cin >> deadline.tm_year;
-        deadline.tm_year -= 1900; // to adjust the year
-    } while (deadline.tm_year + 1900 < 2024);
-
-    do
-    {
-        cout << "Month (1-12) : ";
-        cin >> deadline.tm_mon;
-        deadline.tm_mon -= 1; // Adjust month
-    } while (deadline.tm_mon < 0 || deadline.tm_mon > 11);
-
-    do
-    {
-        cout << "Day (1-31): ";
-        cin >> deadline.tm_mday;
-    } while (deadline.tm_mday < 1 || deadline.tm_mday > 31);
-
-    clearInput();
-    return mktime(&deadline);
-}
-
-void addNewTask(TaskManager &manager)
-{
-    string title, description;
-
-    cout << "Enter task title: ";
-    getline(cin, title);
-
-    cout << "Enter task description: ";
-    getline(cin, description);
-
-    Priority priority = getPriorityFromUser();
-    time_t deadline = getDeadlineFromUser();
-
-    // adding a new task to the list
-    Task newTask(title, description, priority, deadline);
-    manager.addTask(newTask);
-    cout << "Task added successfully! \n";
-}
+    ADD_TASK = 1,
+    DELETE_TASK,
+    MARK_TASK_DONE,
+    LIST_TASKS,
+    EXPORT_TASKS,
+    EXIT
+};
 
 int main()
 {
-    TaskManager manager;
-    int choice;
+    TaskManager taskManager;
+    taskManager.importTasks();
 
+    int choice;
+    string title, description;
+    int priorityChoice, day, month, year;
     do
     {
-        cout << "\n TASK MANAGEMENT SYSTEM\n"
-             << "1. Add Task\n"
-             << "2. View Tasks\n"
-             << "3. Mark Task as completed\n"
-             << "4. Remove Task\n"
-             << "5. Exit\n"
-             << "Enter your choice: ";
-
+        cout << "Task Management Application\n";
+        cout << ADD_TASK << ". Add Task\n";
+        cout << DELETE_TASK << ". Delete Task\n";
+        cout << MARK_TASK_DONE << ". Mark Task as Done\n";
+        cout << LIST_TASKS << ". List Tasks\n";
+        cout << EXPORT_TASKS << ". Export Tasks\n";
+        cout << EXIT << ". Exit\n";
+        cout << "Enter your choice: ";
         cin >> choice;
-        clearInput();
 
         switch (choice)
         {
-        case 1:
-            addNewTask(manager);
+        case ADD_TASK:
+            cout << "Enter task title: ";
+            cin.ignore();
+            getline(cin, title);
+            cout << "Enter task description: ";
+            getline(cin, description);
+            cout << "Enter task priority (0 for Low, 1 for Medium, 2 for High): ";
+            cin >> priorityChoice;
+            cout << "Enter due date (day month year): ";
+            cin >> day >> month >> year;
+            taskManager.addTask(title, description, static_cast<Priority>(priorityChoice), Date(day, month, year));
             break;
 
-        case 2:
-            manager.displayTasks();
+        case DELETE_TASK:
+            int deleteIndex;
+            cout << "Enter task index to delete: ";
+            cin >> deleteIndex;
+            taskManager.deleteTask(deleteIndex);
             break;
 
-        case 3:
-        {
-            manager.displayTasks();
-            cout << "Enter Task ID to mark as completed: ";
-            size_t index;
-            cin >> index;
-
-            manager.markTaskCompleted(index);
-            cout << "Task marked as completed! \n";
+        case MARK_TASK_DONE:
+            int markIndex;
+            cout << "Enter task index to mark as done: ";
+            cin >> markIndex;
+            taskManager.markTaskAsDone(markIndex);
             break;
-        }
 
-        case 4:
-        {
-            manager.displayTasks();
-            cout << "Enter Task ID to remove: ";
-            size_t index;
-            cin >> index;
-            manager.removeTask(index);
-            cout << "Task removed!\n ";
+        case LIST_TASKS:
+            taskManager.listTasks();
             break;
-        }
 
-        case 5:
-            cout << "Goodbye!\n";
+        case EXPORT_TASKS:
+            taskManager.exportTasks();
+            break;
+
+        case EXIT:
             break;
 
         default:
-            cout << "Invalid Choice. Please try again.\n";
+            cout << "Invalid choice. Please try again.\n";
+            break;
         }
-    } while (choice != 5);
-    return 0; 
+    } while (choice != EXIT);
+
+    return 0;
 }
