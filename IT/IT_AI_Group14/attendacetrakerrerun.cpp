@@ -1,0 +1,204 @@
+#include <iostream>
+#include <iomanip>
+#include <cmath>
+#include <ctime>
+#include <cstdlib>
+#include <string>
+#include <fstream>
+using namespace std;
+
+template <typename T>
+T calculateSum(T array[], int size) {
+    T sum = 0;
+    for (int st= 0; st < size; st++) {
+        sum += array[st];
+    }
+    return sum;
+}
+
+class Student {
+protected:
+    string studentNames[100];
+    int rollNumbers[100];
+    int studentCount;
+
+public:
+    Student() : studentCount(0) {}
+
+    virtual void addStudent() {
+        if (studentCount >= 100) {
+            cout << "Cannot add more students. Maximum limit reached!\n";
+            return;
+        }
+
+        cin.ignore();
+        cout << "Enter student name: ";
+        getline(cin, studentNames[studentCount]);
+        cout << "Enter roll number: ";
+        cin >> rollNumbers[studentCount];
+        studentCount++;
+        cout << "Student added successfully!\n";
+    }
+
+    int getStudentCount() const { return studentCount; }
+    string getStudentName(int index) const { return studentNames[index]; }
+    int getRollNumber(int index) const { return rollNumbers[index]; }
+};
+
+class Attendance : public Student {
+private:
+    int attendance[100][31];
+    string attendanceDates[31];
+    int attendanceCount;
+
+public:
+    Attendance() : attendanceCount(0) {}
+
+    void simulateAttendance() {
+        srand(time(0));
+        for (int st= 0; st < studentCount; st++) {
+            attendance[st][attendanceCount] = rand() % 2;
+        }
+        cout << "Attendance simulated successfully!\n";
+    }
+
+    void markAttendance() {
+        if (attendanceCount >= 31) {
+            cout << "Cannot record attendance. Maximum days reached!\n";
+            return;
+        }
+
+        time_t now = time(0);
+        tm* localTime = localtime(&now);
+        char dateBuffer[11];
+        sprintf(dateBuffer, "%d-%02d-%02d", localTime->tm_year + 1900, localTime->tm_mon + 1, localTime->tm_mday);
+        attendanceDates[attendanceCount] = dateBuffer;
+
+        cout << "Mark attendance for " << attendanceDates[attendanceCount] << ":\n";
+        for (int st = 0; st< studentCount; st++) {
+            int status;
+            cout << "Roll " << rollNumbers[st] << " (" << studentNames[st] << "): ";
+            cin >> status;
+            attendance[st][attendanceCount] = status;
+        }
+
+        attendanceCount++;
+        cout << "Attendance recorded successfully!\n";
+    }
+
+    void viewAttendance(int rollNumber) {
+        for (int st= 0; st< studentCount; st++) {
+            if (rollNumbers[st] == rollNumber) {
+                cout << "Attendance for Roll: " << rollNumbers[st] << ", Name: " << studentNames[st] << ":\n";
+                for (int j = 0; j < attendanceCount; j++) {
+                    cout << "  Date: " << attendanceDates[j] << ", Status: "
+                         << (attendance[st][j] == 1 ? "Present" : "Absent") << "\n";
+                }
+                return;
+            }
+        }
+        cout << "Student not found!\n";
+    }
+
+    void viewAttendance() {
+        cout << "Attendance Report:\n";
+        for (int st = 0; st< studentCount; st++) {
+            cout << "Roll: " << setw(4) << rollNumbers[st] << ", Name: " << setw(20) << left << studentNames[st] << "\n";
+            for (int j = 0; j < attendanceCount; j++) {
+                cout << "  Date: " << attendanceDates[j] << ", Status: "
+                     << (attendance[st][j] == 1 ? "Present" : "Absent") << "\n";
+            }
+        }
+    }  
+
+    void saveToFile() {
+        ofstream file("attendance_data.txt");
+        if (!file) {
+            cout << "Error saving data to file.\n";
+            return;
+        }
+
+        file << studentCount << " " << attendanceCount << "\n";
+
+        for (int st= 0; st< studentCount; st++) {
+            file << rollNumbers[st] << " " << studentNames[st] << "\n";
+        }
+
+        for (int st= 0; st < attendanceCount; st++) {
+            file << attendanceDates[st] << "\n";
+            for (int j = 0; j < studentCount; j++) {
+                file << attendance[j][st] << " ";
+            }
+            file << "\n";
+        }
+
+        file.close();
+    }
+
+    void loadFromFile() {
+        ifstream file("attendance_data.txt");
+        if (!file) {
+            return;
+        }
+
+        file >> studentCount >> attendanceCount;
+        file.ignore();
+
+        for (int st= 0; st < studentCount; st++) {
+            file >> rollNumbers[st];
+            file.ignore();
+            getline(file, studentNames[st]);
+        }
+
+        for (int st= 0; st < attendanceCount; st++) {
+            getline(file, attendanceDates[st]);
+            for (int j = 0; j < studentCount; j++) {
+                file >> attendance[j][st];
+            }
+            file.ignore();
+        }
+
+        file.close();
+    }
+};
+
+int main() {
+    Attendance attendanceManager;
+    attendanceManager.loadFromFile();
+
+    int choice;
+    do {
+        cout << "\nAttendance Tracker Menu:\n";
+        cout << "1. Add Student\n";
+        cout << "2. Mark Attendance\n";
+        cout << "3. View Attendance\n";
+        cout << "4. Simulate Attendance\n";
+        cout << "5. Exit\n";
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1:
+                attendanceManager.addStudent();
+                break;
+            case 2:
+                attendanceManager.markAttendance();
+                break;
+            case 3:
+                attendanceManager.viewAttendance();
+                break;
+            case 4:
+                attendanceManager.simulateAttendance();
+                break;
+            case 5:
+                attendanceManager.saveToFile();
+                cout << "Exiting and saving data.\n";
+                break;
+            default:
+                cout << "Invalid choice!\n";
+                break;
+        }
+    } while (choice != 5);
+
+    return 0;
+}
