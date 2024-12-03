@@ -1,4 +1,6 @@
+#pragma once
 #include <string>
+#include "class_hotelpayment.cpp" 
 using namespace std;
 class Reservation : public Payment {
 

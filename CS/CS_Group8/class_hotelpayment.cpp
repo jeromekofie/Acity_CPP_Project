@@ -1,8 +1,10 @@
+#pragma once
+#include <string>
+using namespace std;
 class Payment{
 
     private:
     int reservationid;
-    double amount;
     string paymentdate;
     string paymentmethod;
 
@@ -13,14 +15,6 @@ class Payment{
 
     int getreservationid(){
         return reservationid;
-    }
-
-    void setamount (double M){
-        amount = M;
-    }
-
-    double getamount(){
-        return amount;
     }
 
     void setpaymentdate(string E){
