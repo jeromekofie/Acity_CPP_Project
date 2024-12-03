@@ -11,24 +11,18 @@ void saveCart(const ShoppingCart& cart) {
         return;
     }
 
-    // Assuming ShoppingCart has a method to retrieve items
-    for (const auto& item : cart.getItems()) {  // Ensure getItems() returns a collection of strings or objects with a valid stream operator
-        outFile << item << std::endl;
-    }
+
+ void saveCart(const ShoppingCart& cart) {
     std::cout << "Cart saved successfully.\n";
 }
 
 // Load the cart from a file
 void loadCart(ShoppingCart& cart) {
-    std::ifstream inputFile("cart.txt"); // Open the file for reading
-    if (!inputFile.is_open()) {
+    std::ifstream inFile("cart.txt");  // Open a file for reading
+    if (!inFile) {
         std::cout << "No saved cart found.\n";
         return;
     }
 
-    std::string item;
-    while (std::getline(inputFile, item)) {  // Corrected variable name from 'inFile' to 'inputFile'
-        cart.addItem(item);  // Assuming ShoppingCart has an addItem method that accepts a string
-    }
-    std::cout << "Cart loaded successfully.\n";
-}
+
+
