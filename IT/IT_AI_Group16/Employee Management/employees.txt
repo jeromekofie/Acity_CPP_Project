@@ -1,0 +1,7 @@
+Employee ID: 109
+Name: Kwesi
+Age: 20
+Date of Birth: 12/10/2003
+Gender: male
+Department: i.t
+----------------------------
