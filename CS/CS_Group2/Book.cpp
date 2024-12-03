@@ -6,6 +6,7 @@
 #include <cstdlib>
 #include <limits>
 #include <algorithm> // to find the value in range
+#pragma once
 using namespace std;
 
 class Book {

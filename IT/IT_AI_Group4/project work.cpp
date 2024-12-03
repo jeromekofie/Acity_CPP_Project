@@ -84,7 +84,7 @@ int main(){
             cin>>marks;
             c.setlogical_reasoning(logical_reasoning);
            
-            c.displayMarks();
+           // c.displayMarks();
 
 
         }
@@ -92,53 +92,37 @@ int main(){
          else if (course==2){
             s.setCourse(course);
 
-        // Input marks for Information Technology
+            // Input marks for Information Technology
         
-        cout << "\nEnter marks for Information Technology subjects :\n";
+            cout << "\nEnter marks for Information Technology subjects :\n";
 
-        cout << "Networking: ";
-        cin >> networking;
-        t.setnetworking(networking);
+            cout << "Networking: ";
+                cin >> networking;
+            t.setnetworking(networking);
         
         
-        cout << "Cybersecurity: ";
-        cin >> cybersecurity;
-        t.setcybersecurity(cybersecurity);
+            cout << "Cybersecurity: ";
+            cin >> cybersecurity;
+            t.setcybersecurity(cybersecurity);
         
-        cout << "Web Development: ";
-        cin >> web_development;
-        t.setweb_development(web_development);
+            cout << "Web Development: ";
+            cin >> web_development;
+            t.setweb_development(web_development);
         
-        cout << "Database Management: ";
-        cin >> database_management;
-        t.setdatabase_management(database_management);
+            cout << "Database Management: ";
+            cin >> database_management;
+            t.setdatabase_management(database_management);
 
-        t.displayMarks();
+            //t.displayMarks();
 
-        }  
-         else {
-        cout << "Invalid course choice! Exiting program.\n";
-        return 1;
-    }
+            }  
+            else {
+            cout << "Invalid course choice! Exiting program.\n";
+            return 1;
+        }
 
-    cout << "\nReport card generated successfully in 'reportcard.txt'.\n";
-    file.close();
-    return 0;
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-return 0;
+        cout << "\nReport card generated successfully in 'reportcard.txt'.\n";
+        file.close();
+        
+        return 0;
 }    

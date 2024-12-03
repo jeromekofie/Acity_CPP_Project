@@ -65,12 +65,23 @@ public:
         {
             for (const auto &task : tasks)
             {
-                file << task.title << ','
-                     << task.description << ','
-                     << task.isDone << ','
-                     << static_cast<int>(task.priority) << ','
-                     << task.dueDate.day << '/' << task.dueDate.month << '/' << task.dueDate.year << '\n';
+                // file << task.title << ','
+                //      << task.description << ','
+                //      << task.isDone << ','
+                //      << static_cast<int>(task.priority) << ','
+                //      << task.dueDate.day << '/' << task.dueDate.month << '/' << task.dueDate.year << '\n';
+
+
+
+                file << "TITLE : " << task.title << endl;
+                file << "DESCRIPTION : " << task.description << endl;
+                file << "PRIORITY : " << static_cast<int>(task.priority) << endl;
+                file << "DUE DATE : " << task.dueDate.day << "/" << task.dueDate.month << "/" << task.dueDate.year << endl;
+                file << "\n"; 
+                file << "_____________________________" << endl;
+
             }
+
             file.close();
             cout << "Tasks exported successfully.\n";
         }

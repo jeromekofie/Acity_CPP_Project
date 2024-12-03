@@ -60,7 +60,12 @@
     "string": "cpp",
     "string_view": "cpp",
     "iostream": "cpp",
+<<<<<<< HEAD
     "bitset": "cpp",
     "iosfwd": "cpp"
+=======
+    "ostream": "cpp",
+    "iomanip": "cpp"
+>>>>>>> 55b0d493abc8a6151aee703c121e52385706f132
   }
 }
