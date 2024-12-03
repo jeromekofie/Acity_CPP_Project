@@ -1,0 +1,32 @@
+Employees.cpp
+Text file containing employees info (10 to start)- id, name, position, department, salary, type
+Code to edit, add, delete and view either all or specific employee- use id to edit, delete or view specific 
+Update the employee text file
+
+
+Payroll.cpp
+A pay slip text file to display employee's salary calculations (use id to generate)
+Should contain employee info
+
+for salaried-
+salary + bonus - deductions = new salary
+
+for hourly-
+rate * hours = salary
+salary + bonus - deductions = new salary
+
+Bonus and Deductions are user input
+
+
+Main.cpp
+Use menu to navigate
+add - add new employee
+edit - edit existing employee
+delete - delete employee
+view - sub menu - chose all or specific (use id)
+salary - enter id to generate payslip
+
+
+
+
+vectors
