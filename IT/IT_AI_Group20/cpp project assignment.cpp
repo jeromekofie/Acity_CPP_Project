@@ -2,32 +2,26 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <stdexcept>
+#include <limits>
+
 using namespace std;
 
+// Contact class definition
 class Contact {
 public:
-    string name;
-    string phoneNumber;
-    string email;
-    string address;
+    string name, phoneNumber, email, address, birthday, gender, occupation, company, emergencyContact, socialMediaHandle, notes;
     int age;
-    string birthday;
-    string gender;
-    string occupation;
-    string company;
-    string emergencyContact;
-    string socialMediaHandle;
-    string notes;
 
-    // Constructor to initialize the contact
-    Contact(string name, string phone, string email, string address, int age, string birthday,
-            string gender, string occupation, string company, string emergencyContact,
+    // Constructor to initialize a contact
+    Contact(string name, string phone, string email, string address, int age, string birthday, 
+            string gender, string occupation, string company, string emergencyContact, 
             string socialMediaHandle, string notes)
         : name(name), phoneNumber(phone), email(email), address(address), age(age), birthday(birthday),
           gender(gender), occupation(occupation), company(company), emergencyContact(emergencyContact),
           socialMediaHandle(socialMediaHandle), notes(notes) {}
 
-    // Display the contact details
+    // Display contact details
     void display() const {
         cout << "\nName: " << name << endl;
         cout << "Phone Number: " << phoneNumber << endl;
@@ -44,70 +38,81 @@ public:
     }
 };
 
+// ContactManagementSystem class definition
 class ContactManagementSystem {
-private:
-    vector<Contact> contacts;
-
 public:
+    vector<Contact> contacts;  // A vector to store contacts
+
+    // Function to add a contact
     void addContact() {
         string name, phone, email, address, birthday, gender, occupation, company, emergencyContact, socialMediaHandle, notes;
         int age;
 
-        // Collecting details from the user
-        cout << "Enter Name: ";
+        cout << "Enter name: ";
         getline(cin, name);
-        cout << "Enter Phone Number: ";
+        cout << "Enter phone number: ";
         getline(cin, phone);
-        cout << "Enter Email: ";
+        cout << "Enter email: ";
         getline(cin, email);
-        cout << "Enter Address: ";
+        cout << "Enter address: ";
         getline(cin, address);
-        cout << "Enter Age: ";
-        cin >> age;
-        cin.ignore();  // to clear the newline character left by cin
-        cout << "Enter Birthday (YYYY-MM-DD): ";
+        
+        while (true) {
+            cout << "Enter age: ";
+            cin >> age;
+            if (cin.fail()) {
+                cout << "Invalid input! Please enter a valid age.\n";
+                cin.clear(); // clear input buffer
+                cin.ignore(numeric_limits<streamsize>::max(), '\n'); // discard invalid input
+            } else {
+                cin.ignore(); // To clear the newline character left by cin
+                break;
+            }
+        }
+
+        cout << "Enter birthday: ";
         getline(cin, birthday);
-        cout << "Enter Gender: ";
+        cout << "Enter gender: ";
         getline(cin, gender);
-        cout << "Enter Occupation: ";
+        cout << "Enter occupation: ";
         getline(cin, occupation);
-        cout << "Enter Company: ";
+        cout << "Enter company: ";
         getline(cin, company);
-        cout << "Enter Emergency Contact: ";
+        cout << "Enter emergency contact: ";
         getline(cin, emergencyContact);
-        cout << "Enter Social Media Handle: ";
+        cout << "Enter social media handle: ";
         getline(cin, socialMediaHandle);
-        cout << "Enter Notes: ";
+        cout << "Enter any notes: ";
         getline(cin, notes);
 
-        // Create a new contact and add it to the list
+        // Add the new contact to the vector
         contacts.push_back(Contact(name, phone, email, address, age, birthday, gender, occupation, company, emergencyContact, socialMediaHandle, notes));
         cout << "Contact added successfully!" << endl;
     }
 
+    // Function to display all contacts
     void displayAllContacts() const {
         if (contacts.empty()) {
-            cout << "No contacts available." << endl;
+            cout << "No contacts available!" << endl;
             return;
         }
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            cout << "\nContact " << i + 1 << ":" << endl;
-            contacts[i].display();
-            cout << "-----------------------------" << endl;
+
+        for (const auto& contact : contacts) {
+            contact.display();
         }
     }
 
+    // Function to search for a contact by name
     void searchContactByName() const {
         string name;
         cout << "Enter the name to search: ";
         getline(cin, name);
-
         bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].name == name) {
-                contacts[i].display();
+
+        for (const auto& contact : contacts) {
+            if (contact.name == name) {
+                contact.display();
                 found = true;
-                break;
             }
         }
 
@@ -116,66 +121,40 @@ public:
         }
     }
 
-    void editContact() {
-        string name;
-        cout << "Enter the name of the contact you want to edit: ";
-        getline(cin, name);
-
-        bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].name == name) {
-                found = true;
-
-                string phone, email, address, birthday, gender, occupation, company, emergencyContact, socialMediaHandle, notes;
-                int age;
-
-                cout << "Edit Phone Number: ";
-                getline(cin, phone);
-                cout << "Edit Email: ";
-                getline(cin, email);
-                cout << "Edit Address: ";
-                getline(cin, address);
-                cout << "Edit Age: ";
-                cin >> age;
-                cin.ignore();
-                cout << "Edit Birthday (YYYY-MM-DD): ";
-                getline(cin, birthday);
-                cout << "Edit Gender: ";
-                getline(cin, gender);
-                cout << "Edit Occupation: ";
-                getline(cin, occupation);
-                cout << "Edit Company: ";
-                getline(cin, company);
-                cout << "Edit Emergency Contact: ";
-                getline(cin, emergencyContact);
-                cout << "Edit Social Media Handle: ";
-                getline(cin, socialMediaHandle);
-                cout << "Edit Notes: ";
-                getline(cin, notes);
-
-                contacts[i] = Contact(name, phone, email, address, age, birthday, gender, occupation, company, emergencyContact, socialMediaHandle, notes);
-                cout << "Contact updated successfully!" << endl;
-                break;
-            }
-        }
-
-        if (!found) {
-            cout << "Contact not found!" << endl;
-        }
-    }
-
+    // Function to delete a contact by name
     void deleteContact() {
         string name;
-        cout << "Enter the name of the contact you want to delete: ";
+        cout << "Enter the name of the contact to delete: ";
         getline(cin, name);
 
+        auto it = remove_if(contacts.begin(), contacts.end(), [&name](const Contact& contact) {
+            return contact.name == name;
+        });
+
+        if (it != contacts.end()) {
+            contacts.erase(it, contacts.end());
+            cout << "Contact deleted successfully!" << endl;
+        } else {
+            cout << "Contact not found!" << endl;
+        }
+    }
+
+    // Function to display total number of contacts
+    void displayTotalContacts() const {
+        cout << "Total contacts: " << contacts.size() << endl;
+    }
+
+    // Function to search for a contact by phone
+    void searchContactByPhone() const {
+        string phone;
+        cout << "Enter the phone number to search: ";
+        getline(cin, phone);
         bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].name == name) {
-                contacts.erase(contacts.begin() + i);
-                cout << "Contact deleted successfully!" << endl;
+
+        for (const auto& contact : contacts) {
+            if (contact.phoneNumber == phone) {
+                contact.display();
                 found = true;
-                break;
             }
         }
 
@@ -184,97 +163,41 @@ public:
         }
     }
 
+    // Function to display menu
     void displayMenu() const {
-        cout << "\nContact Management System" << endl;
-        cout << "1. Add Contact" << endl;
+        cout << "\n---- Contact Management System ----" << endl;
+        cout << "1. Add a Contact" << endl;
         cout << "2. Display All Contacts" << endl;
         cout << "3. Search Contact by Name" << endl;
-        cout << "4. Edit Contact" << endl;
-        cout << "5. Delete Contact" << endl;
+        cout << "4. Edit a Contact (Not implemented yet)" << endl;
+        cout << "5. Delete a Contact" << endl;
         cout << "6. Display Total Contacts" << endl;
-        cout << "7. Search Contact by Phone Number" << endl;
-        cout << "8. Display Contacts by Age" << endl;
-        cout << "9. Display Contacts by Birthday" << endl;
+        cout << "7. Search Contact by Phone" << endl;
+        cout << "8. Display Contacts by Age (Not implemented yet)" << endl;
+        cout << "9. Display Contacts by Birthday (Not implemented yet)" << endl;
         cout << "10. Sort Contacts by Name" << endl;
         cout << "11. Sort Contacts by Age" << endl;
         cout << "12. Exit" << endl;
     }
 
-    void displayTotalContacts() const {
-        cout << "Total Contacts: " << contacts.size() << endl;
-    }
-
-    void searchContactByPhone() const {
-        string phone;
-        cout << "Enter the phone number to search: ";
-        getline(cin, phone);
-
-        bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].phoneNumber == phone) {
-                contacts[i].display();
-                found = true;
-                break;
-            }
-        }
-
-        if (!found) {
-            cout << "Contact not found!" << endl;
-        }
-    }
-
-    void displayContactsByAge() const {
-        int age;
-        cout << "Enter the age to search: ";
-        cin >> age;
-        cin.ignore();
-
-        bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].age == age) {
-                contacts[i].display();
-                found = true;
-            }
-        }
-
-        if (!found) {
-            cout << "No contacts found with age " << age << endl;
-        }
-    }
-
-    void displayContactsByBirthday() const {
-        string birthday;
-        cout << "Enter the birthday to search (YYYY-MM-DD): ";
-        getline(cin, birthday);
-
-        bool found = false;
-        for (size_t i = 0; i < contacts.size(); ++i) {
-            if (contacts[i].birthday == birthday) {
-                contacts[i].display();
-                found = true;
-            }
-        }
-
-        if (!found) {
-            cout << "No contacts found with birthday " << birthday << endl;
-        }
-    }
-
+    // Function to sort contacts by name
     void sortContactsByName() {
-        sort(contacts.begin(), contacts.end(), [](const Contact &a, const Contact &b) {
+        sort(contacts.begin(), contacts.end(), [](const Contact& a, const Contact& b) {
             return a.name < b.name;
         });
         cout << "Contacts sorted by name." << endl;
     }
 
+    // Function to sort contacts by age
     void sortContactsByAge() {
-        sort(contacts.begin(), contacts.end(), [](const Contact &a, const Contact &b) {
+        sort(contacts.begin(), contacts.end(), [](const Contact& a, const Contact& b) {
             return a.age < b.age;
         });
         cout << "Contacts sorted by age." << endl;
     }
 };
 
+// Main function
 int main() {
     ContactManagementSystem system;
     int choice;
@@ -283,24 +206,25 @@ int main() {
         system.displayMenu();
         cout << "Enter your choice (1-12): ";
         cin >> choice;
-        cin.ignore();  // to ignore the newline character left by cin
+        cin.ignore(); // Clear newline character after integer input
 
         switch (choice) {
             case 1: system.addContact(); break;
             case 2: system.displayAllContacts(); break;
             case 3: system.searchContactByName(); break;
-            case 4: system.editContact(); break;
+            case 4: cout << "Edit functionality not implemented yet." << endl; break;
             case 5: system.deleteContact(); break;
             case 6: system.displayTotalContacts(); break;
             case 7: system.searchContactByPhone(); break;
-            case 8: system.displayContactsByAge(); break;
-            case 9: system.displayContactsByBirthday(); break;
+            case 8: cout << "Display contacts by age not implemented yet." << endl; break;
+            case 9: cout << "Display contacts by birthday not implemented yet." << endl; break;
             case 10: system.sortContactsByName(); break;
             case 11: system.sortContactsByAge(); break;
             case 12: cout << "Exiting..." << endl; return 0;
             default: cout << "Invalid choice! Please enter a valid option (1-12)." << endl;
         }
     }
+
     return 0;
 }
 
