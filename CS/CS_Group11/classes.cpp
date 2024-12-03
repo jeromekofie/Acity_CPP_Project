@@ -1,27 +1,19 @@
 #include <iostream>
 #include <vector>
+#include <iomanip>
 #include <string>
-
 using namespace std;
 
-// Structure to represent an item in the cart
 struct Item {
     string name;
     int quantity;
     double price;
 };
 
-// Function prototypes for external dependencies
-void displayCartLoop(const vector<Item>& cart);
-void calculateTotal(const vector<Item>& items);
-
-// Class representing the ShoppingCart
 class ShoppingCart {
-private:
-    vector<Item> items; // Encapsulation: private member
-
 public:
-    // Add an item to the cart
+    vector<Item> items;
+
     void addItem() {
         Item newItem;
         cout << "Enter item name: ";
@@ -36,23 +28,28 @@ public:
         cout << "Item added successfully!\n";
     }
 
-    // View all items in the cart
-    void viewCart() const {
+    void viewCart() {
         if (items.empty()) {
             cout << "Your cart is empty!\n";
             return;
         }
-        displayCartLoop(items); // Display items using loop
-        calculateTotal(items);  // Calculate the total price
-    }
 
-    // Getter for accessing `items`
-    const vector<Item>& getItems() const {
-        return items;
-    }
+        cout << "\nYour Cart:\n";
+        cout << left << setw(20) << "Item Name" << setw(10) << "Quantity" << setw(10) << "Price\n";
+        cout << string(40, '-') << "\n";
 
-    // Setter for modifying `items`
-    void setItems(const vector<Item>& newItems) {
-        items = newItems;
+        for (const auto& item : items) {
+            cout << left << setw(20) << item.name
+                 << setw(10) << item.quantity
+                 << fixed << setprecision(2) << item.price << "\n";
+        }
+
+        double total = 0.0;
+        for (const auto& item : items) {
+            total += item.quantity * item.price;
+        }
+
+        cout << string(40, '-') << "\n";
+        cout << "Total: $" << fixed << setprecision(2) << total << "\n";
     }
 };
