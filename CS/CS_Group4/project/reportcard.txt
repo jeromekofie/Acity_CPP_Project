@@ -52,3 +52,39 @@ F. I .E            	: 90 | Grade: 		 A
 Total Marks: 720
 CWA        : 90
 Remarks    : Excellent performance. More vim.
+
+--------- Report Card ---------
+Name       : ana Koranteng
+Roll Number: 22300115
+Course     : Computer Science
+
+Programming in C++ 	: 91 | Grade: 		 A
+Data Structures    	: 94 | Grade: 		 A
+Database Systems   	: 82 | Grade: 		 B
+Operations Research	: 90 | Grade: 		 A
+Calculus & Matlab  	: 90 | Grade: 		 A
+Leadership Seminar 	: 87 | Grade: 		 B
+Logic and Design   	: 98 | Grade: 		 A
+F. I .E            	: 99 | Grade: 		 A
+
+Total Marks: 731
+CWA        : 91.375
+Remarks    : Excellent performance. More vim.
+
+--------- Report Card ---------
+Name       : Nana Koranteng
+Roll Number: 22300115
+Course     : Information Technology
+
+Business in Africa   	: 60 | Grade: 		 C
+Web Development      	: 60 | Grade: 		 C
+System Administration	: 60 | Grade: 		 C
+Database Systems     	: 60 | Grade: 		 C
+Cybersecurity        	: 60 | Grade: 		 C
+Leadership Seminar   	: 60 | Grade: 		 C
+Data Structures      	: 60 | Grade: 		 C
+F. I .E              	: 60 | Grade: 		 C
+
+Total Marks: 480
+CWA        : 60
+Remarks    : You try. There's room for improvement.

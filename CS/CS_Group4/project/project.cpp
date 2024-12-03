@@ -49,10 +49,10 @@ int main() {
     ofstream outToFile("reportcard.txt", ios::app);
 
     cout << "Enter student's name: ";
-    cin.ignore();
     getline(cin, name);
 
     cout << "Enter roll number: ";
+    cin.ignore();
     cin >> rollNumber;
 
    
