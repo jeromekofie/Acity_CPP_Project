@@ -2,10 +2,13 @@
 #include <iomanip>
 #include <cmath>
 #include <ctime>
-#include <cstdlib>
+ #include <cstdlib>
 #include <string>
 #include <fstream>
 using namespace std;
+
+ofstream file("attendance.txt");
+
 
 template <typename T>
 T calculateSum(T array[], int size) {
@@ -13,7 +16,7 @@ T calculateSum(T array[], int size) {
     for (int st= 0; st < size; st++) {
         sum += array[st];
     }
-    return sum;
+     return sum;
 }
 
 class Student {
@@ -28,7 +31,7 @@ public:
     virtual void addStudent() {
         if (studentCount >= 100) {
             cout << "Cannot add more students. Maximum limit reached!\n";
-            return;
+             return;
         }
 
         cin.ignore();
@@ -64,7 +67,7 @@ public:
 
     void markAttendance() {
         if (attendanceCount >= 31) {
-            cout << "Cannot record attendance. Maximum days reached!\n";
+             cout << "Cannot record attendance. Maximum days reached!\n";
             return;
         }
 
@@ -118,7 +121,7 @@ public:
             return;
         }
 
-        file << studentCount << " " << attendanceCount << "\n";
+         file << studentCount << " " << attendanceCount << "\n";
 
         for (int st= 0; st< studentCount; st++) {
             file << rollNumbers[st] << " " << studentNames[st] << "\n";
