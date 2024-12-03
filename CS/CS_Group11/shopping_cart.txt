@@ -1,4 +1,3 @@
 Item Name	Quantity	Price	Total
-apple	5		cedis2.00	cedis10.00
-banana	8		cedis3.00	cedis24.00
-Total: cedis 34.00
+dcx	0		cedis2.00	cedis0.00
+Total: cedis 0.00
