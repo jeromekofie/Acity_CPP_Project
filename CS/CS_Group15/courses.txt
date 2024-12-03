@@ -1,1 +1,1 @@
-Course: Mathematics
+Course: Database Systems
