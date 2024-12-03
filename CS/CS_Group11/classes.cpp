@@ -48,7 +48,7 @@ public:
 
     // Getter for accessing `items`
     const vector<Item>& getItems() const {
-         return items;
+        return items;
     }
 
     // Setter for modifying `items`
