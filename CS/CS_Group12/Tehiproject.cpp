@@ -117,7 +117,7 @@ class Expense_tracker{
     };
 
     Expense generateRandomExpenses(){
-        string dates[]= {"2023-04-05", "2024-01-13", "2024-04-25", "2024-12-03"};
+        string dates[]= {"2024-04-05", "2024-01-13", "2024-04-25", "2024-12-03"};
         Category categories[]= {FOOD, RENT, FEES, AIRTIME, TRANSPORT, CLOTHES, SHOES, MISCELLANEOUS};
         double amount = (rand()% 100+1)* 10.0;       //(amount b/n 10 and 1000)
         return Expense(dates[rand()%4], categories[rand()%4], amount);
@@ -136,7 +136,60 @@ class Expense_tracker{
     }
 
 
-    int main(){
+    int main() {
+    srand(time(0)); 
+    Expense_tracker tracker;
+    int choice;
 
-        return 0;
-    }
+    do {
+        displayMenu();
+        cin >> choice;
+        cin.ignore();
+
+        switch (choice) {
+            case 1: {
+                string date;
+                int cat;
+                double amount;
+                cout << "Enter date (YYYY-MM-DD): ";
+                cin >> date;
+                cout << "Enter category (0: Food, 1: Rent, 2: Travel, 3: Other): ";
+                cin >> cat;
+                cout << "Enter amount: ";
+                cin >> amount;
+
+                try {
+                    tracker.addExpenses(date, static_cast<Category>(cat), amount);
+                    cout << "Expense added successfully.\n";
+                } catch (const exception& e) {
+                    cout << "Error: " << e.what() << endl;
+                }
+                break;
+            }
+            case 2:
+                tracker.displayExpenses();
+                break;
+            case 3:
+                tracker.displayTotals();
+                break;
+            case 4: {
+                Expense randomExpense = generateRandomExpenses();
+                tracker.addExpenses(randomExpense.getDate(), randomExpense.getCategory(),
+                                   randomExpense.getAmount());
+                cout << "Random expense generated and added.\n";
+                randomExpense.display();
+                break;
+            }
+            case 5:
+                tracker.saveToFile("expenses.txt");
+                break;
+            case 6:
+                cout << "Exiting program. Goodbye!\n";
+                break;
+            default:
+                cout << "Invalid choice. Please try again.\n";
+        }
+    } while (choice != 6);
+
+    return 0;
+}

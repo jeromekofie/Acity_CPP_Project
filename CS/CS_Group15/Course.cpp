@@ -8,7 +8,7 @@
 using namespace std;
 
 // Declaration
-class Course
+class Course : public Student
 {
 private:
     string name;

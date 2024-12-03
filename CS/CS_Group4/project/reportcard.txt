@@ -88,3 +88,21 @@ F. I .E              	: 60 | Grade: 		 C
 Total Marks: 480
 CWA        : 60
 Remarks    : You try. There's room for improvement.
+
+--------- Report Card ---------
+Name       : KK
+Roll Number: 303
+Course     : Computer Science
+
+Programming in C++ 	: 66 | Grade: 		 C
+Data Structures    	: 66 | Grade: 		 C
+Database Systems   	: 66 | Grade: 		 C
+Operations Research	: 66 | Grade: 		 C
+Calculus & Matlab  	: 66 | Grade: 		 C
+Leadership Seminar 	: 66 | Grade: 		 C
+Logic and Design   	: 66 | Grade: 		 C
+F. I .E            	: 66 | Grade: 		 C
+
+Total Marks: 528
+CWA        : 66
+Remarks    : You try. There's room for improvement.
