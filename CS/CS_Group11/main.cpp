@@ -17,7 +17,7 @@ int main() {
         cout << "Enter item name: ";
         cin >> ws; // To ignore leading whitespaces
         getline(cin, name);
-        cout << "Enter item price: $";
+        cout << "Enter item price: cedis";
         cin >> price;
         cout << "Enter quantity: ";
         cin >> quantity;

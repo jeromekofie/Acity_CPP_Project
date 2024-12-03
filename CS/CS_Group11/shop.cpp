@@ -19,11 +19,11 @@ void displayCart(const vector<Item>& cart) {
     cout << "Item Name\tQuantity\tPrice\tTotal\n";
     for (const auto& item : cart) {
         double itemTotal = item.price * item.quantity;
-        cout << item.name << "\t" << item.quantity << "\t\t$" << fixed << setprecision(2) << item.price
-             << "\t$" << fixed << setprecision(2) << itemTotal << endl;
+        cout << item.name << "\t" << item.quantity << "\t\tcedis" << fixed << setprecision(2) << item.price
+             << "\tcedis" << fixed << setprecision(2) << itemTotal << endl;
         total += itemTotal;
     }
-    cout << "Total: $ " << fixed << setprecision(2) << total << endl;
+    cout << "Total: cedis " << fixed << setprecision(2) << total << endl;
 }
 
 // Function to save cart details to a text file
@@ -33,14 +33,14 @@ void saveCartToFile(const vector<Item>& cart) {
         outFile << "Item Name\tQuantity\tPrice\tTotal\n";
         for (const auto& item : cart) {
             double itemTotal = item.price * item.quantity;
-            outFile << item.name << "\t" << item.quantity << "\t\t$" << fixed << setprecision(2) << item.price
-                    << "\t$" << fixed << setprecision(2) << itemTotal << endl;
+            outFile << item.name << "\t" << item.quantity << "\t\tcedis" << fixed << setprecision(2) << item.price
+                    << "\tcedis" << fixed << setprecision(2) << itemTotal << endl;
         }
         double total = 0.0;
         for (const auto& item : cart) {
             total += item.price * item.quantity;
         }
-        outFile << "Total: $ " << fixed << setprecision(2) << total << endl;
+        outFile << "Total: cedis " << fixed << setprecision(2) << total << endl;
         outFile.close();
         cout << "Cart saved to shopping_cart.txt" << endl;
     } else {
