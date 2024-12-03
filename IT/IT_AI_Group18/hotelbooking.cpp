@@ -1,4 +1,4 @@
-//this is for simple hotel booking system
+//this is for simple hotel booking system Group 18
 
 #include<iostream>
 

@@ -1,4 +1,1 @@
-#include <iostream>
-using namespace std;
-intmain (){
-}
+//this is for payment
