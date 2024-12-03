@@ -89,14 +89,13 @@ int main() {
         // Save loan details to a file
         loan.saveToFile(filename);
 
-        cout << "Loan details saved to '" << filename << "'." << endl;
 
         // Ask if the user wants to calculate another loan
         cout << "Do you want to calculate another loan? (Y/N): ";
         cin >> choice;
 
         // Convert choice to uppercase for consistency
-        choice = toupper(choice);
+        choice = toupper(choice);// Unique in-built function
 
     } while (choice == 'Y'); // Continue if user enters 'Y'
 
