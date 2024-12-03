@@ -8,15 +8,19 @@ using namespace std;
 
 // Function to save courses to a file
 void saveToFile(const vector<Course> &courses) {
-    ofstream file("courses.txt");
+    ofstream file("courses_and_students.txt");
     if (file.is_open()) {
-        for (const auto &course : courses) {
-            file << "Course: " << course.getName() << "\n";
+        if (courses.empty()) {
+            file << "No courses available.\n";
+        } else {
+            for (const auto &course : courses) {
+                course.saveCourseData(file); // Save course and student data
+            }
         }
         file.close();
-        cout << "Courses saved to file.\n";
+        cout << "Courses and student data saved to 'courses_and_students.txt'.\n";
     } else {
-        cout << "Error opening file.\n";
+        cout << "Error opening file for saving.\n";
     }
 }
 
