@@ -1,5 +1,6 @@
 #include<iostream>
-
+#include<fstream>
+#include<iomanip>
 
 using namespace std;
 
@@ -12,7 +13,7 @@ public:
 
 class GradingPolicy {
 public:
-     char calculateGrade(float marks) ; // 
+    virtual char calculateGrade(float marks) = 0; // Pure virtual function; // 
 };
 
 class LetterGrading : public GradingPolicy {
@@ -31,13 +32,13 @@ class Student {
 private:
     string name;
     int roll_number;
-    string course;
+    int course;
 
 public:
-    void setName(string n) {
+    void setname(string n) {
         name = n;
     }
-    string getName() {
+    string getname() {
         return name;
     }
 
@@ -48,10 +49,10 @@ public:
         return roll_number;
     }
 
-    void setCourse(string c) {
+    void setCourse(int c) {
         course = c;
     }
-    string getCourse() {
+    int getCourse() {
         return course;
     }
 };
@@ -72,7 +73,7 @@ public:
     void setprogramming_in_C(float pc){
         programming_in_C = pc;
     }
-    void setdata_stuctures(float ds){
+    void setdata_structures(float ds){
         data_structures = ds;
     }
      void setlogical_reasoning(float lr){
@@ -116,7 +117,8 @@ public:
     }
     
     float getTotalMarks() {
-        return networking + cybersecurity + web_development + database_management;
+        float totalmarks= networking + cybersecurity + web_development + database_management;
+        return totalmarks;
     }
     
 

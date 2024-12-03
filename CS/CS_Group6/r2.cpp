@@ -219,7 +219,7 @@ public:
             cerr << "Error opening file for saving.\n";
             return;
         }
-
+//writing to file
         for (const auto& profile : profiles) {
             file << "Name: " << profile.get_name() << "\n";
             file << "Weight: " << profile.get_weight() << "Kg\n";
@@ -247,12 +247,14 @@ public:
         string name, line;
         double weight, height, temperature, sugar;
         int systolic, diastolic;
-
-        while (getline(file, line)) {
-            if (line.find("Name: ") == 0) {
-                name = line.substr(6);
-                getline(file, line);
-                weight = stod(line.substr(8));
+//what's special in our code
+//line by line explained
+//read from file
+        while (getline(file, line)) {//getline function reads the line and stores in a variable called line
+            if (line.find("Name: ") == 0) {//checks if the line starts with a string
+                name = line.substr(6);//converts the weight from string to a double
+                getline(file, line);//reads the next line
+                weight = stod(line.substr(8));//the substr(8) skips the first 8 characters
                 getline(file, line);
                 height = stod(line.substr(8));
                 getline(file, line);
@@ -260,8 +262,8 @@ public:
                 getline(file, line);
                 sugar = stod(line.substr(18));
                 getline(file, line);
-                sscanf(line.c_str(), "Blood Pressure: %d/%d", &systolic, &diastolic);
-
+                sscanf(line.c_str(), "Blood Pressure: %d/%d", &systolic, &diastolic);//the sscanf function parses the string and stores the values in the variables
+                //creates a new profile and adds it to the vector
                 profiles.emplace_back(name, weight, height, temperature, sugar, systolic, diastolic);
                 getline(file, line); // Skip separator line
             }

@@ -137,7 +137,7 @@ class Expense_tracker{
 
 
     int main() {
-    srand(time(0)); 
+    srand(time(0)); // Seed for random number generation
     Expense_tracker tracker;
     int choice;
 
