@@ -1,46 +1,53 @@
 #include <iostream>
-#include "ShoppingCart.cpp"  // Include the ShoppingCart class definition
-#include "FileHandler.cpp"  // Include the file handling functions
-#include "DecisionMaking.cpp"  // Other modules you may have
-#include "Loops.cpp"  // Other modules you may have
-#include "Functions.cpp"  // Other modules you may have
+#include "shop.cpp" // This includes the `ShoppingCart` and `Item` classes
 
 using namespace std;
 
 int main() {
-    ShoppingCart cart;  // Shopping cart object
-    int choice;
+    ShoppingCart cart;
+    string name;
+    double price;
+    int quantity;
+    char choice;
 
     do {
-        cout << "\n===== Online Shopping Cart =====\n";
-        cout << "1. Add Item\n";
-        cout << "2. View Cart\n";
-        cout << "3. Save Cart\n";
-        cout << "4. Load Cart\n";
-        cout << "5. Exit\n";
+        cout << "\nMenu:\n";
+        cout << "1. Add Item to Cart\n";
+        cout << "2. Display Cart\n";
+        cout << "3. Save Cart to File\n";
+        cout << "4. Exit\n";
         cout << "Enter your choice: ";
         cin >> choice;
 
         switch (choice) {
-            case 1:
-                cart.addItem();  // Add an item to the cart
+            case '1':
+                cout << "Enter item name: ";
+                cin >> ws; // To ignore leading whitespaces
+                getline(cin, name);
+                cout << "Enter item price (in cedis): ";
+                cin >> price;
+                cout << "Enter quantity: ";
+                cin >> quantity;
+                cart.addItem(name, price, quantity);
                 break;
-            case 2:
-                cart.viewCart();  // View the items in the cart
+
+            case '2':
+                cout << "\nYour Shopping Cart:\n";
+                cart.displayCart();
                 break;
-            case 3:
-                saveCart(cart);  // Save the cart to a file
+
+            case '3':
+                cart.saveToFile("shopping_cart.txt");
                 break;
-            case 4:
-            loadCart(cart);  // Load the cart from a file
+
+            case '4':
+                cout << "Exiting the program. Thank you!\n";
                 break;
-            case 5:
-                cout << "Exiting program. Goodbye!\n";
-                break;
+
             default:
-                invalidInput();  // Handle invalid input
+                cout << "Invalid choice. Please try again.\n";
         }
-    } while (choice != 5);
+    } while (choice != '4');
 
     return 0;
 }

@@ -51,7 +51,7 @@ public:
 
         double total = 2.0;
         ofstream receipt("receipt.txt");
-        receipt << "========== Receipt ==========" << endl;
+        receipt << "========== Joojo and Wuni's Stationery SHop Receipt ==========" << endl;
         receipt << "Customer Name: " << customerName << endl;
         receipt << setw(20) << left << "Product Name"
                 << setw(10) << left << "Quantity"
