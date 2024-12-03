@@ -34,3 +34,21 @@ F. I .E              	: 66 | Grade: 		 C
 Total Marks: 528
 Average    : 66
 Remarks    : You try. There's room for improvement.
+
+--------- Report Card ---------
+Name       : KJR
+Roll Number: 976987
+Course     : Computer Science
+
+Programming in C++ 	: 90 | Grade: 		 A
+Data Structures    	: 90 | Grade: 		 A
+Database Systems   	: 90 | Grade: 		 A
+Operations Research	: 90 | Grade: 		 A
+Calculus & Matlab  	: 90 | Grade: 		 A
+Leadership Seminar 	: 90 | Grade: 		 A
+Logic and Design   	: 90 | Grade: 		 A
+F. I .E            	: 90 | Grade: 		 A
+
+Total Marks: 720
+CWA        : 90
+Remarks    : Excellent performance. More vim.
