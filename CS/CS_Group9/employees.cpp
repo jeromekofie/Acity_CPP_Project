@@ -38,4 +38,25 @@ public:
         return true;
     }
 
-    
+    // Getters for employee data
+    int getId() const { return id; }
+    string getName() const { return name; }
+    string getAddress() const { return address; }
+    string getPhoneNumber() const { return phoneNumber; }
+    string getEmail() const { return email; }
+    string getEmergency_contact() const { return emergency_contact; }
+    string getnextofkin() const { return nextofkin; }
+
+    // Virtual function for generating pay (for polymorphism)
+    virtual double calculateMonthlySalary() const = 0;  // Pure virtual function to be implemented by subclasses
+
+    // Destructor to clean up assigned ID when an object is destroyed
+    virtual ~Employee() {
+        if (id > 0) {
+            assignedIds.erase(id);
+        }
+    }
+};
+
+// Initialize the static member
+unordered_set<int> Employee::assignedIds;
