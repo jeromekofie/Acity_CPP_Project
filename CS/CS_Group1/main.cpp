@@ -4,8 +4,12 @@
 #include <string>
 #include <sstream>
 
+// #include "task_types.h"
+// #include "task_with_getters_setters.h"
+// #include "task.h"
 #include "priority.h"
 #include "date.h"
+
 
 using namespace std;
 
@@ -18,7 +22,7 @@ public:
     Priority priority;
     Date dueDate;
 
-    Task(const std::string &_title, const std::string &_description, Priority _priority, const Date &_dueDate)
+    Task(const string &_title, const string &_description, Priority _priority, const Date &_dueDate)
         : title(_title), description(_description), isDone(false), priority(_priority), dueDate(_dueDate) {}
 };
 
@@ -73,12 +77,23 @@ public:
 
 
 
+                // file << "TITLE : " << task.title << endl;
+                // file << "DESCRIPTION : " << task.description << endl;
+                // file << "PRIORITY : " << static_cast<int>(task.priority) << endl;
+                // file << "DUE DATE : " << task.dueDate.day << "/" << task.dueDate.month << "/" << task.dueDate.year << endl;
+                // file << "\n"; 
+                // file << "_____________________________" << endl;
+
+                file << "\n";
                 file << "TITLE : " << task.title << endl;
                 file << "DESCRIPTION : " << task.description << endl;
                 file << "PRIORITY : " << static_cast<int>(task.priority) << endl;
                 file << "DUE DATE : " << task.dueDate.day << "/" << task.dueDate.month << "/" << task.dueDate.year << endl;
+                file << "Status: " << (task.isDone ? "Done" : "Not Done") << '\n';
                 file << "\n"; 
                 file << "_____________________________" << endl;
+                file << "\n";
+
 
             }
 
@@ -140,11 +155,18 @@ public:
         int index = 0;
         for (const auto &task : tasks)
         {
-            cout << index << ". ";
-            cout << "Title: " << task.title << ", ";
-            cout << "Description: " << task.description << ", ";
-            cout << "Status: " << (task.isDone ? "Done" : "Not Done") << '\n';
-            index++;
+                cout << "\n";
+                cout << index << ". ";
+                cout << "TITLE : " << task.title << endl;
+                cout << "DESCRIPTION : " << task.description << endl;
+                cout << "PRIORITY : " << static_cast<int>(task.priority) << endl;
+                cout << "DUE DATE : " << task.dueDate.day << "/" << task.dueDate.month << "/" << task.dueDate.year << endl;
+                cout << "Status: " << (task.isDone ? "Done" : "Not Done") << '\n';
+                index++;
+                cout << "\n"; 
+                cout << "_____________________________" << endl;
+                cout << "\n";
+
         }
     }
 };
