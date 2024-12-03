@@ -36,14 +36,24 @@ i finished : {
 
 errors or bugs faced : {
      - im getting errors from the main class file as well as the taskmanager class fine so fix that 
+     - The new information is not being uploaded to the file 
+     - i get into an infinite loop any time the software isnt closed 
 }
 
 
 
 
+RESTART V3 : 
+
+Task Management project. 
+
+i have figured out the main file problem but i am now going to separate the classes for the priority and the date
+
+- Kwame please make the files for the priority and the date 
 
 
 
+issues faced : im getting this "Error converting priority or due date: stoi" but i think the error is where the compiler is not being able to convert the data type necessarily but will still run the code  as it says task completed
 
 
 
@@ -52,5 +62,12 @@ errors or bugs faced : {
 
 
 Kwame : 
+i am going to  make the classes for the priority and the date 
+- Cyril im done making the code for the priority and the date, 
+
+
+
+
+
 
 

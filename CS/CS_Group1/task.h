@@ -1,64 +1,45 @@
 #ifndef TASK_H
 #define TASK_H
 
-#include <string> 
-#include <ctime> 
+#include "priority.h"
+#include "date.h"
+#include <string>
 
 using namespace std; 
 
-enum class Priority {
-    LOW, 
-    MEDIUM, 
-    HIGH 
-}; 
+class Task {
+protected: // Change from private to protected
+    string title;
+    string description;
+    bool isDone;
+    Priority priority;
+    Date dueDate;
 
-class Task { 
-    private : 
-        string title; 
-        string description;
-        Priority priority; 
-        time_t deadline ; // From the ctime function 
-        bool completed; // true or false for if its completed or not 
+public:
+    Task(const std::string &_title, const std::string &_description, Priority _priority, const Date &_dueDate)
+        : title(_title), description(_description), isDone(false), priority(_priority), dueDate(_dueDate) {}
 
-    public: 
+    // Setters
+    void setTitle(const std::string& newTitle) { title = newTitle; }
+    void setDescription(const std::string& newDescription) { description = newDescription; }
+    void setIsDone(bool done) { isDone = done; }
+    void setPriority(Priority newPriority) { priority = newPriority; }
+    void setDueDate(const Date& newDueDate) { dueDate = newDueDate; }
 
-    Task(const string& title,const string& description, Priority priority, time_t deadline);
-//GETTERS
-    string getTitle() const {
-        return title;
-    }
-    string getDescription() const  {
-        return description;
-    }
-    Priority getPriority() const  {
-        return priority; 
-    }
-    time_t getDeadline() const  {
-        return deadline; 
-    }
-    bool isCompleted() const  {
-        return completed; 
-    }
+    // Getters
+    string getTitle() const { return title; }
+    string getDescription() const { return description; }
+    bool getIsDone() const { return isDone; }
+    Priority getPriority() const { return priority; }
+    Date getDueDate() const { return dueDate; }
 
-//SETTERS 
-    void setTitle ( const string title) {
-        this->title = title; // this is used to assign the parameter to that member variable (title)
+    // Display function
+    virtual void display() const {
+        cout << "Task: " << title << ", Description: " << description 
+                  << ", Status: " << (isDone ? "Done" : "Not Done") 
+                  << ", Priority: " << static_cast<int>(priority) 
+                  << ", Due Date: " << dueDate.getDay() << "/" << dueDate.getMonth() << "/" << dueDate.getYear() << std::endl;
     }
-    void setDescription( const string description) {
-        this->description = description; 
-    }
-    void setPriority(Priority priority) {
-        this->priority = priority;
-    }
-    void setDeadline (time_t deadline) {
-        this->deadline = deadline; 
-    }
-    void setCompleted (bool completed) {
-        this ->completed = completed; 
-    }
-
-    string getPriorityString() const ; 
-    
-}; 
+};
 
 #endif

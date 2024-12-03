@@ -374,7 +374,7 @@ int main() {
                 }
 
                 // Use the getter method to access members
-                for (auto &member : library.getMembers()) {
+                for (auto &member : library.getMembers()) {//auto: This keyword tells the compiler to automatically deduce the type of member
                     if (member->getId() == memberId) {
                         int bookId;
                         cout << "Enter Book ID to return: ";
