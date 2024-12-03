@@ -32,10 +32,10 @@ int main() {
                 saveCart(cart);  // Save the cart to a file
                 break;
             case 4:
-                loadCart(cart);  // Load the cart from a file
+            loadCart(cart);  // Load the cart from a file
                 break;
             case 5:
-                cout << "Closing program. Goodbye!\n";
+                cout << "Exiting program. Goodbye!\n";
                 break;
             default:
                 invalidInput();  // Handle invalid input
