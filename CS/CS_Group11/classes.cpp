@@ -31,7 +31,7 @@ public:
         cin >> newItem.quantity;
         cout << "Enter item price: ";
         cin >> newItem.price;
-
+        
         items.push_back(newItem);
         cout << "Item added successfully!\n";
     }

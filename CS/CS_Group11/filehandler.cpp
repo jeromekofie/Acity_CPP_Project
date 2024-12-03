@@ -25,10 +25,4 @@ void loadCart(ShoppingCart& cart) {
         std::cout << "No saved cart found.\n";
         return;
     }
-
-    std::string item;
-    while (getline(inFile, item)) {
-        cart.addItem(item);  // Assuming ShoppingCart has an addItem method that accepts a string
-    }
-    std::cout << "Cart loaded successfully.\n";
 }

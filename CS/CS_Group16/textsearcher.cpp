@@ -1,21 +1,20 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
 using namespace std;
 
 class TextSearcher {
+private:
     string filename;
-
 public:
     TextSearcher(string file) {
         filename = file;
     }
 
-    void search(string keyword) {
-        ifstream file(filename.c_str());
-        if (!file.is_open()) {
-            cout << "Error: Cannot open file for reading.\n";
+    void searchKeyword(string keyword) {
+        ifstream file(filename);
+        if (!file) {
+            cout << "Could not open the file.\n";
             return;
         }
 
@@ -27,12 +26,12 @@ public:
             lineNumber++;
             if (line.find(keyword) != string::npos) {
                 found = true;
-                cout << "Found on line " << lineNumber << ": " << line << endl;
+                cout << "Line " << lineNumber << ": " << line << endl;
             }
         }
 
         if (!found) {
-            cout << "Keyword not found in the file.\n";
+            cout << "No matches found for \"" << keyword << "\".\n";
         }
 
         file.close();

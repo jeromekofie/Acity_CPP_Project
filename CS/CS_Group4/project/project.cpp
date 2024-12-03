@@ -1,32 +1,11 @@
 #include <iostream>
 #include <iomanip>
 #include <fstream>
+#include "remarks.cpp"
 using namespace std;
 
-// Remarks class to handle remarks based on average score
-class Remarks {
-private:
-    string remark;
 
-public:
-    void setRemark(float average) {
-        if (average >= 90) {
-            remark = "Excellent performance. More vim.";
-        } else if (average >= 75) {
-            remark = "Good job. You force.";
-        } else if (average >= 50) {
-            remark = "You try. There's room for improvement.";
-        } else {
-            remark = "Needs improvement. Don't give up.";
-        }
-    }
 
-    string getRemark() {
-        return remark;
-    }
-};
-
-// Function to calculate grades
 char calculateGrade(float subjectTotal) {
     if (subjectTotal >= 90) {
         return 'A';
@@ -51,13 +30,13 @@ int main() {
     ofstream outToFile("reportcard.txt", ios::app);
 
     cout << "Enter student's name: ";
-    cin.ignore();
     getline(cin, name);
 
     cout << "Enter roll number: ";
+    cin.ignore();
     cin >> rollNumber;
 
-    // Course selection
+   
     cout << "Choose a course:" << endl;
     cout << "1. Computer Science" << endl;
     cout << "2. Information Technology" << endl;
@@ -131,7 +110,7 @@ int main() {
         subjectTotal = classScore + examScore;
         total += subjectTotal;
 
-        // Use the calculateGrade function
+        
         char grade = calculateGrade(subjectTotal);
 
         outToFile << subjects[i] << "\t: " << subjectTotal << " | Grade: \t\t " << grade << endl;
@@ -139,7 +118,7 @@ int main() {
 
     average = total / MAX_SUBJECTS;
 
-    // Use the Remarks class
+   
     Remarks remarkHandler;
     remarkHandler.setRemark(average);
     string remarks = remarkHandler.getRemark();
