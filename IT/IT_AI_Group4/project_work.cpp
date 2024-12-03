@@ -38,7 +38,7 @@ int main(){
     Student s;
     CompSci c;
     Info_tech t;
-    GradingPolicy gp;
+    GradingPolicy *gp;
 
 
 
@@ -84,7 +84,7 @@ int main(){
             cin>>marks;
             c.setlogical_reasoning(logical_reasoning);
            
-           // c.displayMarks();
+            c.displayMarks(file,gp);
 
 
         }
@@ -113,16 +113,20 @@ int main(){
             cin >> database_management;
             t.setdatabase_management(database_management);
 
-            //t.displayMarks();
+            t.displayMarks(file,gp);
 
             }  
             else {
-            cout << "Invalid course choice! Exiting program.\n";
+            cout << "Invalid course choice! Exiting program.\n"<<endl;
+            file.close();
             return 1;
         }
 
-        cout << "\nReport card generated successfully in 'reportcard.txt'.\n";
+        cout << "\nReport card generated successfully in 'reportcard.txt'.\n"<<endl;
         file.close();
-        
         return 0;
+        
+        
+        
+
 }    
