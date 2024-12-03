@@ -6,6 +6,8 @@
 #include <cstdlib>
 #include <limits>
 #include <algorithm> // to find the value in range
+#include"Member.cpp"
+#pragma once
 using namespace std;
 
 class StudentMember : public Member {
