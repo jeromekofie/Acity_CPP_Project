@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <vector>
 
+
 using namespace std;
 
 // Structure to represent an item in the cart
@@ -22,3 +23,4 @@ void displayCartLoop(const vector<Item>& cart) {
              << setw(10) << item.quantity
              << fixed << setprecision(2) << item.price << "\n";
     }
+}

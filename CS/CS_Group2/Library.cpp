@@ -9,6 +9,7 @@
 #include"Book.cpp"
 #include"Member.cpp"
 #include"StudentMember.cpp"
+#pragma once
 using namespace std;
 // Library Management System
 class Library {
