@@ -94,7 +94,7 @@ int calculateFine(const string& returnDate, const string& dueDate) {
     int dueMonth = stoi(dueDate.substr(5, 2));
     int dueDay = stoi(dueDate.substr(8, 2));
 
-    // Calculate days overdue (naive method for demo purposes)
+    // Calculate days overdue
     int daysOverdue = (returnYear - dueYear) * 365 + (returnMonth - dueMonth) * 30 + (returnDay - dueDay);
     return (daysOverdue > 0) ? daysOverdue * DAILY_FINE : 0;
 }
@@ -211,11 +211,13 @@ void displayMenu() {
     cout << "\n*****************************************************\n";
     cout << "          Library Fine Calculator Menu\n";
     cout << "*****************************************************\n";
+    cout << "                                                         \n";
     cout << "1. Add Book Loan\n";
     cout << "2. View All Loans\n";
     cout << "3. Delete a Loan\n";
-    cout << "4. Calculate Fine(5 cedis charge)\n";
+    cout << "4. Calculate Fine (5 cedis charge)\n";
     cout << "5. Exit\n";
+    cout << "                                                         \n";
     cout << "Enter your choice: ";
 }
 
