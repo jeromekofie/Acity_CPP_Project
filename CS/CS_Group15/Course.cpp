@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <iostream>
+#include <fstream>
 using namespace std;
 
 // Declaration
@@ -45,5 +46,19 @@ public:
     {
         return name;
     };
+    void saveCourseData(ofstream &file) const {
+    file << "Course: " << name << " (Limit: " << limit << ")\n";
+    file << "Enrolled Students:\n";
+
+    if (enrolledStudents.empty()) {
+        file << "  None\n";
+    } else {
+        for (const auto &student : enrolledStudents) {
+            file << "  ID: " << student.getId() << ", Name: " << student.getName() << "\n";
+        }
+    }
+
+    file << "--------------------------------\n";
+}
 };
 #endif

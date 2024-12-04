@@ -6,7 +6,7 @@ using namespace std;
 
 class Payroll{
     public: 
-        void generatePayslip (const EmployeeManager& empManager) {
+        void generatePayslip (const EmployeeManager& empManager) { 
             int id;
             cout << "Enter Employee ID to generate payslip: ";
             cin >> id;
@@ -16,7 +16,7 @@ class Payroll{
                             [id](const Employee& emp) { return emp.id == id; });
 
             if (it != employees.end()) {
-                double baseSalary = 0.0, bonus = 0.0, deductions = 0.0;
+                double baseSalary = 0.0, bonus = 0.0, deductions = 0.0; //assignment
 
                 cout << "Enter bonus: ";
                 cin >> bonus;
@@ -35,9 +35,9 @@ class Payroll{
                     return;
                 }
 
-                double netSalary = baseSalary + bonus - deductions;
+                double netSalary = baseSalary + bonus - deductions; // initialized
 
-                ofstream outFile ("PaySlip.txt");
+                ofstream outFile ("PaySlip.txt"); // file
                 if (!outFile){
                     cout << "Unable to open PaySlip.txt" << endl;
                     return;
@@ -48,7 +48,7 @@ class Payroll{
                 outFile << "Designation:       " << it->position << endl;
                 outFile << "Department:        " << it->department << endl << endl;
 
-                outFile << "Basic Salary:      $ " << fixed << setprecision(2) << baseSalary << endl;
+                outFile << "Basic Salary:      $ " << fixed << setprecision(2) << baseSalary << endl; // fixed setprecision
                 outFile << "Allowances:        $ " << bonus << endl;
                 outFile << "Deduction:         $ " << deductions << endl;
                 outFile << "Net Salary Amount: $ " << netSalary << endl << endl;

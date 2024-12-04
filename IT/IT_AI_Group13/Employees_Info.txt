@@ -4,15 +4,3 @@ Position: Software Engineer
 Department: IT
 Salary Type: Salaried
 Salary: $85000.00
-ID: 002
-Name: Jane Smith
-Position: Marketing Manager
-Department: Marketing
-Salary Type: Salaried
-Salary: $92000.00
-ID: 003
-Name: David Johnson
-Position: Sales Associate
-Department: Sales
-Salary Type: Hourly
-Salary: $25.00
