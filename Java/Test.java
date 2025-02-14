@@ -13,6 +13,36 @@ public class Test{
     //Group 1
     
     //Group 2
+    public static void group2() {
+    
+        Scanner cin = new Scanner(System.in);
+        Random random = new Random();
+        
+
+        // Assuming Group 1 provides the word, Group 4 provides correct capitalization
+        String correctPassword = "PaSsWoRd"; 
+        
+        //  a lower bound word
+        String lowerBoundWord = "password"; 
+        
+        int firstDigit = random.nextInt(51) * 2; // Random even number between 0 and 100
+        int secondDigit = random.nextInt(51) * 2; // Random even number between 0 and 100
+        String firstTwoDigits = String.valueOf(firstDigit) + String.valueOf(secondDigit);
+        
+        System.out.println("Enter the password:");
+        String userInput = cin.nextLine();
+        
+        if (correctPassword.equalsIgnoreCase(userInput)) {
+            System.out.println("You have made it you can proceed.");
+            System.out.println("The lower bound word is '" + lowerBoundWord + "'.");
+            System.out.println(" The first two digits of the escape code are '" + firstTwoDigits + "'.");
+        } else {
+            System.out.println("Incorrect password. Try again!");
+        }
+        
+        cin.close();
+    }
+}
     
     //Group 3
 
