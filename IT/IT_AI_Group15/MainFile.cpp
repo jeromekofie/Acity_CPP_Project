@@ -31,7 +31,8 @@ int main() {
 
             vector<string> lines = file.readFile();
             if (!lines.empty()) {
-                file.search(lines, keyword);
+                file.search(lines, keyword)
+                ;
                 file.navigateResults();
             }
         } else if (choice == 3) {
