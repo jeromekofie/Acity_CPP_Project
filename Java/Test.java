@@ -31,7 +31,7 @@ public class Test{
                 JOptionPane.showMessageDialog(null, "Access denied. Incorrect password.");
             }
         }
-    }
+    
     //Group 2
     public static void group2() {
     
