@@ -1,5 +1,5 @@
+#pragma once
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 class Product{
@@ -33,13 +33,6 @@ public:
         }
     double getPrice(){
         return price;
-        }
-
-    void display(){
-        cout << setw(20) << left << name
-             << setw(10) << left << quantity
-             << "$" << setw(10) << left << fixed << setprecision(2) << price << endl;
-    }
-    
+        }   
 
 };
