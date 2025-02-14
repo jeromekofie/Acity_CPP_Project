@@ -1,6 +1,4 @@
-Course: Database Systems (Limit: 50)
+Course: C++ (Limit: 30)
 Enrolled Students:
-  ID: 1, Name: Ayomide Abikoye
-  ID: 2, Name: Stanley Agambire
-  ID: 3, Name: Antoine Asare
+  ID: 1, Name: Stanley Agambire
 --------------------------------
