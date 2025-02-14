@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.Random;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
+import java.util.List;
 
 public class Test{
 
@@ -31,6 +33,24 @@ public class Test{
             }
         }
     }
+    
+        public static String combinePasswords(String group3, String group5) {
+            return group3 + group5;
+        }
+    
+        public static String getPasswordInput() {
+            return JOptionPane.showInputDialog(null,"Please enter the name password:");
+        }
+    
+        public static void checkPassword(String inputPassword, String fullPassword) {
+            if (inputPassword.equals(fullPassword)) {
+    
+                JOptionPane.showMessageDialog(null, "Access granted! The door opens.");
+            } else {
+    
+                JOptionPane.showMessageDialog(null, "Access denied. Incorrect password.");
+            }
+        }
     
     //Group 2
     public static void group2() {
@@ -65,6 +85,67 @@ public class Test{
 }
     
     //Group 3
+ 
+
+        String halfpassw ="agsja";
+        String group2="";
+        String group5="";
+
+        List<String> numberofwords = Arrays.asList("one","ONE","TWO","two","three","THREE","FOUR","four","five","FIVE");
+     
+        if (!numberofwords.contains(group2)){ 
+
+        
+       JOptionPane.showMessageDialog(null,"Number is accepted");
+
+        }
+
+        else if (!numberofwords.contains(group5)){
+            JOptionPane.showMessageDialog(null,"Number is accepted");
+
+
+        }
+
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Number is invalid"); 
+
+        }
+
+        if(group2.compareTo(group5) > 0){
+            System.out.println("High");
+
+        }
+        else 
+        {
+            System.out.println("Low");
+
+              
+        }
+            
+
+        if(group5.compareTo(group2) < 0){
+            System.out.println("Low");
+
+        }
+        else 
+        {
+            System.out.println("High");
+
+        }
+
+
+            
+
+        
+
+
+        
+
+    
+
+
+}
 
     //Group 4
         public static void runMemoryTest() throws InterruptedException {
