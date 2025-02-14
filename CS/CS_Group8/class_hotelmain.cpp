@@ -7,13 +7,14 @@
 #include "class_hotelpayment.cpp"
 #include "class_hotelreservations.cpp"
 
-#include <cmath>
 
+
+//header
 void splitDate(const string &date, int &day, int &month, int &year) {
     sscanf(date.c_str(), "%d/%d/%d", &day, &month, &year);
 }
 
-int calculateDays(const string &checkindate, const string &checkoutdate) {
+    int calculateDays(const string &checkindate, const string &checkoutdate) {
     int day1, month1, year1, day2, month2, year2;
     splitDate(checkindate, day1, month1, year1);
     splitDate(checkoutdate, day2, month2, year2);
@@ -67,7 +68,7 @@ int main(){
         executiveRooms[i].setprice(1000.0);
     }
 
-    
+    //local variables
     int roomtypeChoice;
     int roomnumber = -1;
     double price = 0;

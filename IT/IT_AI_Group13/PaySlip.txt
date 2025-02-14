@@ -1,14 +1,14 @@
 Salary Slip For The Month of December
-Employee ID:       3
-Name:              David Johnson
-Designation:       Sales Associate
-Department:        Sales
+Employee ID:       1
+Name:              John Doe
+Designation:       Software Engineer
+Department:        IT
 
-Basic Salary:      $ 250.00
-Allowances:        $ 100.00
-Deduction:         $ 50.00
-Net Salary Amount: $ 300.00
+Basic Salary:      $ 85000.00
+Allowances:        $ 2500.00
+Deduction:         $ 500.00
+Net Salary Amount: $ 87000.00
 
-Amount in Words: Dollars 300 Only
+Amount in Words: Dollars 87000 Only
 Prepared By:       HR Department
 Approved By:       Manager
