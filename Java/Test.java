@@ -115,7 +115,7 @@ public class the_quiz {
 
     //Group 3
 public class Groupc{
-     public static void main(String[] args) {
+    
         String halfpassw ="agsja";
         String group2="";
         String group5="";
