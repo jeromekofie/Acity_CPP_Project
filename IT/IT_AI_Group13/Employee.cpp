@@ -2,7 +2,7 @@
 
 // Implementation of Employee struct methods
 void Employee::display() const {
-    cout << "ID: " << setw(3) << setfill('0') << id << endl
+    cout << "ID: " << setw(3) << setfill('0') << id << endl // setw
          << "Name: " << name << endl
          << "Position: " << position << endl
          << "Department: " << department << endl
@@ -32,9 +32,9 @@ EmployeeManager::EmployeeManager() {
     }
 }
 
-void EmployeeManager::saveToFile() {
+void EmployeeManager::saveToFile() { //function
     ofstream outFile(filename);
-    if (!outFile) throw runtime_error("Unable to open file for saving!");
+    if (!outFile) throw runtime_error("Unable to open file for saving!"); // Exceptions
 
     for (const auto& emp : employees) {
         outFile << "ID: " << setw(3) << setfill('0') << emp.id << endl
@@ -79,7 +79,7 @@ void EmployeeManager::displayEmployeeById() const {
     cout << "Enter Employee ID: ";
     cin >> id;
 
-    auto it = find_if(employees.begin(), employees.end(),
+    auto it = find_if(employees.begin(), employees.end(), // bool functions
                       [id](const Employee& emp) { return emp.id == id; });
 
     if (it != employees.end()) {
@@ -90,7 +90,7 @@ void EmployeeManager::displayEmployeeById() const {
 }
 
 void EmployeeManager::editEmployee() {
-    int id;
+    int id; // local variable
     cout << "Enter Employee ID to edit: ";
     cin >> id;
 
@@ -103,7 +103,7 @@ void EmployeeManager::editEmployee() {
         char choice;
         bool editDone = false;
 
-        do {
+        do { // menu driven
             cout << "\nSelect field to edit:\n";
             cout << "1. Name" << endl;
             cout << "2. Department" << endl;
@@ -120,7 +120,7 @@ void EmployeeManager::editEmployee() {
                     cin.ignore();
                     getline(cin, it->name);
                     editDone = true;
-                    break;
+                    break; // break concepts
 
                 case '2':
                     cout << "Enter new Department: ";

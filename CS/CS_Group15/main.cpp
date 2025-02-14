@@ -8,15 +8,19 @@ using namespace std;
 
 // Function to save courses to a file
 void saveToFile(const vector<Course> &courses) {
-    ofstream file("courses.txt");
+    ofstream file("courses_and_students.txt");
     if (file.is_open()) {
-        for (const auto &course : courses) {
-            file << "Course: " << course.getName() << "\n";
+        if (courses.empty()) {
+            file << "No courses available.\n";
+        } else {
+            for (const auto &course : courses) {
+                course.saveCourseData(file); // Save course and student data
+            }
         }
         file.close();
-        cout << "Courses saved to file.\n";
+        cout << "Courses and student data saved to 'courses_and_students.txt'.\n";
     } else {
-        cout << "Error opening file.\n";
+        cout << "Error opening file for saving.\n";
     }
 }
 
@@ -40,6 +44,7 @@ int main() {
 
         if (choice == 1) {
             // Add a new course
+            cout << "\n...................................................................."<<endl;
             string courseName;
             int courseLimit;
             cout << "Enter course name: ";
@@ -52,6 +57,7 @@ int main() {
 
         } else if (choice == 2) {
             // Enroll a student in a course
+            cout << "\n...................................................................."<<endl;
             if (courses.empty()) {
                 cout << "No courses available. Add a course first.\n";
                 continue;
@@ -87,6 +93,7 @@ int main() {
 
         } else if (choice == 3) {
             // List students in a course
+            cout << "\n...................................................................."<<endl;
             if (courses.empty()) {
                 cout << "No courses available. Add a course first.\n";
                 continue;
@@ -109,6 +116,7 @@ int main() {
 
         } else if (choice == 4) {
             // Save and exit
+            cout << "\n...................................................................."<<endl;
             saveToFile(courses);
             cout << "Exiting program. Goodbye!\n";
         } else {

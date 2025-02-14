@@ -1,3 +1,17 @@
+/*while
+switch
+2 classses
+functions
+setprecission
+/n
+boolean
+break
+variable declaration
+setw
+*/
+
+
+
 #include <iostream>
 #include <iomanip>
 // #include <fstream>

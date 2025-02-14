@@ -1,11 +1,12 @@
 #include<iostream>
+#include <iomanip>
 using namespace std;
 
 class HotelBill{
     public:
     void display_menu()
 {
-    cout << "*****Hotel Menu*****" << endl;
+    cout <<setw(10)<< "Hotel Menu" << endl;
     cout << "-------------------------" << endl;
     cout << "1. Pizza - $15.99" << endl;
     cout << "2. Salad - $5.50" << endl;

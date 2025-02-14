@@ -17,7 +17,8 @@ void showMenu() {
 int main() {
     string filename = "example.txt";
     FileHandler fileHandler(filename);
-    TextSearcher textSearcher(filename);
+    TextSearcher textSearcher(filename);   //Object Instantiation .instances of the specified classes are created and initialized with specific parameters. 
+    //This allows the program to utilize the methods and properties defined within those classes for further operations.
 
     int choice;
 
