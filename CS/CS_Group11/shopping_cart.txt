@@ -1,0 +1,3 @@
+Item Name	Quantity	Price	Total
+dcx	0		cedis2.00	cedis0.00
+Total: cedis 0.00

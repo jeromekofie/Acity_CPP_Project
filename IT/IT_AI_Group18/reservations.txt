@@ -1,0 +1,6 @@
+Name: Kelly
+Gender: M
+Contact: 64155
+Room Number: 2
+Check-in date: 2024-12-05
+Check-out date: 2024-12-20
