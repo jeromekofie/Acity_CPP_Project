@@ -20,6 +20,12 @@ public class Test{
 
     //Group 5
 
+<<<<<<< HEAD
+=======
+
+
+
+>>>>>>> 9af65e40e9744fc9c1474e3788c8a6b09f3d060e
     //Group Challeng 1,2,3,4,5
 
 
