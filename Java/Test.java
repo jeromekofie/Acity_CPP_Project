@@ -13,8 +13,6 @@ public class Test{
     }
 
     //Group 1
-    
-   
         public static String combinePasswords(String group3, String group5) {
             return group3 + group5;
         }
