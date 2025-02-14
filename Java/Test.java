@@ -174,7 +174,6 @@ public class Test{
 
 
     //Group 5
-    public class Escape101 {
             String otherPassword = JOptionPane.showInputDialog("Enter the other password:");
             
             Random random = new Random();
@@ -199,7 +198,6 @@ public class Test{
             
             JOptionPane.showMessageDialog(null, "You have unlocked the final escape code.");
         }
-    }
 
     //Group Challeng 1,2,3,4,5
 
