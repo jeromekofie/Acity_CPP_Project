@@ -20,7 +20,6 @@ public class Test{
 
     //Group 5
     public class Escape101 {
-        public static void main(String[]args) {
             String otherPassword = JOptionPane.showInputDialog("Enter the other password:");
             
             Random random = new Random();
@@ -51,4 +50,4 @@ public class Test{
 
 
     
-}
+
