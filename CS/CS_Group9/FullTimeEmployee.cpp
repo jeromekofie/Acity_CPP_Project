@@ -41,7 +41,7 @@ public:
     void saveToFile(ofstream& outFile) const {
         outFile << " Employee Type: FullTime. \n"; // Identifier for FullTimeEmployee
         outFile <<"Employee ID: " << getId() << ".\n"; // Unique ID
-        outFile <<"Employee Name: " << getName() << "./n" <<"Employee Address: "<< getAddress() << ".\n" <<"Employee    Phone Number: "<< getPhoneNumber() << ".\n" <<"Employee Email: "<< getEmail() << ".\n";
+        outFile <<"Employee Name: " << getName() << ".\n" <<"Employee Address: "<< getAddress() << ".\n" <<"Employee Phone Number: "<< getPhoneNumber() << ".\n" <<"Employee Email: "<< getEmail() << ".\n";
         outFile <<"Gross Salary: $"<< calculateMonthlySalary() << ".\n" <<"Net Salary: $"<<calculateNetSalary() <<"\n";
     }
 
@@ -79,7 +79,7 @@ public:
         double netSalary = calculateNetSalary();
 
         cout << "--------------------------------------------------\n";
-        cout << "                   COMPANY NAME                   \n";
+        cout << "                   V TECH                   \n";
         cout << "              Full-Time Employee Payslip          \n";
         cout << "--------------------------------------------------\n";
         cout << "Employee ID: " << getId() << endl;
