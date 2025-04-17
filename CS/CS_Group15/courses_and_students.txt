@@ -1,4 +1,0 @@
-Course: C++ (Limit: 30)
-Enrolled Students:
-  ID: 1, Name: Stanley Agambire
---------------------------------
