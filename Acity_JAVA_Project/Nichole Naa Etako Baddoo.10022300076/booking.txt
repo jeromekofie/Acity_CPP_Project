@@ -1,24 +1,3 @@
-
-Booking Confirmed!
-Name: nichole
-Room Type: Standard
-Check-in: 2025-03-10
-Check-out: 2025-03-15
-Stay Duration: 5 nights(s)
-Total Cost: GHC 500
-Payment Date: 2025-03-10
-Payment Method: Card
-
-Booking Confirmed!
-Name: nichole
-Room Type: Executive
-Check-in: 2025-02-03
-Check-out: 2025-02-10
-Stay Duration: 7 nights(s)
-Total Cost: GHC 1400
-Payment Date: 2025-02-03
-Payment Method: Card
-
 Booking Confirmed!
 Name: nichole
 Room Type: Deluxe
@@ -138,4 +117,14 @@ Stay Duration: 7 nights(s)
 Total Cost: GHC 700
 Payment Date: 2025-03-02
 Payment Method: Cash
+
+Booking Confirmed!
+Name: nichole
+Room Type: Standard
+Check-in: 2025-03-02
+Check-out: 2025-03-05
+Stay Duration: 3 nights(s)
+Total Cost: GHC 300
+Payment Date: 2025-03-02
+Payment Method: Card
 

@@ -377,6 +377,15 @@ String output = "Booking Confirmed!\n"
 
         JOptionPane.showMessageDialog(null, "Booking deleted successfully!");
 
+        BufferedReader updatedReader = new BufferedReader(new FileReader("booking.txt"));
+    outputfield.setText(""); // Clear the output area
+    String l;
+    while ((l = updatedReader.readLine()) != null) {
+    outputfield.append(l + "\n");
+}
+updatedReader.close();
+
+
     } catch (IOException ex) {
         JOptionPane.showMessageDialog(null, "Error: " + ex.getMessage());
     }
