@@ -1,8 +1,0 @@
-Report Card for fafa (Roll No: 123)
-Course: Computer Science
-------------------------------------------
-Critical Thinking      :   1 | Grade: D
-Programming in C       :   1 | Grade: D
-Data Structures        :   1 | Grade: D
-Logical Reasoning      :   1 | Grade: D
-Total Marks            :   4

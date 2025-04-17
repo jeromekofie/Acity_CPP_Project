@@ -1,4 +1,0 @@
-Account Type: Checking Account
-Account Number: 223
-Account Holder: deji
-Balance: 233
