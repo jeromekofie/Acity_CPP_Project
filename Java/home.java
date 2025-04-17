@@ -4,7 +4,7 @@ import java.util.Arrays;
 import javax.swing.JOptionPane;
 import java.util.List;
 
-public class Test {
+public class home {
 
     // Main method
     public static void main(String[] args) {
@@ -63,9 +63,7 @@ public class Test {
         String correctPassword = "PaSsWoRd"; // Correct password
         String lowerBoundWord = "password"; // Lower bound word
 
-        int firstDigit = random.nextInt(51) * 2; // Random even number between 0 and 100
-        int secondDigit = random.nextInt(51) * 2; // Random even number between 0 and 100
-        String firstTwoDigits = String.valueOf(firstDigit) + String.valueOf(secondDigit);
+        int firstTwoDigits = random.nextInt(90) + 10; // Random number between 10 and 99
 
         System.out.println("Enter the password:");
         String userInput = cin.nextLine();
