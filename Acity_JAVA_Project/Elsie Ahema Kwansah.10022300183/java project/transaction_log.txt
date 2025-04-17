@@ -1,0 +1,12 @@
+Thu Apr 17 13:13:28 GMT 2025 - Elsie: Account created
+Thu Apr 17 13:14:00 GMT 2025 - Elsie: Deposited: $456.0
+Thu Apr 17 13:14:07 GMT 2025 - Elsie: Viewed Statement
+2025-04-17 14:10:36 - Elsie: Account created
+2025-04-17 14:17:24 - Elsie: Account created
+2025-04-17 14:17:45 - Elsie: Deposited: $35454.0
+2025-04-17 14:17:58 - Elsie: Withdrew: $454.0
+2025-04-17 14:18:05 - Elsie: Viewed Account Info
+2025-04-17 14:18:14 - Elsie: Viewed Statement
+2025-04-17 14:58:25 - Elsie: Account created
+2025-04-17 14:58:48 - Elsie: Deposited: $435645.0
+2025-04-17 14:59:12 - Elsie: Withdrew: $45.0

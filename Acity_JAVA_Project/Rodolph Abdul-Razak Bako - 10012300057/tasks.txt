@@ -1,0 +1,5 @@
+4|buy M5|budget to buy|HIGH|2025-04-17|false
+5|buy koko and boflot|Wuni because she talks a lot|MEDIUM|2025-04-17|false
+2|Java homework|do the the homework|MEDIUM|2025-04-22|true
+1|GYM|Go there|HIGH|2025-05-22|false
+6|Buy M4 Competition||HIGH|2026-04-21|false

@@ -1,0 +1,6 @@
+ID	Name	Parent	Level	Phone	City	Course	Course Position
+39	Arthur Morgan		Ms Morgan	400	12414234	Texas	BSc Computer Science	1
+47	Jack Marston		John Marston	300	21435234546	Armadillo	BSc Artificial Intelligence	1
+48	Dutch Vanderlinde		MVP	400	2143242	Armadillo	BSc Artificial Intelligence	2
+50	Kofi Assan		Mr Assan	200	0536200366	Takoradi	BSc Information Technology	1
+51	Hideo Kojima		Mr Kojima	200	423235232	Okinawa	Game Development and Design	1

@@ -1,0 +1,3 @@
+Item Name	Quantity	Price	Total
+Apple	2		cedis2.00	cedis4.00
+Total: cedis 4.00

@@ -1,0 +1,4 @@
+ORD8513|kojo|2x Pizza=$15.99, 1x Salad=$5.50, 1x Water=$2.99|24.48
+ORD25060|hana|1x Pizza=$15.99, 1x Salad=$5.50|21.49
+ORD11727|Cyril|1x Burger=$8.99, 2x Water=$5.98|14.97
+ORD87626|kelvin|1x Pizza=$15.99, 2x Salad=$11.00, 1x Burger=$8.99, 1x Water=$2.99|38.97
