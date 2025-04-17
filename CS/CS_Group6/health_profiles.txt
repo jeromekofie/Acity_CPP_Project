@@ -1,0 +1,32 @@
+Name: Hooria
+Weight: 56Kg
+Height: 1.8 m
+Body Temperature: 38 oC
+Blood Sugar Level: 90 mg/dL
+Blood Pressure: 100/90
+BMI: 17.284 (Underweight)
+---------------------------------
+Name: Barbara
+Weight: 60Kg
+Height: 1.9 m
+Body Temperature: 38 oC
+Blood Sugar Level: 70 mg/dL
+Blood Pressure: 100/89
+BMI: 16.6205 (Underweight)
+---------------------------------
+Name: James
+Weight: 39Kg
+Height: 1.5 m
+Body Temperature: 30 oC
+Blood Sugar Level: 70 mg/dL
+Blood Pressure: 100/70
+BMI: 17.3333 (Underweight)
+---------------------------------
+Name: Michael
+Weight: 50Kg
+Height: 1.7 m
+Body Temperature: 39 oC
+Blood Sugar Level: 60 mg/dL
+Blood Pressure: 110/90
+BMI: 17.301 (Underweight)
+---------------------------------

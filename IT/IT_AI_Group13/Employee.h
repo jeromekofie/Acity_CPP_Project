@@ -9,8 +9,8 @@
 #include <algorithm>
 using namespace std;
 
-struct Employee {
-    int id;
+struct Employee { // Constructors
+    int id; //declaration
     string name;
     string department;
     string position;
@@ -20,15 +20,15 @@ struct Employee {
     void display() const;
 };
 
-class EmployeeManager {
+class EmployeeManager { //class
 private:
-    vector<Employee> employees;
+    vector<Employee> employees; // vectors
     const string filename = "Employees_Info.txt";
 
     void saveToFile();
 
 public:
-    EmployeeManager();
+    EmployeeManager(); //Encapsulation
     void addEmployee();
     void displayAllEmployees() const;
     void displayEmployeeById() const;

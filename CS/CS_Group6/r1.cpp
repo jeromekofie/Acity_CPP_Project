@@ -9,6 +9,9 @@ using namespace std;
 
 class Health_Profile {
 protected:
+//Encapsulation 
+//encapsulation restricts direct access to some of an object's components, 
+//which is a means of preventing unintended interference and misuse of the methods and data.
     string name;   //Variable declaration
     double weight;
     double height;
@@ -21,12 +24,12 @@ public:
     //constructors
     //The primary purpose of a constructor is to initialize the object's properties or fields
     //Constructors can take parameters, allowing you to pass values when creating an instance of the class
-    
+
     Health_Profile(string name, double weight, double height, double body_temperature = 0.0, 
                   double blood_sugar = 0.0, int systolic_BP = 120, int diastolic_BP = 80)
         : name(name), weight(weight), height(height), body_temperature(body_temperature),
           blood_sugar(blood_sugar), systolic_BP(systolic_BP), diastolic_BP(diastolic_BP) {}
-
+//Its main purpose is to initialize the object's attributes or perform setup tasks.
     // Setters
     void set_weight(double w) { 
         weight = w;
@@ -90,32 +93,32 @@ public:
     // Temperature Status
     string temperature_status() const {
         if (body_temperature < 36.1) 
-        return "Low";
+        return "You're temperature is low. Let's have a hot cup of tea";
 
         else if (body_temperature <= 37.2) 
-        return "Normal";
+        return "Normal range. You're good to go";
 
-        else return "High";
+        else return "It's skyrocketing. Let's get you to the hospital";
     }
 
     // Blood Sugar Status
     string blood_sugar_status() const {
         if (blood_sugar < 70) 
-        return "Low";
+        return "Your sugar level is low. Glucose tablets can normalize your sugar level.";
 
         else if (blood_sugar <= 140) 
-        return "Normal";
+        return "You have a normal sugar level. Keep hydated!";
 
-        else return "High";
+        else return "You have a high sugar level. Please consult a doctor.";
     }
 
     // Blood Pressure Status
     string blood_pressure_status() const {
         if (systolic_BP < 120 && diastolic_BP < 80) 
-        return "Normal";
+        return "120/80 is the normal range.You are healthy";
 
         else if (systolic_BP < 130 && diastolic_BP < 80) 
-        return "Elevated";
+        return "Elevated blood pressure. Please consult a doctor";
 
         else if (systolic_BP <= 139 || diastolic_BP <= 89) 
         return "Hypertension Stage 1";

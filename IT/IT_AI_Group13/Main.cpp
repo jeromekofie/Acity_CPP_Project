@@ -8,8 +8,8 @@ int main() {
     Payroll payroll;
     int choice;
 
-    do {
-        cout << "\n--- Payroll Management System ---\n"
+    do { // loops
+        cout << "\n--- Payroll Management System ---\n" // escape sequence
              << "1. Add Employee" << endl
              << "2. Edit Employee" << endl
              << "3. Delete Employee" << endl
@@ -19,7 +19,7 @@ int main() {
              << "Choice: ";
         cin >> choice;
 
-        switch (choice) {
+        switch (choice) { // decision marking
             case 1: empManager.addEmployee(); break;
             case 2: empManager.editEmployee(); break;
             case 3: empManager.deleteEmployee(); break;

@@ -63,6 +63,7 @@ int main() {
                 cout << "Invalid choice!.\n";
                 break;
         }
+<<<<<<< Updated upstream
     } 
     while (choice!=4);
 
@@ -187,3 +188,11 @@ bool timeLimit() {
 void file() {
     saveToFile();
 }
+=======
+    } while (choice != 4);
+    
+
+    return 0;
+    
+}
+>>>>>>> Stashed changes
