@@ -1,0 +1,2 @@
+10,Mensah,mensah@gmail.com,0244029292,FullTime,2500.00,0,0
+11,Kwaku,kwaku@gmail.com,02440393,PartTime,0,14.00,100.00
