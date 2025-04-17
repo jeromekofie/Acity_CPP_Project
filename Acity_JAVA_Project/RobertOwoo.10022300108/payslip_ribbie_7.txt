@@ -1,0 +1,10 @@
+=== PAY SLIP FOR April 2025 ===
+Employee ID: 7
+Name: ribbie
+Email: yuugj
+Phone: 234567
+Pay Period: April 2025
+Gross Pay: $0.00
+Deductions: $0.00
+Net Pay: $0.00
+=========================
