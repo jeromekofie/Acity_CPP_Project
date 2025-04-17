@@ -1,0 +1,6 @@
+ID: 001
+Name: John Doe
+Position: Software Engineer
+Department: IT
+Salary Type: Salaried
+Salary: $85000.00
