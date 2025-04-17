@@ -82,7 +82,7 @@ int main() {
                 cout << "Exiting the program.\n";
                 exit = true;
                 break;
-            default:
+                default:
                 cout << "Invalid choice. Please try again.\n";
                 break;
         }
