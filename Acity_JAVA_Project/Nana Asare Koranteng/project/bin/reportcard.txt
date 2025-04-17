@@ -1,0 +1,36 @@
+
+--------- Report Card ---------
+Name       : kk
+Roll Number: 32
+Course     : Information Technology
+
+Business in Africa   	: 56.0 | Grade: 		 C
+Web Development      	: 54.0 | Grade: 		 C
+System Administration	: 48.0 | Grade: 		 D
+Database Systems     	: 48.0 | Grade: 		 D
+Cybersecurity        	: 44.0 | Grade: 		 D
+Leadership Seminar   	: 44.0 | Grade: 		 D
+Data Structures      	: 44.0 | Grade: 		 D
+F. I .E              	: 44.0 | Grade: 		 D
+
+Total Marks: 382.0
+CWA        : 47.75
+Remarks    : Needs improvement. Don't give up.
+
+--------- Report Card ---------
+Name       : kk
+Roll Number: 115
+Course     : Computer Science
+
+Programming in C++ 	: 44.0 | Grade: 		 D
+Data Structures    	: 44.0 | Grade: 		 D
+Database Systems   	: 44.0 | Grade: 		 D
+Operations Research	: 44.0 | Grade: 		 D
+Calculus & Matlab  	: 44.0 | Grade: 		 D
+Leadership Seminar 	: 44.0 | Grade: 		 D
+Logic and Design   	: 44.0 | Grade: 		 D
+F. I .E            	: 44.0 | Grade: 		 D
+
+Total Marks: 352.0
+CWA        : 44.0
+Remarks    : Needs improvement. Don't give up.
