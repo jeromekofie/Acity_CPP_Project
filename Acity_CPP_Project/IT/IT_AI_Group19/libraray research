@@ -1,9 +1,0 @@
-#include<iostream>
-using namespace std;
-int main(){
-    cout << "Name: Britney Opoku-Addo"<< endl;
-    cout << "Account Number: 123477859" << endl;
-    cout << "Academic City Bank" << endl;
-    return 0;
-    
-}

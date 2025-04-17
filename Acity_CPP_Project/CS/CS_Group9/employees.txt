@@ -1,8 +1,0 @@
- Employee Type: FullTime. 
-Employee ID: 1001.
-Employee Name: Jesudunyin Ayobolu.
-Employee Address: shina street.
-Employee Phone Number: +233839933773.
-Employee Email: jeusdunyin.ayobolu@vtech.org.gh.
-Gross Salary: $33500.
-Net Salary: $32500
