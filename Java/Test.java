@@ -1,6 +1,10 @@
+<<<<<<< HEAD
+    import java.util.Scanner;
+=======
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;
+>>>>>>> 3d57f2c72dab70edc98dc19815d854f979039bd0
 import javax.swing.JOptionPane;
 import java.util.List;
 
