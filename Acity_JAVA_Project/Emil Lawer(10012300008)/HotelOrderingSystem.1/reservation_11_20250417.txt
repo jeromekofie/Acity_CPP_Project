@@ -1,0 +1,16 @@
+================================
+     RESERVATION CONFIRMATION
+================================
+Hotel: Royal Gardens
+Address: 202 Park Lane, London
+Phone: 207-555-1005
+--------------------------------
+Reservation ID: 11
+Customer: kelly
+Room Type: Suite
+Check-in: 2025-04-17
+Check-out: 2027-04-17
+Status: Confirmed
+--------------------------------
+Thank you for your reservation!
+================================

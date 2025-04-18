@@ -1,0 +1,16 @@
+================================
+     RESERVATION CONFIRMATION
+================================
+Hotel: Grand Plaza
+Address: 123 Main St, New York
+Phone: 212-555-1001
+--------------------------------
+Reservation ID: 7
+Customer: joh
+Room Type: Standard
+Check-in: 2025-04-17
+Check-out: 2025-04-17
+Status: Confirmed
+--------------------------------
+Thank you for your reservation!
+================================
