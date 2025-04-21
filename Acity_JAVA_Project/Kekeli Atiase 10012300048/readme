@@ -1,0 +1,7 @@
+compile and run
+javac -cp ".;mysql-connector-j-9.3.0.jar" FinderApp.java
+java -cp ".;mysql-connector-j-9.3.0.jar" FinderApp
+
+
+javac -cp ".;mysql-connector-j-9.3.0.jar" LibraryFineCalculator.java
+java -cp ".;mysql-connector-j-9.3.0.jar" LibraryFineCalculator
