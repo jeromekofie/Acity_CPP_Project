@@ -1,0 +1,7 @@
+Name: Ayodeji
+ID: 10012300012
+Courses:
+  java - 3.0 credits - Grade 90 -> GPA 4.0
+  algebra - 3.0 credits - Grade 97 -> GPA 4.0
+GPA: 4.00 -> Grade: A
+---
