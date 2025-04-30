@@ -451,9 +451,7 @@ public class Addstudent extends javax.swing.JFrame {
                         credhours1,
                         credhours2,
                         credhours3,
-                        gpa,
-
-                        new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new java.util.Date()));
+                        gpa);
                 
                 buffered.write(record);
             }
