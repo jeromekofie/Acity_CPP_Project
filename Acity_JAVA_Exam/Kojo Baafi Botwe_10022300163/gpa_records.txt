@@ -1,0 +1,25 @@
+Name: kojo, ID: 001, Course: Arts, Credit Hours: 2.00, Grade: 3, GPA: 0.00
+Name: John, ID: 002, Course: writing, Credit Hours: 3.00, Grade: b, GPA: 9.00
+Name: John, ID: 002, Course: writing, Credit Hours: 2.00, Grade: b, GPA: 6.00
+Name: kojo, ID: 001, GPA: 3.60
+Courses:
+  - information tech | Grade: b | Credit Hours: 2.00
+  - data structures  | Grade: a | Credit Hours: 3.00
+
+Name: kwesi, ID: 003, GPA: 3.00
+Courses:
+  - arts | Grade: b | Credit Hours: 2.00
+  - normal | Grade: b | Credit Hours: 3.00
+
+Name: kwesi, ID: 003, GPA: 3.00
+Courses:
+  - arts | Grade: b | Credit Hours: 2.00
+  - normal | Grade: b | Credit Hours: 3.00
+  - free | Grade: b | Credit Hours: 2.00
+
+Name: Kelvin, ID: 123, GPA: 2.86
+Courses:
+  - FIE | Grade: A | Credit Hours: 4.00
+  - Java | Grade: A | Credit Hours: 6.00
+  - C | Grade: A+ | Credit Hours: 4.00
+
