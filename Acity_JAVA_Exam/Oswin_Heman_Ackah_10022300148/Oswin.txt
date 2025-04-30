@@ -1,0 +1,4 @@
+Student Name: Ojekeke
+Student ID: 144532324
+DSA, 3 hrs, Grade: A
+GPA: A

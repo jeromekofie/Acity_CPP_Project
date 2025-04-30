@@ -1,0 +1,3 @@
+SEY,100223000172,agric
+sey,10022300172,it
+sefakor,1223300,java
