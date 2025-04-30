@@ -1,0 +1,9 @@
+Student Name: Shaun Adams Nana
+Student ID: 10022300192
+Course Code	Course Name	Grade	Credits
+------------------------------------------------
+UC102	Programming With Java	A	3
+UC103	Linear Algerbra	B	2
+UC104	History	C+	2
+
+GPA: Student: Shaun Adams Nana (ID: 10022300192) - GPA: 3.29
