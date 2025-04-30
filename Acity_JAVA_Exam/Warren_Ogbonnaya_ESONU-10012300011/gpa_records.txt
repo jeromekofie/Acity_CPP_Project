@@ -1,0 +1,28 @@
+Student Name: Warren
+Student ID: 1
+Courses:
+- phy: 3.0 credits, Grade: A
+- tyu: 3.0 credits, Grade: B+
+- wer: 5.0 credits, Grade: A
+
+Total Credits: 11.0
+GPA: 3.86
+----------------------------------------
+Student Name: jeph
+Student ID: 2
+Courses:
+- wer: 9.0 credits, Grade: B+
+- wedf: 2.0 credits, Grade: F
+
+Total Credits: 11.0
+GPA: 2.86
+----------------------------------------
+Student Name: Kelvin
+Student ID: 7
+Courses:
+- java: 3.0 credits, Grade: A
+- math: 4.0 credits, Grade: B+
+
+Total Credits: 7.0
+GPA: 3.71
+----------------------------------------
