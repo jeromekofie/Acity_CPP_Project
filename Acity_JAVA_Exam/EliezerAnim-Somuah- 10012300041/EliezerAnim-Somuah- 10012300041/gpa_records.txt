@@ -1,0 +1,22 @@
+Eliezer
+10012300041
+Course: Java, Grade: 98.0, Credits: 3
+Course: Probability, Grade: 50.0, Credits: 3
+Course: FIE, Grade: 60.0, Credits: 2
+70.50
+---------------
+Eliezer
+10012300041
+Course: Java, Grade: 98.0, Credits: 3
+Course: Prob, Grade: 50.0, Credits: 3
+Course: FIE, Grade: 60.0, Credits: 2
+70.50
+---------------
+er
+132
+Course: we, Grade: 32.0, Credits: 2
+Course: ewds, Grade: 89.0, Credits: 3
+Course: edsfed, Grade: 75.0, Credits: 2
+Course: erd, Grade: 95.0, Credits: 3
+2.91
+---------------
