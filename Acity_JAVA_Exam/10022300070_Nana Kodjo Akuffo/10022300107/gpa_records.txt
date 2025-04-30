@@ -1,0 +1,8 @@
+Student ID: 1002234567
+
+GPA Calculator Records
+
+1. java - Grade: 60.00, Credits: 3
+2. probability - Grade: 80.00, Credits: 2
+
+Final GPA: 68.00
