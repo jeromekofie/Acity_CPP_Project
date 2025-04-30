@@ -1,0 +1,29 @@
+Name: Kofi
+ID: 10022300106
+Courses: It
+Credits: 2
+Grades: A
+GPA: 4.00
+Database: Under Construction.
+
+Name: Kofi
+ID: 1223
+Courses: It
+Credits: 2
+Grades: A
+GPA: 4.00
+Database: Under Construction.
+
+Name: Appiah
+ID: 10022300106
+Courses: IT
+Credits: 3
+Grades: A
+GPA: 4.00
+Database: Under Construction.Name: Kofi
+ID: 100223
+Courses: IT
+Credits: 3
+Grades: A
+GPA: 4.00
+Database: Under Construction.

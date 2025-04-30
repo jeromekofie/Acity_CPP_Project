@@ -1,0 +1,6 @@
+Benjamin Acheampong;10022300181;Business,1,C+;2.50
+Isaac Kofi Emeka;10022300212;Agriculture,2,C;2.00
+Kwaku Boateng Asiedu-Mensah;10022300181;CS,3,A;4.00
+Yoofi Brew-Hammond;10022300169;HR,3,B+;3.50
+Bayaka Braimah;10022300069;French,1,A;Accounting,2,B+;Data Strunctures and Algorithms,3,A;Linear Algebra,3,B;3.56
+Erica Higher;1002234643159;Dondology,1,A;Love Making,3,B;Bed Breaking,3,B+;Soul Taking,3,B;Catering Services,2,E;2.88
