@@ -1,0 +1,16 @@
+Name: Kelly Michael
+ID: 12230014
+FIE: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 2.0
+JAVA: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 3.0
+LEADERSHIP: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 2.0
+DSA: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 3.0
+ALGEBRA: Grade = B     |        Grade Point = 3.0       |        Credit Hours = 3.0
+GPA: 3.77
+--------------------------------------------------
+Name: KELLY MIKE
+ID: 33
+DSA: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 3.0
+AU: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 2.0
+RT: Grade = A     |        Grade Point = 4.0       |        Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------
