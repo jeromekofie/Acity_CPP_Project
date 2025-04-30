@@ -1,0 +1,16 @@
+4,fds,1.75,2025-04-30 15:49:52
+3,Kofi,3.50,2025-04-30 15:58:16
+10|fesdf|1.81|2025-04-30 16:02:54
+5|dfssd|2.69|2025-04-30 16:05:10
+4|Kofi Assan|3.67|2025-04-30 16:13:19
+5|asd|dsfsd|fwef|efd|javax.swing.JLabel[,285,155,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@74957034,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Credit Hours,verticalAlignment=CENTER,verticalTextPosition=CENTER]|javax.swing.JLabel[,285,218,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@66207eb9,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Credit Hours,verticalAlignment=CENTER,verticalTextPosition=CENTER]|javax.swing.JLabel[,285,282,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@6807c303,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Credit Hours,verticalAlignment=CENTER,verticalTextPosition=CENTER]|javax.swing.JLabel[,698,155,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@6503ff20,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Grade 1,verticalAlignment=CENTER,verticalTextPosition=CENTER]|javax.swing.JLabel[,698,218,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@3509438,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Grade 2,verticalAlignment=CENTER,verticalTextPosition=CENTER]|javax.swing.JLabel[,698,282,122x17,alignmentX=0.0,alignmentY=0.0,border=javax.swing.plaf.synth.SynthBorder@6660f75d,flags=8388608,maximumSize=,minimumSize=,preferredSize=,defaultIcon=,disabledIcon=,horizontalAlignment=LEADING,horizontalTextPosition=TRAILING,iconTextGap=4,labelFor=,text=Grade 3,verticalAlignment=CENTER,verticalTextPosition=CENTER]|3.19|2025-04-30 16:28:41
+4|dasd|3.63
+5|dsf|3.75
+8|dfs|3.67
+3|asd|3.31
+7|dsas|3.19|dsffds|dsf
+8|wer|3.00|fdsf
+3|skjabbk|3.75|das|sda|disahf
+89|sab|adsn|fdpnjp|3|3|3|2.83|dsjab`
+43|Kofi Assan|WebTech|Java|3|3|3|4.00|Prob
+67|Kofi|Java|Python|3|3|3|3.33|WebTech
