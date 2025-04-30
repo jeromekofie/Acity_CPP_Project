@@ -1,4 +1,0 @@
-Kbam,10011,Java,3,A,4.0,3.00
-Kbam,10011,Apllied Statistics,2,D,1.5,3.00
-John Stocks,10022,Linear Algebra,3,B,3.0,2.25
-John Stock,10022,Journalism,3,D,1.5,2.25
