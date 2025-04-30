@@ -1,0 +1,13 @@
+Name: arsg
+ID: 12341234
+Courses/Credits/Grades:
+- agfd (3 hrs): A
+- sdfgsdf (3 hrs): B
+GPA: 3.50
+--------------------------------------
+Name: Kelly
+ID: 123
+Courses/Credits/Grades:
+- Java (3 hrs): B
+GPA: 3.00
+--------------------------------------
