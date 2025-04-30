@@ -1,0 +1,56 @@
+
+Books in Library:
+   ID               Title              Author              Status
+    1               Alpha              Warren           Available
+    2               Omega                Yoofi          Available
+
+Library Members:
+   ID                Name
+    1              Warren
+    2                Brew
+
+Books in Library:
+   ID               Title              Author              Status
+
+Library Members:
+   ID                Name
+    2                   w
+
+Books in Library:
+   ID               Title              Author              Status
+    1               Omega              Warren            Borrowed
+    2               Alpha                Yoofi            Borrowed
+
+Library Members:
+   ID                Name
+    1              Warren
+
+Books in Library:
+   ID               Title              Author              Status
+    1                   t                   y            Borrowed
+    2                   u                   o            Borrowed
+
+Library Members:
+   ID                Name
+    1                   w
+
+Books in Library:
+   ID               Title              Author              Status
+    1                   t                   y            Borrowed
+    2                   u                   o            Borrowed
+
+Library Members:
+   ID                Name
+    1                   w
+
+Books in Library:
+   ID               Title              Author              Status
+
+Library Members:
+   ID                Name
+
+Books in Library:
+   ID               Title              Author              Status
+
+Library Members:
+   ID                Name

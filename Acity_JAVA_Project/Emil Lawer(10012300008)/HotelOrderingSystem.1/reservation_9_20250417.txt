@@ -1,0 +1,16 @@
+================================
+     RESERVATION CONFIRMATION
+================================
+Hotel: Southern Comfort
+Address: 707 Magnolia Dr, Atlanta
+Phone: 404-555-1010
+--------------------------------
+Reservation ID: 9
+Customer: kojo
+Room Type: Deluxe
+Check-in: 2025-04-17
+Check-out: 2025-04-17
+Status: Confirmed
+--------------------------------
+Thank you for your reservation!
+================================
