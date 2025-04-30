@@ -1,0 +1,16 @@
+Name: Emmanuel Gaisie
+ID: 10022300173
+Course: java, Credit Hours: 3, Grade: A
+Course: system analysis, Credit Hours: 3, Grade: A
+Course: statistics, Credit Hours: 3, Grade: A
+Cumulative GPA: 4.00
+Database: under construction
+------------------------------
+Name: Michael Kelly
+ID: 123456789
+Course: Java, Credit Hours: 3, Grade: A
+Course: stats, Credit Hours: 3, Grade: A
+Course: engineering, Credit Hours: 3, Grade: A
+Cumulative GPA: 4.00
+Database: under construction
+------------------------------

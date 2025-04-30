@@ -1,0 +1,7 @@
+Student Name: Daniel
+Student ID: 12345678
+
+Course: IT, Grade: A, Credits: 3.0
+
+GPA: 4.00
+-----

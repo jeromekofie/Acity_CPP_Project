@@ -1,0 +1,35 @@
+Student:  | ID: 
+GPA: 0.00
+
+Student: Britney Opoku-Addo | ID: 10022300211
+GPA: 0.00
+GPA: 0.00
+GPA: 0.00
+Java, Grade: A, Credit: 3
+GPA: 4.00
+Web Technology, Grade: B, Credit: 4
+GPA: 3.43
+
+Student: Brian Holme  | ID: 10022300499
+GPA: 0.00
+GPA: 0.00
+GPA: 0.00
+Java, Grade: A, Credit: 3
+GPA: 4.00
+Web Technology, Grade: B, Credit: 4
+GPA: 3.43
+Emerging Technology, Grade: B, Credit: 4
+GPA: 3.27
+
+Student: Brian Holme  | ID: 10022300499
+GPA: 0.00
+GPA: 0.00
+GPA: 0.00
+Java, Grade: A, Credit: 3
+GPA: 4.00
+Web Technology, Grade: B, Credit: 4
+GPA: 3.43
+Emerging Technology, Grade: B, Credit: 4
+GPA: 3.27
+music, Grade: C, Credit: 2
+

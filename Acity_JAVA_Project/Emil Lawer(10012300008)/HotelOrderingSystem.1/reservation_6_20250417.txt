@@ -1,0 +1,16 @@
+================================
+     RESERVATION CONFIRMATION
+================================
+Hotel: Ocean View Resort
+Address: 456 Beach Blvd, Miami
+Phone: 305-555-1002
+--------------------------------
+Reservation ID: 6
+Customer: kojo
+Room Type: Standard
+Check-in: 2025-04-17
+Check-out: 2025-04-17
+Status: Confirmed
+--------------------------------
+Thank you for your reservation!
+================================

@@ -1,0 +1,12 @@
+Student Name: Amazing 
+Student ID: 10022300216
+GPA: 4.00
+------------------------
+Student Name: Priscilla Fynn
+Student ID: 10022300265
+GPA: 4.00
+------------------------
+Student Name: kelly
+Student ID: 70000
+GPA: 2.00
+------------------------

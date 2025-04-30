@@ -1,0 +1,28 @@
+Name: Denzel Nyarko
+ID: 10021
+Course: COMPUTER SCIENCE
+Subject 1: Grade = B, Grade Point = 3.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 4: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 3.70
+--------------------------------------------------
+Name: Ama Amoah
+ID: 10022
+Course: NURSING
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B+, Grade Point = 3.5, Credit Hours = 3.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 4: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 3.86
+--------------------------------------------------
+Name: Kojo Oppong
+ID: 10022
+Course: ECOLOGY
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = C, Grade Point = 2.0, Credit Hours = 3.0
+Subject 3: Grade = B, Grade Point = 3.0, Credit Hours = 3.0
+Subject 4: Grade = B+, Grade Point = 3.5, Credit Hours = 3.0
+Subject 5: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 3.30
+--------------------------------------------------

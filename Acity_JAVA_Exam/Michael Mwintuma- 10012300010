@@ -1,0 +1,131 @@
+
+
+// GUI FOR CALCULATING GRADES / GPAs in Schools 
+
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.io.*;
+
+public class GPACalculator extends JFrame {
+
+    private JTextField nameField, idField, courseField, creditField, gradeField;
+    private JComboBox<String> saveOptionBox;
+    private JButton calculateButton;
+    private JLabel resultLabel;
+
+    public GPACalculator() {
+        setTitle(" GPA Calculator for Students ");
+        setSize(350, 350);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new GridLayout(8, 2, 4, 4));
+
+        add(new JLabel("Student Name:"));
+        nameField = new JTextField();
+        add(nameField);
+
+        add(new JLabel("Student ID:"));
+        idField = new JTextField();
+        add(idField);
+
+        add(new JLabel("Courses :"));
+        courseField = new JTextField();
+        add(courseField);
+
+        add(new JLabel("No. of Credit Hours :"));
+        creditField = new JTextField();
+        add(creditField);
+
+        add(new JLabel("Grades (A, B+, B, etc - :"));
+        gradeField = new JTextField();
+        add(gradeField);
+
+        add(new JLabel("Save to:"));
+        saveOptionBox = new JComboBox<>(new String[]{"File", "Database"});
+        add(saveOptionBox);
+
+        calculateButton = new JButton("Get / Calculate GPA");
+        resultLabel = new JLabel("");
+        add(calculateButton);
+        add(resultLabel);
+
+        calculateButton.addActionListener(e -> calculateGPA());
+
+        setVisible(true);
+    }
+
+    private void calculateGPA() {
+        try {
+            String name = nameField.getText();
+            String id = idField.getText();
+            String[] courses = courseField.getText().split(",");
+            String[] creditsStr = creditField.getText().split(",");
+            String[] grades = gradeField.getText().split(",");
+
+            if (courses.length != creditsStr.length || grades.length != courses.length) {
+                JOptionPane.showMessageDialog(this, "Mismatch in number of courses, credits, and grades.", "Error", JOptionPane.ERROR_MESSAGE);
+                return;
+            }
+
+            double totalPoints = 0;
+            int totalCredits = 0;
+
+            for (int i = 0; i < courses.length; i++) {
+                int credit = Integer.parseInt(creditsStr[i].trim());
+                double gradePoint = getGradePoint(grades[i].trim());
+
+                totalPoints += gradePoint * credit;
+                totalCredits += credit;
+            }
+
+            double gpa = totalPoints / totalCredits;
+            resultLabel.setText(String.format("GPA: %.2f", gpa));
+
+            String saveOption = (String) saveOptionBox.getSelectedItem();
+
+            if (saveOption.equals("File")) {
+                saveToFile(name, id, courseField.getText(), creditField.getText(), gradeField.getText(), gpa);
+            } else {
+                JOptionPane.showMessageDialog(this, "Database: Still Under Construction.");
+            }
+
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(this, "Error: " + ex.getMessage(), "Input Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
+
+    private double getGradePoint(String grade) {
+        return switch (grade.toUpperCase()) {
+            case "A" -> 4.0;
+            case "B+" -> 3.5;
+            case "B" -> 3.0;
+            case "C+" -> 2.5;
+            case "C" -> 2.0;
+            case "D" -> 1.0;
+            case "F" -> 0.0;
+            default -> throw new IllegalArgumentException("Invalid grade: " + grade);
+        };
+    }
+
+    private void saveToFile(String name, String id, String courses, String credits, String grades, double gpa) {
+        try {
+            File folder = new File("data");
+            if (!folder.exists()) folder.mkdir(); 
+
+
+            FileWriter fw = new FileWriter("data/gpa_records.txt", true);
+            fw.write("Name: " + name + ", ID: " + id + ", Courses: " + courses + ", Credits: " + credits + ", Grades: " + grades + ", GPA: " + gpa + "\n");
+            fw.close();
+
+            JOptionPane.showMessageDialog(this, "Saved sucessfully to file.");
+        } catch (IOException e) {
+            JOptionPane.showMessageDialog(this, "Failed to save to file.");
+        }
+    }
+
+    public static void main(String[] args) {
+
+        SwingUtilities.invokeLater(GPACalculator::new);
+    }
+}

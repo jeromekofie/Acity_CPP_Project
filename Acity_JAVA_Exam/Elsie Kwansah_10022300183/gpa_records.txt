@@ -1,0 +1,5 @@
+Name: ElsieID: 10022300183Courses:
+  C++ - 2.0 credits - Grade 87 -> GPA 3.5  Java - 3.0 credits - Grade 94 -> GPA 4.0GPA: 3.80 
+  Grade: B+---Name: KojoID: 100974255Courses:
+  Math - 3.0 credits - Grade 56 -> GPA 1.5  English - 2.0 credits - Grade 78 -> GPA 2.5GPA: 1.90 
+  Grade: D---

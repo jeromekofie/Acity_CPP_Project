@@ -1,0 +1,22 @@
+Name: hh
+ID: 55
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------
+Name: hh
+ID: 55
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------
+Name: KWAKU
+ID: 1002230
+Course: INFORMATION TECHNOLOGY
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 3.75
+--------------------------------------------------
