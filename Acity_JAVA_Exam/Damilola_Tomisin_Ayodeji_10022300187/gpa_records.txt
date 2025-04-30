@@ -1,0 +1,16 @@
+Name: damilola, ID: 10022300187
+math	4.0	3.5
+english	2.0	1.0
+economics	3.0	2.0
+science	4.0	1.5
+social studies	3.0	2.5
+GPA: 2.22
+
+Name: damilola, ID: 10022300187
+math	3.0	1.5
+english	4.0	3.5
+french	2.0	2.0
+science	3.0	1.5
+social	4.0	2.0
+GPA: 2.19
+
