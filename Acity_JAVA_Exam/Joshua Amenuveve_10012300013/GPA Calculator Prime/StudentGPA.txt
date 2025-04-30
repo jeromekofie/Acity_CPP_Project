@@ -1,0 +1,27 @@
+              Calulated GPA                  
+Course: IT
+Sub Course 1: Grade : A, Grade Point: 4.0, Credit Hours: 3.0
+Sub Course 2: Grade : D, Grade Point: 1.5, Credit Hours: 4.0
+Sub Course 3: Grade : B, Grade Point: 3.0, Credit Hours: 2.0
+Sub Course 4: Grade : C, Grade Point: 2.0, Credit Hours: 5.0
+GPA: 2.43
+Name: Kwaku
+ID: 10034500788
+              Calulated GPA                  
+Course: Mass Communication
+Sub Course 1: Grade : A, Grade Point: 4.0, Credit Hours: 3.0
+Sub Course 2: Grade : D, Grade Point: 1.5, Credit Hours: 4.0
+Sub Course 3: Grade : B, Grade Point: 3.0, Credit Hours: 3.0
+Sub Course 4: Grade : C, Grade Point: 2.0, Credit Hours: 3.0
+Sub Course 5: Grade : B, Grade Point: 3.0, Credit Hours: 5.0
+GPA: 2.67
+Name: Paul Yaw
+ID: 10445566000
+              Calulated GPA                  
+Course: Geology
+Sub Course 1: Grade : A, Grade Point: 4.0, Credit Hours: 3.0
+Sub Course 2: Grade : D, Grade Point: 1.5, Credit Hours: 2.0
+Sub Course 3: Grade : B, Grade Point: 3.0, Credit Hours: 2.0
+GPA: 3.00
+Name: Forson Greg
+ID: 10467833333

@@ -1,0 +1,6 @@
+Student Name: Oswin Heman - Ackah
+Student ID: 10022300148
+DSA, 3 hrs, Grade: A
+Java, 3 hrs, Grade: A
+Algebra, 3 hrs, Grade: B
+Your GPA is: 3.62

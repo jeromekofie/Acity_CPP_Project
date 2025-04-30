@@ -1,0 +1,55 @@
+Name: Alex
+ID: 128
+Course: INFORMATION TECHNOLOGY
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 2: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 3: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 4: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 5: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 6: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 7: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 8: Grade = C, Grade Point = 2.0, Credit Hours = 2.0
+GPA: 3.29
+--------------------------------------------------
+Name: KELLY
+ID: 102
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = D, Grade Point = 1.5, Credit Hours = 1.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 3.64
+--------------------------------------------------
+Name: Andi
+ID: 001
+Course: PUBLIC RELATIONS
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 4: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 5: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 6: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+GPA: 3.75
+--------------------------------------------------
+Name: Yemi
+ID: 129
+Course: INFORMATION TECHNOLOGY
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 2: Grade = C, Grade Point = 2.0, Credit Hours = 2.0
+Subject 3: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 4: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 5: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+Subject 6: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+GPA: 3.00
+--------------------------------------------------
+Name: KELVIN
+ID: 111
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+--------------------------------------------------
+Name: alex
+ID: 128
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------

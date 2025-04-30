@@ -1,0 +1,14 @@
+STUDENT GPA RECORD
+==================
+Name: KOFI KWANSAH
+ID: 10022300419
+------------------
+LEARNING - 3 credits - Grade: A
+WRITING - 2 credits - Grade: B
+LISTENING - 3 credits - Grade: C+
+UNDERSTANDING - 3 credits - Grade: B+
+PHYSICAL EDU, - 3 credits - Grade: B+
+COMM SKILLS - 3 credits - Grade: C
+------------------
+GPA: 3.09
+Saved: Wed Apr 30 15:44:46 GMT 2025
