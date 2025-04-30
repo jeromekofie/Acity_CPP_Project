@@ -1,0 +1,27 @@
+Student GPA
+-----------------------
+Name: Nana Kwaku
+Student ID: 1001
+
+Courses Taken:
+ - Chemistry (Credits: 2, Grade: E)
+
+Total Credits: 2
+ GPA: 1.00
+-------------------
+
+
+Student GPA
+-----------------------
+Name: nk
+Student ID: 100123
+
+Courses Taken:
+ - IT (Credits: 3, Grade: A)
+ - math (Credits: 2, Grade: C)
+
+Total Credits: 5
+GPA: 3.20
+-------------------
+
+
