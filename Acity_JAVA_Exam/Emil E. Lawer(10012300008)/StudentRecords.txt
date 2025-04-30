@@ -1,0 +1,48 @@
+Name: hh
+ID: 55
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------
+Name: hh
+ID: 55
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 2.0
+GPA: 4.00
+--------------------------------------------------
+Name: Emil E. Lawer
+ID: 10012300008
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+--------------------------------------------------
+Name: Emil E. Lawer
+ID: 10012300008
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B, Grade Point = 3.0, Credit Hours = 3.0
+Subject 3: Grade = C+, Grade Point = 2.5, Credit Hours = 3.0
+GPA: 3.17
+--------------------------------------------------
+Name: Emil E. Lawer
+ID: 10012300008
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B+, Grade Point = 3.5, Credit Hours = 3.0
+GPA: 3.75
+--------------------------------------------------
+Name: GHana
+ID: 10012300008
+Course: ELECTRICAL ENGINEERING
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 6.0
+Subject 2: Grade = D, Grade Point = 1.5, Credit Hours = 4.0
+GPA: 3.00
+--------------------------------------------------
+Name: Emil E. Lawer
+ID: 10012300008
+Course: COMPUTER SCIENCE
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B+, Grade Point = 3.5, Credit Hours = 3.0
+GPA: 3.75

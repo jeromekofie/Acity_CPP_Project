@@ -1,0 +1,9 @@
+Student Name: Maame
+Student ID: 111
+Storage Type: File
+
+Courses:
+Java - 3 credits - Grade: B+
+Web Tech - 3 credits - Grade: A
+
+GPA: 3.75

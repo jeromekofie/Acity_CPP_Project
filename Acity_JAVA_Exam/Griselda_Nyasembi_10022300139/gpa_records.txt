@@ -1,0 +1,5 @@
+ama,1000,French,90.0,3,30.0
+Ama,1000,Maths,77.0,2,38.5
+Ama,1000,Science,78.0,3,78.0
+Ama,199,English,90.0,2,90.0
+Seyram,1222,Social Studies,67.0,2,67.0

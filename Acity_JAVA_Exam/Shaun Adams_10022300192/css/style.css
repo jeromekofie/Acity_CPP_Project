@@ -1,0 +1,114 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+/* General styling for the body */
+body {
+    font-family: 'Roboto', sans-serif; /* Using Google Font */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url('images/rush1.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Ensures background stays in place when scrolling */
+}
+
+/* Header styling */
+.header {
+    background-color: rgba(255, 99, 71, 0.8); /* Transparent Tomato color */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px); /* Optional: adds a blur effect to the background */
+}
+
+.header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+/* Navigation bar styling */
+.nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    padding: 10px 0;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content container styling */
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    border-radius: 10px; /* Optional: round the corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add a slight shadow for a raised effect */
+}
+
+/* Styling for the paragraph text */
+#p1 {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+/* Image container styling */
+.image {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Button styling */
+button {
+    padding: 15px 30px;
+    background-color: #FF6347; /* Tomato color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #FF4500; /* Darker tomato color on hover */
+}
+
+/* Additional responsiveness for smaller screens */
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav a {
+        margin: 10px 0;
+    }
+
+    .container1 {
+        padding: 10px;
+    }
+}
