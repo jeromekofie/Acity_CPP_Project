@@ -1,0 +1,17 @@
+--------------------------------------------------
+Name: Kelly
+ID: 1002203109
+Course: BBa. Business Administration
+Subject 1: Grade = A, Credit Hours = 3.0
+Subject 2: Grade = A, Credit Hours = 3.0
+GPA: 4.00
+--------------------------------------------------
+--------------------------------------------------
+Name: George
+ID: 1022300108
+Course: Bsc.Information Technology
+Subject 1: Grade = A, Credit Hours = 3.0
+Subject 2: Grade = B+, Credit Hours = 4.0
+Subject 3: Grade = A, Credit Hours = 3.0
+GPA: 3.80
+--------------------------------------------------
