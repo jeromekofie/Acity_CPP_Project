@@ -1,0 +1,71 @@
+Name: sdsd
+ID: 232
+Gender: Female
+Age: 32
+
+Course: s, 
+Credit: 1, 
+Grade: 2.0
+
+Course: c, 
+Credit: 2, 
+Grade: 3.0
+
+Course: a, 
+Credit: 3, 
+Grade: 4.0
+GPA: 3.33
+----------------------
+Name: Michael Kelly
+ID: 10012300026
+Gender: Male
+Age: 19
+
+Course: JAVA, 
+Credit: 3, 
+Grade: 4.0
+
+Course: DSA, 
+Credit: 3, 
+Grade: 4.0
+
+Course: ALINALG, 
+Credit: 3, 
+Grade: 3.5
+
+Course: PNS, 
+Credit: 3, 
+Grade: 4.0
+
+Course: FIE, 
+Credit: 2, 
+Grade: 3.5
+
+Course: AFS, 
+Credit: 3, 
+Grade: 4.0
+GPA: 3.85
+----------------------
+Name: Kelvin Yeleyeyeyi
+ID: 10012300002
+Gender: Male
+Age: 80
+
+Course: English, 
+Credit: 3, 
+Grade: 2.0
+
+Course: Science, 
+Credit: 2, 
+Grade: 3.0
+
+Course: Math, 
+Credit: 3, 
+Grade: 3.0
+
+Course: Social Studies, 
+Credit: 3, 
+Grade: 4.0
+GPA: 3.00
+----------------------
+
