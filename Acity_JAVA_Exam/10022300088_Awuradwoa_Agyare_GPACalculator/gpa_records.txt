@@ -1,0 +1,48 @@
+Student Name: Awuradwoa Agyare
+Student ID: 10022300088
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = B+, Grade Point = 3.5, Credit Hours = 2.0
+Subject 3: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 4: Grade = B, Grade Point = 3.0, Credit Hours = 2.0
+GPA: 3.70
+--------------------------------------------------
+
+Gradebook
+.............................Student Name: Awuradwoa Agyare
+Student ID: 10022300088
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+
+Gradebook
+.............................
+Student Name: Awuradwoa Agyare
+Student ID: 10022300088
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+
+Gradebook.............................
+Student Name: Awuradwoa Agyare
+Student ID: 10022300088
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+Subject 2: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+Gradebook
+.............................
+Student Name: Awuradwoa Agyare
+Student ID: 10022300088
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+Gradebook
+.............................
+Student Name: John Smith
+Student ID: 10293847
+Course: Computer Science
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
