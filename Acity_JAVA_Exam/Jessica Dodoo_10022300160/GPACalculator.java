@@ -21,7 +21,6 @@ public class GPACalculator extends JFrame {
         getContentPane().setBackground(Color.WHITE);
         Font font = new Font("Arial", Font.PLAIN, 14);
 
-        // Top Panel (Student Info)
         JPanel topPanel = new JPanel(new GridLayout(2, 2, 10, 10));
         topPanel.setBackground(Color.WHITE);
         nameField = new JTextField();
@@ -31,7 +30,7 @@ public class GPACalculator extends JFrame {
         topPanel.add(new JLabel("Student ID:"));
         topPanel.add(idField);
 
-        // Course Panel (Input Courses)
+       
         JPanel coursePanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 10));
         coursePanel.setBackground(Color.WHITE);
         courseField = new JTextField(10);
@@ -46,11 +45,10 @@ public class GPACalculator extends JFrame {
         coursePanel.add(gradeCombo);
         coursePanel.add(addCourseBtn);
 
-        // Table Model
+        
         tableModel = new DefaultTableModel(new String[] { "Course", "Credit Hours", "Grade" }, 0);
         JTable courseTable = new JTable(tableModel);
 
-        // Bottom Panel (Buttons & Storage)
         JPanel bottomPanel = new JPanel();
         bottomPanel.setBackground(Color.WHITE);
         storageCombo = new JComboBox<>(new String[] { "File", "Database" });
@@ -73,7 +71,7 @@ public class GPACalculator extends JFrame {
         for (JButton btn : buttons)
             bottomPanel.add(btn);
 
-        // Add Course Action
+       
         addCourseBtn.addActionListener(e -> {
             try {
                 String course = courseField.getText();
@@ -96,7 +94,7 @@ public class GPACalculator extends JFrame {
             }
         });
 
-        // Delete Course
+       
         deleteBtn.addActionListener(e -> {
             int selectedRow = courseTable.getSelectedRow();
             if (selectedRow != -1) {
@@ -109,7 +107,7 @@ public class GPACalculator extends JFrame {
             }
         });
 
-        // Update Course
+       
         updateBtn.addActionListener(e -> {
             int selectedRow = courseTable.getSelectedRow();
             if (selectedRow != -1) {
@@ -134,7 +132,7 @@ public class GPACalculator extends JFrame {
             }
         });
 
-        // Calculate GPA
+       
         calculateBtn.addActionListener(e -> {
             String name = nameField.getText();
             String id = idField.getText();
@@ -199,7 +197,7 @@ public class GPACalculator extends JFrame {
             }
         });
 
-        // View History
+        
         viewHistoryBtn.addActionListener(e -> {
             String[] columns = { "Name", "ID", "Courses", "GPA" };
             historyTableModel = new DefaultTableModel(columns, 0);
@@ -210,7 +208,7 @@ public class GPACalculator extends JFrame {
             JOptionPane.showMessageDialog(this, scroll, "History", JOptionPane.PLAIN_MESSAGE);
         });
 
-        // Add New Entry
+       
         addNewBtn.addActionListener(e -> {
             nameField.setText("");
             idField.setText("");
@@ -222,7 +220,7 @@ public class GPACalculator extends JFrame {
             credits.clear();
         });
 
-        // Layout Assembly
+       
         JPanel centerPanel = new JPanel(new BorderLayout());
         centerPanel.setBackground(Color.WHITE);
         centerPanel.add(coursePanel, BorderLayout.NORTH);
