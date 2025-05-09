@@ -1,0 +1,5 @@
+Name: yinmii
+ID: 100
+Subject 1: Grade = A, Grade Point = 4.0, Credit Hours = 3.0
+GPA: 4.00
+--------------------------------------------------

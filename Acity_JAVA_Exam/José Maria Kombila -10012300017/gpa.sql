@@ -1,0 +1,10 @@
+CREATE DATABASE gpa_db;
+USE gpa_db;
+
+CREATE TABLE Students (
+ID INT AUTO_INCREMENT PRIMARY KEY,
+Student_Name VARCHAR(50),
+Credit_Hours VARCHAR(5),
+GPA  VARCHAR(4),
+Grades VARCHAR(2)
+);
